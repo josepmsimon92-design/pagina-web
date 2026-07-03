@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="¿Va a abrir un bar, cafetería o restaurante? Cuéntenoslo en 5 minutos: humos, terraza, aforo… Le decimos qué necesita su local antes de invertir. EPCA · Ingeniería.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://epca.es/asistente-hosteleria.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Cuéntenos su bar o restaurante · EPCA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B2A4A; --navy2:#26385c; --gold:#C9962A; --gold-light:#E8B84B;
+  --white:#FFFFFF; --gray-50:#F8F9FB; --gray-100:#F0F2F6;
+  --gray-300:#D7DCE5; --gray-400:#9BA3B2; --gray-600:#4B5563; --gray-900:#111827;
+  --green:#1f7a4d; --green-bg:#e7f3ec; --amber:#9a6b00; --amber-bg:#fdf3da;
+  --blue:#1d4e89; --blue-bg:#e8f0fb;
+  --radius:10px; --shadow:0 4px 24px rgba(27,42,74,.10);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--gray-900);background:var(--gray-50);line-height:1.6}
+.wrap{max-width:840px;margin:0 auto;padding:0 20px}
+header.top{background:var(--navy);color:#fff;padding:26px 0}
+header.top .bar{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+header.top h1{font-size:1.45rem;font-weight:700;line-height:1.3}
+header.top p{color:#c7d0e0;font-size:.92rem;margin-top:6px;max-width:600px}
+header.top a.home{color:#c7d0e0;font-size:.85rem;text-decoration:none}
+header.top a.home:hover{color:#fff}
+.lang-toggle{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-family:inherit;font-weight:600;font-size:.8rem;padding:5px 12px;border-radius:6px;cursor:pointer;flex:0 0 auto}
+.lang-toggle:hover{border-color:#fff}
+.badge{display:inline-block;background:var(--gold);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:6px;margin-bottom:10px}
+.intro{background:var(--blue-bg);border:1px solid #abc8ec;color:#16335a;font-size:.88rem;padding:14px 16px;border-radius:var(--radius);margin:18px 0}
+.card{background:#fff;border:1px solid var(--gray-100);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 26px;margin:18px 0}
+.card h2{font-size:1.1rem;color:var(--navy);margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.step-n{background:var(--navy);color:#fff;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;flex:0 0 auto}
+.card .hint{color:var(--gray-600);font-size:.85rem;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+label{font-size:.83rem;font-weight:600}
+label .opt{font-weight:400;color:var(--gray-400)}
+label .req{color:var(--gold);font-weight:700}
+input[type=text],input[type=tel],input[type=email],select,textarea{font-family:inherit;font-size:.95rem;padding:10px 12px;border:1px solid var(--gray-300);border-radius:8px;background:#fff;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,150,42,.15)}
+textarea{min-height:90px;resize:vertical}
+.radios{display:flex;flex-direction:column;gap:9px}
+.radios--row{flex-direction:row;flex-wrap:wrap}
+.radio,.check{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;font-weight:400;cursor:pointer;padding:11px 13px;border:1px solid var(--gray-100);border-radius:8px;background:var(--gray-50)}
+.radio:hover,.check:hover{border-color:var(--gray-300)}
+.radio input,.check input{margin-top:4px;flex:0 0 auto;accent-color:var(--gold)}
+.radio span small,.check span small{display:block;color:var(--gray-600);font-size:.8rem}
+.subblock{border:1px dashed var(--gray-300);border-radius:8px;padding:16px;margin-top:14px;background:var(--gray-50)}
+.subblock h3{font-size:.92rem;color:var(--navy);margin-bottom:10px}
+.warn{background:var(--amber-bg);border:1px solid #e3c26a;color:var(--amber);font-size:.85rem;padding:11px 14px;border-radius:8px;margin-top:12px}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.btn{font-family:inherit;font-weight:600;font-size:.98rem;padding:13px 28px;border-radius:var(--radius);border:2px solid transparent;cursor:pointer;transition:.18s;text-decoration:none;display:inline-block;text-align:center}
+.btn--primary{background:var(--gold);color:#fff;border-color:var(--gold)}
+.btn--primary:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.btn:disabled{opacity:.55;cursor:wait}
+.hidden{display:none!important}
+.err{color:#9b2226;background:#fbe7e7;border:1px solid #e9b3b3;border-radius:8px;padding:10px 13px;font-size:.87rem;margin-top:10px}
+.note{font-size:.8rem;color:var(--gray-600)}
+.success{background:var(--green-bg);border:1px solid #9fd3b4;border-radius:var(--radius);padding:26px;text-align:center}
+.success .tick{font-size:2.4rem}
+.success h2{color:var(--green);font-size:1.25rem;margin:6px 0 10px;justify-content:center;display:flex}
+.success ol{text-align:left;max-width:520px;margin:14px auto;padding-left:22px;font-size:.92rem;display:flex;flex-direction:column;gap:8px}
+footer{color:var(--gray-400);font-size:.78rem;text-align:center;padding:24px 0 40px}
+footer a{color:var(--gray-600)}
+.privacy{font-size:.76rem;color:var(--gray-400);margin-top:14px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <div>
+        <div class="badge">EPCA · Enginyeria i Projectes Cardener</div>
+        <h1 data-es="Cuéntenos su bar, cafetería o restaurante" data-ca="Expliqueu-nos el vostre bar, cafeteria o restaurant">Cuéntenos su bar, cafetería o restaurante</h1>
+        <p data-es="5 minutos. Humos, terraza, aforo, acústica… Al terminar sabremos qué necesita su local y podremos decirle si es viable antes de que invierta en él." data-ca="5 minuts. Fums, terrassa, aforament, acústica… En acabar sabrem què necessita el vostre local i us podrem dir si és viable abans que hi invertiu.">5 minutos. Humos, terraza, aforo, acústica… Al terminar sabremos qué necesita su local y podremos decirle si es viable antes de que invierta en él.</p>
+        <p style="margin-top:8px"><a class="home" href="hosteleria.html" data-es="← Volver a Proyectos para hostelería" data-ca="← Tornar a Projectes per a hostaleria">← Volver a Proyectos para hostelería</a></p>
+      </div>
+      <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">CA</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro" data-es="💬 No necesita conocimientos técnicos: responda lo que sepa y deje en blanco lo demás. Un ingeniero revisará personalmente su proyecto. Si aún no ha firmado el local, mejor: podemos avisarle de los problemas antes de que se comprometa." data-ca="💬 No calen coneixements tècnics: responeu el que sapigueu i deixeu en blanc la resta. Un enginyer revisarà personalment el vostre projecte. Si encara no heu signat el local, millor: us podem avisar dels problemes abans que us hi comprometeu.">💬 No necesita conocimientos técnicos: responda lo que sepa y deje en blanco lo demás. Un ingeniero revisará personalmente su proyecto. Si aún no ha firmado el local, mejor: podemos avisarle de los problemas antes de que se comprometa.</div>
+
+  <form id="hostForm" name="proyecto-hosteleria" method="POST">
+    <input type="hidden" name="subject" id="f_subject" value="Proyecto hostelería · nueva ficha">
+    <input type="hidden" name="idioma" id="f_idioma" value="es">
+    <p class="hidden"><label>No rellenar: <input name="bot-field"></label></p>
+
+    <!-- 1 · CONTACTO -->
+    <div class="card">
+      <h2><span class="step-n">1</span> <span data-es="Sus datos de contacto" data-ca="Les vostres dades de contacte">Sus datos de contacto</span></h2>
+      <div class="radios radios--row" style="margin-bottom:14px">
+        <label class="radio"><input type="radio" name="tipo_cliente" value="fisica" checked><span data-es="<b>Particular o autónomo</b>" data-ca="<b>Particular o autònom</b>"><b>Particular o autónomo</b></span></label>
+        <label class="radio"><input type="radio" name="tipo_cliente" value="juridica"><span data-es="<b>Empresa o sociedad</b>" data-ca="<b>Empresa o societat</b>"><b>Empresa o sociedad</b></span></label>
+      </div>
+      <div class="grid">
+        <div class="field full"><label id="nomLabel" data-es="Nombre y apellidos <span class='req'>*</span>" data-ca="Nom i cognoms <span class='req'>*</span>">Nombre y apellidos <span class="req">*</span></label><input type="text" name="nombre" id="f_nombre" required></div>
+        <div class="field"><label data-es="Teléfono <span class='req'>*</span>" data-ca="Telèfon <span class='req'>*</span>">Teléfono <span class="req">*</span></label><input type="tel" name="telefono" id="f_telefono" required></div>
+        <div class="field"><label data-es="Correo electrónico" data-ca="Correu electrònic">Correo electrónico</label><input type="email" name="email" id="f_email"></div>
+        <div class="field"><label id="nifLabel" data-es="DNI / NIE <span class='opt'>(para el encargo)</span>" data-ca="DNI / NIE <span class='opt'>(per a l'encàrrec)</span>">DNI / NIE <span class="opt">(para el encargo)</span></label><input type="text" name="nif" id="f_nif"></div>
+        <div class="field"><label data-es="Población" data-ca="Població">Población</label><input type="text" name="poblacion" id="f_poblacion"></div>
+      </div>
+      <div class="subblock hidden" id="repBlock">
+        <h3 data-es="Representante que firmará en nombre de la empresa" data-ca="Representant que signarà en nom de l'empresa">Representante que firmará en nombre de la empresa</h3>
+        <div class="grid">
+          <div class="field"><label data-es="Nombre y apellidos" data-ca="Nom i cognoms">Nombre y apellidos</label><input type="text" name="rep_nombre" id="f_rep_nombre"></div>
+          <div class="field"><label data-es="DNI / NIE" data-ca="DNI / NIE">DNI / NIE</label><input type="text" name="rep_nif" id="f_rep_nif"></div>
+          <div class="field full"><label data-es="Cargo <span class='opt'>(administrador/a, apoderado/a…)</span>" data-ca="Càrrec <span class='opt'>(administrador/a, apoderat/da…)</span>">Cargo <span class="opt">(administrador/a, apoderado/a…)</span></label><input type="text" name="rep_cargo" id="f_rep_cargo"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 · SITUACIÓN -->
+    <div class="card">
+      <h2><span class="step-n">2</span> <span data-es="¿En qué punto está el proyecto?" data-ca="En quin punt està el projecte?">¿En qué punto está el proyecto?</span></h2>
+      <p class="hint" data-es="En hostelería el momento importa mucho: revisar el local antes de firmar puede ahorrarle una mala inversión (la salida de humos es el clásico)." data-ca="En hostaleria el moment importa molt: revisar el local abans de signar us pot estalviar una mala inversió (la sortida de fums és el clàssic).">En hostelería el momento importa mucho: revisar el local antes de firmar puede ahorrarle una mala inversión (la salida de humos es el clásico).</p>
+      <div class="radios">
+        <label class="radio"><input type="radio" name="situacion" value="buscando" checked><span data-es="<b>Estoy buscando local</b><small>Valoro opciones y quiero saber qué debo mirar.</small>" data-ca="<b>Estic buscant local</b><small>Valoro opcions i vull saber què he de mirar.</small>"><b>Estoy buscando local</b><small>Valoro opciones y quiero saber qué debo mirar.</small></span></label>
+        <label class="radio"><input type="radio" name="situacion" value="apalabrado"><span data-es="<b>Tengo un local apalabrado, aún sin firmar</b><small>Quiero saber si es viable antes de comprometerme.</small>" data-ca="<b>Tinc un local apalabrat, encara sense signar</b><small>Vull saber si és viable abans de comprometre-m'hi.</small>"><b>Tengo un local apalabrado, aún sin firmar</b><small>Quiero saber si es viable antes de comprometerme.</small></span></label>
+        <label class="radio"><input type="radio" name="situacion" value="local_firmado"><span data-es="<b>Ya tengo el local</b><small>Alquilado o comprado; toca proyecto y licencia.</small>" data-ca="<b>Ja tinc el local</b><small>Llogat o comprat; toca projecte i llicència.</small>"><b>Ya tengo el local</b><small>Alquilado o comprado; toca proyecto y licencia.</small></span></label>
+        <label class="radio"><input type="radio" name="situacion" value="traspaso"><span data-es="<b>Es un traspaso de un bar/restaurante en marcha</b><small>El negocio ya funciona y paso a ser el nuevo titular.</small>" data-ca="<b>És un traspàs d'un bar/restaurant en marxa</b><small>El negoci ja funciona i passo a ser-ne el nou titular.</small>"><b>Es un traspaso de un bar/restaurante en marcha</b><small>El negocio ya funciona y paso a ser el nuevo titular.</small></span></label>
+        <label class="radio"><input type="radio" name="situacion" value="abierto_problema"><span data-es="<b>Ya está abierto y hay un problema</b><small>Requerimiento, quejas de vecinos, actividad sin legalizar…</small>" data-ca="<b>Ja està obert i hi ha un problema</b><small>Requeriment, queixes de veïns, activitat sense legalitzar…</small>"><b>Ya está abierto y hay un problema</b><small>Requerimiento, quejas de vecinos, actividad sin legalizar…</small></span></label>
+      </div>
+      <div class="grid" id="aperturaBox" style="margin-top:16px">
+        <div class="field"><label data-es="¿Cuándo le gustaría abrir? <span class='opt'>(mes/año aproximado)</span>" data-ca="Quan us agradaria obrir? <span class='opt'>(mes/any aproximat)</span>">¿Cuándo le gustaría abrir? <span class="opt">(mes/año aproximado)</span></label><input type="text" name="fecha_apertura" id="f_apertura"></div>
+      </div>
+      <div class="grid hidden" id="reqBox" style="margin-top:16px">
+        <div class="field"><label data-es="Si hay un plazo, ¿cuál es? <span class='opt'>(muy importante)</span>" data-ca="Si hi ha un termini, quin és? <span class='opt'>(molt important)</span>">Si hay un plazo, ¿cuál es? <span class="opt">(muy importante)</span></label><input type="text" name="plazo_requerimiento" id="f_plazo" data-ph-es="Ej. 1 mes para presentar la documentación" data-ph-ca="Ex. 1 mes per presentar la documentació" placeholder="Ej. 1 mes para presentar la documentación"></div>
+        <div class="field full"><label data-es="¿Qué ha pasado o qué le piden?" data-ca="Què ha passat o què us demanen?">¿Qué ha pasado o qué le piden?</label><textarea name="problema_desc" id="f_reqdesc" style="min-height:60px"></textarea></div>
+      </div>
+    </div>
+
+    <!-- 3 · TIPO DE ESTABLECIMIENTO -->
+    <div class="card">
+      <h2><span class="step-n">3</span> <span data-es="¿Qué tipo de establecimiento será?" data-ca="Quin tipus d'establiment serà?">¿Qué tipo de establecimiento será?</span></h2>
+      <div class="field">
+        <select name="tipo_establecimiento" id="f_tipo" required>
+          <option value="" data-es="— Seleccione —" data-ca="— Seleccioneu —">— Seleccione —</option>
+        </select>
+      </div>
+      <p class="hint" id="tipoHint" style="margin-top:10px;margin-bottom:0"></p>
+    </div>
+
+    <!-- 4 · DETALLES (dinámico) -->
+    <div class="card hidden" id="detCard">
+      <h2><span class="step-n">4</span> <span data-es="Detalles del negocio" data-ca="Detalls del negoci">Detalles del negocio</span></h2>
+      <p class="hint" data-es="Responda lo que sepa; ninguna pregunta es obligatoria." data-ca="Responeu el que sapigueu; cap pregunta no és obligatòria.">Responda lo que sepa; ninguna pregunta es obligatoria.</p>
+      <div class="grid" id="caseQuestions"></div>
+      <div class="grid" style="margin-top:14px">
+        <div class="field full">
+          <label data-es="Describa su proyecto con sus palabras <span class='req'>*</span>" data-ca="Descriviu el vostre projecte amb les vostres paraules <span class='req'>*</span>">Describa su proyecto con sus palabras <span class="req">*</span></label>
+          <textarea name="descripcion" id="f_descripcion" data-ph-es="Ej.: «Bar de tapas de unos 90 m² en Súria, con cocina de plancha y freidora y una terraza de 4 mesas en la acera»." data-ph-ca="Ex.: «Bar de tapes d'uns 90 m² a Súria, amb cuina de planxa i fregidora i una terrassa de 4 taules a la vorera»." placeholder="Ej.: «Bar de tapas de unos 90 m² en Súria, con cocina de plancha y freidora y una terraza de 4 mesas en la acera»."></textarea>
+        </div>
+        <div class="field full"><label data-es="Nombre comercial / rótulo <span class='opt'>(si ya lo tiene)</span>" data-ca="Nom comercial / rètol <span class='opt'>(si ja el teniu)</span>">Nombre comercial / rótulo <span class="opt">(si ya lo tiene)</span></label><input type="text" name="nombre_comercial" id="f_rotulo"></div>
+      </div>
+    </div>
+
+    <!-- 5 · EL LOCAL Y LAS OBRAS -->
+    <div class="card hidden" id="localCard">
+      <h2><span class="step-n">5</span> <span data-es="El local" data-ca="El local">El local</span></h2>
+      <div class="grid">
+        <div class="field full"><label data-es="Dirección del local" data-ca="Adreça del local">Dirección del local</label><input type="text" name="direccion_local" id="f_direccion" data-ph-es="Calle, número, población" data-ph-ca="Carrer, número, població" placeholder="Calle, número, población"></div>
+        <div class="field"><label data-es="Referencia catastral <span class='opt'>(figura en el recibo del IBI)</span>" data-ca="Referència cadastral <span class='opt'>(consta al rebut de l'IBI)</span>">Referencia catastral <span class="opt">(figura en el recibo del IBI)</span></label><input type="text" name="ref_catastral" id="f_refcat" placeholder="Ej. 7103401DG4170S0001OT" data-ph-es="Ej. 7103401DG4170S0001OT" data-ph-ca="Ex. 7103401DG4170S0001OT"></div>
+        <div class="field"><label data-es="Superficie aproximada (m²)" data-ca="Superfície aproximada (m²)">Superficie aproximada (m²)</label><input type="text" name="superficie" id="f_superficie"></div>
+        <div class="field"><label data-es="El local es…" data-ca="El local és…">El local es…</label>
+          <select name="regimen" id="f_regimen">
+            <option value="" data-es="—" data-ca="—">—</option>
+            <option value="alquiler" data-es="De alquiler" data-ca="De lloguer">De alquiler</option>
+            <option value="propiedad" data-es="En propiedad" data-ca="En propietat">En propiedad</option>
+            <option value="pendiente" data-es="Pendiente de firmar" data-ca="Pendent de signar">Pendiente de firmar</option>
+          </select>
+        </div>
+        <div class="field"><label data-es="¿Hay viviendas encima o pegadas al local?" data-ca="Hi ha habitatges a sobre o tocant al local?">¿Hay viviendas encima o pegadas al local?</label>
+          <select name="viviendas_cerca" id="f_viviendas">
+            <option value="" data-es="—" data-ca="—">—</option>
+            <option value="encima" data-es="Sí, encima" data-ca="Sí, a sobre">Sí, encima</option>
+            <option value="al_lado" data-es="Sí, al lado" data-ca="Sí, al costat">Sí, al lado</option>
+            <option value="no" data-es="No" data-ca="No">No</option>
+            <option value="no_se" data-es="No lo sé" data-ca="No ho sé">No lo sé</option>
+          </select>
+        </div>
+        <div class="field full"><label data-es="¿Qué había antes en el local?" data-ca="Què hi havia abans al local?">¿Qué había antes en el local?</label><input type="text" name="actividad_anterior" id="f_anterior" data-ph-es="Ej. otro bar, una tienda, estaba vacío… Si fue un bar, es un dato muy útil" data-ph-ca="Ex. un altre bar, una botiga, estava buit… Si va ser un bar, és una dada molt útil" placeholder="Ej. otro bar, una tienda, estaba vacío… Si fue un bar, es un dato muy útil"></div>
+      </div>
+      <div style="margin-top:18px">
+        <label style="display:block;margin-bottom:9px" data-es="¿Habrá que hacer obras?" data-ca="Caldrà fer obres?">¿Habrá que hacer obras?</label>
+        <div class="radios">
+          <label class="radio"><input type="radio" name="obras" value="sin_obras"><span data-es="<b>No, el local ya está a punto</b><small>Por ejemplo, ya era un bar y está equipado.</small>" data-ca="<b>No, el local ja està a punt</b><small>Per exemple, ja era un bar i està equipat.</small>"><b>No, el local ya está a punto</b><small>Por ejemplo, ya era un bar y está equipado.</small></span></label>
+          <label class="radio"><input type="radio" name="obras" value="reforma_ligera"><span data-es="<b>Reforma ligera</b><small>Pintura, mobiliario, barra… sin tocar instalaciones grandes.</small>" data-ca="<b>Reforma lleugera</b><small>Pintura, mobiliari, barra… sense tocar instal·lacions grans.</small>"><b>Reforma ligera</b><small>Pintura, mobiliario, barra… sin tocar instalaciones grandes.</small></span></label>
+          <label class="radio"><input type="radio" name="obras" value="reforma_importante"><span data-es="<b>Reforma importante</b><small>Cocina nueva, lavabos, salida de humos, insonorización…</small>" data-ca="<b>Reforma important</b><small>Cuina nova, lavabos, sortida de fums, insonorització…</small>"><b>Reforma importante</b><small>Cocina nueva, lavabos, salida de humos, insonorización…</small></span></label>
+          <label class="radio"><input type="radio" name="obras" value="no_se"><span data-es="<b>No lo sé todavía</b>" data-ca="<b>Encara no ho sé</b>"><b>No lo sé todavía</b></span></label>
+        </div>
+        <div class="field full hidden" id="obrasDescBox" style="margin-top:12px">
+          <label data-es="Describa brevemente las obras y el presupuesto aproximado (€)" data-ca="Descriviu breument les obres i el pressupost aproximat (€)">Describa brevemente las obras y el presupuesto aproximado (€)</label>
+          <textarea name="obras_desc" id="f_obras_desc" style="min-height:60px"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 · DOCUMENTACIÓN -->
+    <div class="card hidden" id="docCard">
+      <h2><span class="step-n">6</span> <span data-es="Documentación para su proyecto" data-ca="Documentació per al vostre projecte">Documentación para su proyecto</span></h2>
+      <p class="hint" data-es="Marque lo que ya tiene: no hace falta adjuntarlo ahora, ya se lo pediremos al contactarle. Las fotos del local (incluidos patio y cubierta, si puede acceder) son lo más útil para empezar." data-ca="Marqueu el que ja teniu: no cal adjuntar-ho ara, ja us ho demanarem quan us contactem. Les fotos del local (inclosos pati i coberta, si hi podeu accedir) són el més útil per començar.">Marque lo que ya tiene: no hace falta adjuntarlo ahora, ya se lo pediremos al contactarle. Las fotos del local (incluidos patio y cubierta, si puede acceder) son lo más útil para empezar.</p>
+      <div class="radios" id="docList"></div>
+      <div class="field full" style="margin-top:16px">
+        <label data-es="Observaciones <span class='opt'>(cualquier cosa que debamos saber)</span>" data-ca="Observacions <span class='opt'>(qualsevol cosa que hàgim de saber)</span>">Observaciones <span class="opt">(cualquier cosa que debamos saber)</span></label>
+        <textarea name="observaciones" id="f_obs" style="min-height:60px"></textarea>
+      </div>
+    </div>
+
+    <!-- Campos compuestos para el email -->
+    <input type="hidden" name="detalles_negocio" id="f_detalles">
+    <input type="hidden" name="documentos_disponibles" id="f_docs_si">
+    <input type="hidden" name="documentos_pendientes" id="f_docs_no">
+    <textarea name="ficha_epca" id="f_ficha" class="hidden" aria-hidden="true"></textarea>
+
+    <label class="check" style="margin:0 0 12px"><input type="checkbox" id="f_privacidad" name="privacidad">
+      <span data-es="He leído y acepto la <a href='politica-privacidad.html' target='_blank'>política de privacidad</a> <span class='req'>*</span>" data-ca="He llegit i accepto la <a href='politica-privacidad.html' target='_blank'>política de privacitat</a> <span class='req'>*</span>">He leído y acepto la <a href="politica-privacidad.html" target="_blank">política de privacidad</a> <span class="req">*</span></span>
+    </label>
+    <div class="btnrow" style="margin:6px 0 10px">
+      <button type="submit" class="btn btn--primary" id="sendBtn" data-es="Enviar mi proyecto a EPCA →" data-ca="Enviar el meu projecte a EPCA →">Enviar mi proyecto a EPCA →</button>
+      <span class="note" data-es="Le responderemos en 24-48 h laborables." data-ca="Us respondrem en 24-48 h laborables.">Le responderemos en 24-48 h laborables.</span>
+    </div>
+    <div class="err hidden" id="formErr" data-es="⚠️ Revise los campos marcados: nombre, teléfono, tipo de establecimiento y la descripción del proyecto son necesarios, y debe aceptar la política de privacidad." data-ca="⚠️ Reviseu els camps marcats: nom, telèfon, tipus d'establiment i la descripció del projecte són necessaris, i cal acceptar la política de privacitat.">⚠️ Revise los campos marcados: nombre, teléfono, tipo de establecimiento y la descripción del proyecto son necesarios, y debe aceptar la política de privacidad.</div>
+    <div class="err hidden" id="sendErr" data-es="⚠️ No se ha podido enviar el formulario. Inténtelo de nuevo en unos minutos o escríbanos a info@epca.es." data-ca="⚠️ No s'ha pogut enviar el formulari. Torneu-ho a provar d'aquí a uns minuts o escriviu-nos a info@epca.es.">⚠️ No se ha podido enviar el formulario. Inténtelo de nuevo en unos minutos o escríbanos a info@epca.es.</div>
+    <p class="privacy" data-es="🔒 Sus datos se utilizan únicamente para atender su consulta y elaborar, en su caso, la propuesta de encargo (RGPD). No se ceden a terceros." data-ca="🔒 Les vostres dades s'utilitzen únicament per atendre la consulta i elaborar, si escau, la proposta d'encàrrec (RGPD). No se cedeixen a tercers.">🔒 Sus datos se utilizan únicamente para atender su consulta y elaborar, en su caso, la propuesta de encargo (RGPD). No se ceden a terceros.</p>
+  </form>
+
+  <!-- ÉXITO -->
+  <div class="success hidden" id="okCard">
+    <div class="tick">✅</div>
+    <h2 data-es="Hemos recibido su proyecto" data-ca="Hem rebut el vostre projecte">Hemos recibido su proyecto</h2>
+    <p data-es="Gracias. Un ingeniero lo revisará personalmente, comprobará la viabilidad (humos, acústica, aforo) y le llamaremos en 24-48 h laborables con los pasos y el presupuesto. Si necesitamos alguna documentación, se la pediremos entonces." data-ca="Gràcies. Un enginyer el revisarà personalment, comprovarà la viabilitat (fums, acústica, aforament) i us trucarem en 24-48 h laborables amb els passos i el pressupost. Si necessitem alguna documentació, us la demanarem llavors.">Gracias. Un ingeniero lo revisará personalmente, comprobará la viabilidad (humos, acústica, aforo) y le llamaremos en 24-48 h laborables con los pasos y el presupuesto. Si necesitamos alguna documentación, se la pediremos entonces.</p>
+  </div>
+
+  <footer>
+    EPCA · Enginyeria i Projectes Cardener, SL · <a href="mailto:info@epca.es">info@epca.es</a> · <a href="index.html" data-es="epca.es" data-ca="epca.es">epca.es</a>
+  </footer>
+</div>
+
+<!-- Documento fuera de pantalla: se convierte en imagen para adjuntar al correo -->
+<div id="docbox" style="position:absolute;left:-99999px;top:0;width:760px;background:#fff;color:#10243f;font-family:'Segoe UI',Arial,sans-serif;padding:34px 40px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;gap:16px;border-bottom:2px solid #1B2A4A;padding-bottom:12px;margin-bottom:14px">
+    <img src="logo.png" style="width:140px;height:auto" crossorigin="anonymous">
+    <div>
+      <h1 style="color:#1B2A4A;font-size:22px;margin:0">EPCA · Enginyeria i Projectes Cardener, SL</h1>
+      <div style="font-size:12px;color:#555;margin-top:4px" id="docSub"></div>
+    </div>
+  </div>
+  <div id="docBody"></div>
+  <div style="font-size:12px;color:#888;margin-top:18px">Documento generado automáticamente desde epca.es · No sustituye la nota de encargo</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+/* ══════════ Casuísticas: etiqueta, pista, preguntas y documentación ══════════ */
+const CASOS={
+bar_sin_cocina:{es:'Bar o cafetería sin cocina',ca:'Bar o cafeteria sense cuina',
+ hes:'Bebidas, bocadillos fríos, tostadas… Sin salida de humos el trámite se simplifica mucho.',hca:'Begudes, entrepans freds, torrades… Sense sortida de fums el tràmit se simplifica molt.',
+ q:[
+  {t:'text',es:'¿Qué se servirá?',ca:'Què s’hi servirà?'},
+  {t:'text',es:'Aforo aproximado (personas)',ca:'Aforament aproximat (persones)'},
+  {t:'select',es:'¿Tendrá terraza?',ca:'Tindrà terrassa?',ops:[['Sí, en la vía pública','Sí, a la via pública'],['Sí, en espacio privado','Sí, en espai privat'],['No','No'],['Me gustaría pedirla','M’agradaria demanar-la']]},
+  {t:'select',es:'¿Habrá música o TV?',ca:'Hi haurà música o TV?',ops:[['Solo TV o música ambiental','Només TV o música ambiental'],['Música amplificada','Música amplificada'],['No','No']]}],
+ d:[]},
+bar_cocina:{es:'Bar con cocina (plancha, freidora…)',ca:'Bar amb cuina (planxa, fregidora…)',
+ hes:'La cocina obliga a resolver la salida de humos: es lo primero que hay que comprobar en el local.',hca:'La cuina obliga a resoldre la sortida de fums: és el primer que cal comprovar al local.',
+ q:[
+  {t:'text',es:'¿Qué equipos de cocina prevé? (plancha, freidora, horno…)',ca:'Quins equips de cuina preveieu? (planxa, fregidora, forn…)'},
+  {t:'select',es:'¿El local tiene ya salida de humos hasta la cubierta?',ca:'El local ja té sortida de fums fins a la coberta?',ops:[['Sí','Sí'],['No','No'],['No lo sé','No ho sé']]},
+  {t:'text',es:'Aforo aproximado (personas)',ca:'Aforament aproximat (persones)'},
+  {t:'select',es:'¿Tendrá terraza?',ca:'Tindrà terrassa?',ops:[['Sí, en la vía pública','Sí, a la via pública'],['Sí, en espacio privado','Sí, en espai privat'],['No','No'],['Me gustaría pedirla','M’agradaria demanar-la']]}],
+ d:[]},
+restaurante:{es:'Restaurante con cocina completa',ca:'Restaurant amb cuina completa',
+ hes:'Cocina completa: humos, gas, frío industrial, aforo… El proyecto lo cubre todo para que no haya sustos.',hca:'Cuina completa: fums, gas, fred industrial, aforament… El projecte ho cobreix tot perquè no hi hagi ensurts.',
+ q:[
+  {t:'select',es:'¿El local tiene ya salida de humos hasta la cubierta?',ca:'El local ja té sortida de fums fins a la coberta?',ops:[['Sí','Sí'],['No','No'],['No lo sé','No ho sé']]},
+  {t:'text',es:'¿Cuántas plazas de comedor prevé?',ca:'Quantes places de menjador preveieu?'},
+  {t:'select',es:'¿Cocinará con gas o solo con electricidad?',ca:'Cuinareu amb gas o només amb electricitat?',ops:[['Gas','Gas'],['Solo electricidad','Només electricitat'],['No lo sé','No ho sé']]},
+  {t:'select',es:'¿Tendrá terraza?',ca:'Tindrà terrassa?',ops:[['Sí, en la vía pública','Sí, a la via pública'],['Sí, en espacio privado','Sí, en espai privat'],['No','No'],['Me gustaría pedirla','M’agradaria demanar-la']]}],
+ d:[]},
+cafeteria_pasteleria:{es:'Cafetería-pastelería, heladería o panadería con degustación',ca:'Cafeteria-pastisseria, gelateria o fleca amb degustació',
+ hes:'Si hay obrador u horno propio, hablamos de elaboración: cambia la ventilación y el trámite.',hca:'Si hi ha obrador o forn propi, parlem d’elaboració: canvia la ventilació i el tràmit.',
+ q:[
+  {t:'select',es:'¿Habrá obrador u horno propio?',ca:'Hi haurà obrador o forn propi?',ops:[['Sí, obrador completo','Sí, obrador complet'],['Solo hornear producto congelado','Només enfornar producte congelat'],['No, todo viene hecho','No, tot ve fet']]},
+  {t:'select',es:'¿Habrá mesas para consumir en el local?',ca:'Hi haurà taules per consumir al local?',ops:[['Sí','Sí'],['No, solo para llevar','No, només per emportar']]},
+  {t:'text',es:'Aforo aproximado (personas)',ca:'Aforament aproximat (persones)'}],
+ d:[]},
+take_away:{es:'Comida para llevar / take away / dark kitchen',ca:'Menjar per emportar / take away / dark kitchen',
+ hes:'Aunque no haya mesas, si se cocina hay humos; y el reparto a domicilio también cuenta en la licencia.',hca:'Encara que no hi hagi taules, si es cuina hi ha fums; i el repartiment a domicili també compta a la llicència.',
+ q:[
+  {t:'select',es:'¿Se cocinará en el local?',ca:'Es cuinarà al local?',ops:[['Sí, cocina completa','Sí, cuina completa'],['Solo plancha o regeneración','Només planxa o regeneració'],['No, solo venta','No, només venda']]},
+  {t:'select',es:'¿Habrá reparto a domicilio?',ca:'Hi haurà repartiment a domicili?',ops:[['Sí, propio','Sí, propi'],['Sí, con plataformas (Glovo…)','Sí, amb plataformes (Glovo…)'],['No','No']]},
+  {t:'select',es:'¿Se podrá consumir algo en el local?',ca:'Es podrà consumir res al local?',ops:[['Sí, alguna mesa o barra','Sí, alguna taula o barra'],['No','No']]}],
+ d:[]},
+bar_musical:{es:'Bar musical, pub o sala con música',ca:'Bar musical, pub o sala amb música',
+ hes:'La música amplificada y el horario nocturno hacen de la insonorización el corazón del proyecto.',hca:'La música amplificada i l’horari nocturn fan de la insonorització el cor del projecte.',
+ q:[
+  {t:'select',es:'¿Qué tipo de música habrá?',ca:'Quin tipus de música hi haurà?',ops:[['Música amplificada / DJ','Música amplificada / DJ'],['Actuaciones en directo','Actuacions en directe'],['Música ambiental','Música ambiental']]},
+  {t:'text',es:'¿Hasta qué hora prevé abrir?',ca:'Fins a quina hora preveieu obrir?'},
+  {t:'text',es:'Aforo aproximado (personas)',ca:'Aforament aproximat (persones)'},
+  {t:'select',es:'¿El local está ya insonorizado?',ca:'El local ja està insonoritzat?',ops:[['Sí','Sí'],['No','No'],['No lo sé','No ho sé']]}],
+ d:[]},
+otro:{es:'Otro (food truck, chiringuito, alojamiento…)',ca:'Un altre (food truck, guingueta, allotjament…)',
+ hes:'Cuéntenos qué tiene en mente y le orientamos sobre el trámite que aplica.',hca:'Expliqueu-nos què teniu al cap i us orientem sobre el tràmit que aplica.',
+ q:[
+  {t:'textarea',es:'Describa el proyecto con el máximo detalle posible',ca:'Descriviu el projecte amb el màxim detall possible'}],
+ d:[]}
+};
+
+/* Documentación: base común de hostelería + extras según tipo de cliente y situación */
+const DOCS_BASE=[
+ ['Fotos del local: fachada, interior, lavabos y cocina si la hay','Fotos del local: façana, interior, lavabos i cuina si n’hi ha'],
+ ['Fotos del patio y la cubierta, si puede acceder (para la salida de humos)','Fotos del pati i la coberta, si hi podeu accedir (per a la sortida de fums)'],
+ ['Contrato de alquiler o escritura del local','Contracte de lloguer o escriptura del local'],
+ ['Último recibo del IBI del local','Últim rebut de l’IBI del local'],
+ ['Planos del local, si dispone de ellos','Plànols del local, si en teniu'],
+ ['Licencia o documentación de la actividad anterior, si fue un bar o restaurante','Llicència o documentació de l’activitat anterior, si va ser un bar o restaurant']];
+const DOCS_JUR=[['Escritura de constitución de la sociedad y tarjeta del CIF','Escriptura de constitució de la societat i targeta del CIF'],['Escritura de poderes del representante','Escriptura de poders del representant']];
+const DOCS_TRASPASO=[['Licencia de actividad del titular actual','Llicència d’activitat del titular actual'],['Contrato de traspaso, si ya está firmado','Contracte de traspàs, si ja està signat']];
+
+/* ══════════ Idioma (mismo patrón data-es/data-ca del resto de la web) ══════════ */
+let lang='es';
+function applyLang(l){
+  lang=l;
+  document.querySelectorAll('[data-es]').forEach(el=>{
+    const v=el.dataset[l];
+    if(v!==undefined) el.innerHTML=v;
+  });
+  document.querySelectorAll('[data-ph-es]').forEach(el=>{
+    el.placeholder=el.dataset[l==='es'?'phEs':'phCa']||'';
+  });
+  document.getElementById('langToggle').textContent=l==='es'?'CA':'ES';
+  document.documentElement.lang=l;
+  document.getElementById('f_idioma').value=l;
+  const tipo=document.getElementById('f_tipo').value;
+  document.getElementById('tipoHint').textContent=tipo?('▸ '+CASOS[tipo][l==='es'?'hes':'hca']):'';
+  syncTipoCliente();
+}
+document.getElementById('langToggle').addEventListener('click',()=>applyLang(lang==='es'?'ca':'es'));
+
+/* ══════════ Persona física / jurídica ══════════ */
+function syncTipoCliente(){
+  const j=document.querySelector('input[name=tipo_cliente]:checked').value==='juridica';
+  document.getElementById('repBlock').classList.toggle('hidden',!j);
+  const nl=document.getElementById('nomLabel'), fl=document.getElementById('nifLabel');
+  if(j){
+    nl.dataset.es="Razón social de la empresa <span class='req'>*</span>";nl.dataset.ca="Raó social de l'empresa <span class='req'>*</span>";
+    fl.dataset.es="NIF (CIF) <span class='opt'>(para el encargo)</span>";fl.dataset.ca="NIF (CIF) <span class='opt'>(per a l'encàrrec)</span>";
+  }else{
+    nl.dataset.es="Nombre y apellidos <span class='req'>*</span>";nl.dataset.ca="Nom i cognoms <span class='req'>*</span>";
+    fl.dataset.es="DNI / NIE <span class='opt'>(para el encargo)</span>";fl.dataset.ca="DNI / NIE <span class='opt'>(per a l'encàrrec)</span>";
+  }
+  nl.innerHTML=nl.dataset[lang];fl.innerHTML=fl.dataset[lang];
+}
+document.querySelectorAll('input[name=tipo_cliente]').forEach(r=>r.addEventListener('change',()=>{syncTipoCliente();renderDocs();}));
+
+/* ══════════ Poblar selector de establecimientos ══════════ */
+const tipoSel=document.getElementById('f_tipo');
+Object.entries(CASOS).forEach(([k,c])=>{
+  const o=document.createElement('option');
+  o.value=k;o.dataset.es=c.es;o.dataset.ca=c.ca;o.textContent=c.es;
+  tipoSel.appendChild(o);
+});
+
+/* ══════════ Situación: problema muestra plazo ══════════ */
+document.querySelectorAll('input[name=situacion]').forEach(r=>r.addEventListener('change',()=>{
+  const v=r.form.situacion.value;
+  document.getElementById('reqBox').classList.toggle('hidden',v!=='abierto_problema');
+  document.getElementById('aperturaBox').classList.toggle('hidden',v==='abierto_problema');
+  renderDocs();
+}));
+
+/* ══════════ Obras: descripción solo si hay reforma ══════════ */
+document.querySelectorAll('input[name=obras]').forEach(r=>r.addEventListener('change',()=>{
+  const v=r.form.obras.value;
+  document.getElementById('obrasDescBox').classList.toggle('hidden',v!=='reforma_ligera'&&v!=='reforma_importante');
+}));
+
+/* ══════════ Render dinámico de preguntas y checklist ══════════ */
+function renderDocs(){
+  const k=tipoSel.value;
+  const dBox=document.getElementById('docList');
+  dBox.innerHTML='';
+  if(!k) return;
+  const j=document.querySelector('input[name=tipo_cliente]:checked').value==='juridica';
+  const traspaso=document.querySelector('input[name=situacion]:checked').value==='traspaso';
+  let docs=DOCS_BASE.concat(j?DOCS_JUR:[],traspaso?DOCS_TRASPASO:[],CASOS[k].d);
+  docs.forEach(doc=>{
+    dBox.insertAdjacentHTML('beforeend','<label class="check"><input type="checkbox" class="cd" data-des="'+doc[0]+'" data-dca="'+doc[1]+'"><span data-es="'+doc[0]+'" data-ca="'+doc[1]+'">'+doc[0]+'</span></label>');
+  });
+}
+function renderCaso(k){
+  const c=CASOS[k];
+  const qBox=document.getElementById('caseQuestions');
+  qBox.innerHTML='';
+  if(!c){['detCard','localCard','docCard'].forEach(id=>document.getElementById(id).classList.add('hidden'));return;}
+  c.q.forEach(q=>{
+    const full=q.t!=='select'?' full':'';
+    let inner='';
+    if(q.t==='select'){
+      inner='<select class="cq" data-qes="'+q.es+'" data-qca="'+q.ca+'"><option value="" data-es="—" data-ca="—">—</option>'+
+        q.ops.map(op=>'<option value="'+op[0]+'" data-es="'+op[0]+'" data-ca="'+op[1]+'">'+op[0]+'</option>').join('')+'</select>';
+    }else if(q.t==='textarea'){
+      inner='<textarea class="cq" data-qes="'+q.es+'" data-qca="'+q.ca+'"></textarea>';
+    }else{
+      inner='<input type="text" class="cq" data-qes="'+q.es+'" data-qca="'+q.ca+'">';
+    }
+    qBox.insertAdjacentHTML('beforeend','<div class="field'+full+'"><label data-es="'+q.es+'" data-ca="'+q.ca+'">'+q.es+'</label>'+inner+'</div>');
+  });
+  renderDocs();
+  ['detCard','localCard','docCard'].forEach(id=>document.getElementById(id).classList.remove('hidden'));
+  applyLang(lang);
+}
+tipoSel.addEventListener('change',()=>renderCaso(tipoSel.value));
+
+/* ══════════ Composición y envío (Netlify Forms, AJAX) ══════════ */
+const form=document.getElementById('hostForm');
+const V=id=>document.getElementById(id).value.trim();
+
+function componer(){
+  const det=[];
+  document.querySelectorAll('.cq').forEach(el=>{
+    const v=el.value.trim();
+    if(v) det.push(el.dataset.qes+': '+v);
+  });
+  document.getElementById('f_detalles').value=det.join('\n')||'—';
+  const si=[],no=[];
+  document.querySelectorAll('.cd').forEach(el=>{(el.checked?si:no).push(el.dataset.des);});
+  document.getElementById('f_docs_si').value=si.join(' · ')||'—';
+  document.getElementById('f_docs_no').value=no.join(' · ')||'—';
+  const tipoTxt=CASOS[tipoSel.value]?CASOS[tipoSel.value].es:'proyecto';
+  document.getElementById('f_subject').value='🍽️ Hostelería · '+tipoTxt+' · '+V('f_nombre');
+  const F=[];
+  F.push('== FICHA EPCA · HOSTELERIA v1 ==');
+  F.push('FECHA_ENVIO: '+new Date().toISOString().slice(0,16).replace('T',' '));
+  F.push('IDIOMA: '+lang);
+  F.push('TIPO_CLIENTE: '+form.tipo_cliente.value);
+  F.push('NOMBRE: '+V('f_nombre'));
+  F.push('NIF: '+V('f_nif'));
+  F.push('TELEFONO: '+V('f_telefono'));
+  F.push('EMAIL: '+V('f_email'));
+  F.push('POBLACION: '+V('f_poblacion'));
+  F.push('REPRESENTANTE: '+[V('f_rep_nombre'),V('f_rep_nif'),V('f_rep_cargo')].filter(Boolean).join(' · '));
+  F.push('SITUACION: '+form.situacion.value);
+  F.push('FECHA_APERTURA: '+V('f_apertura'));
+  F.push('PLAZO: '+V('f_plazo'));
+  F.push('PROBLEMA: '+V('f_reqdesc').replace(/\n/g,' / '));
+  F.push('TIPO_ESTABLECIMIENTO: '+tipoSel.value);
+  F.push('DESCRIPCION: '+V('f_descripcion').replace(/\n/g,' / '));
+  F.push('NOMBRE_COMERCIAL: '+V('f_rotulo'));
+  F.push('DIRECCION_LOCAL: '+V('f_direccion'));
+  F.push('REF_CATASTRAL: '+V('f_refcat'));
+  F.push('SUPERFICIE: '+V('f_superficie'));
+  F.push('REGIMEN: '+V('f_regimen'));
+  F.push('VIVIENDAS_CERCA: '+V('f_viviendas'));
+  F.push('ACTIVIDAD_ANTERIOR: '+V('f_anterior'));
+  F.push('OBRAS: '+((form.obras&&form.obras.value)||''));
+  F.push('OBRAS_DESC: '+V('f_obras_desc').replace(/\n/g,' / '));
+  F.push('DETALLES:');
+  det.forEach(d=>F.push('  - '+d.replace(/\n/g,' / ')));
+  F.push('DOCS_DISPONIBLES: '+(si.join(' | ')||'-'));
+  F.push('DOCS_PENDIENTES: '+(no.join(' | ')||'-'));
+  F.push('OBSERVACIONES: '+V('f_obs').replace(/\n/g,' / '));
+  F.push('== FIN FICHA ==');
+  document.getElementById('f_ficha').value=F.join('\n');
+}
+
+/* ══════════ Documento con membrete (imagen) para adjuntar al correo ══════════ */
+const IMGBB_KEY='c7ff8c08de957592ca169191d6bbe4cd';
+function escDoc(s){ return (''+s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+async function renderDocImage(fichaText,titulo){
+  const box=document.getElementById('docbox');
+  document.getElementById('docSub').textContent=titulo+' — '+new Date().toLocaleString('es-ES');
+  const lines=fichaText.split('\n').filter(l=>l&&!l.startsWith('=='));
+  let html='<table style="width:100%;border-collapse:collapse">';
+  lines.forEach(line=>{
+    if(line.startsWith('  - ')){
+      html+='<tr><td colspan="2" style="padding:3px 6px 3px 16px;font-size:13px;color:#333">'+escDoc(line.trim())+'</td></tr>';
+      return;
+    }
+    const i=line.indexOf(':');
+    if(i>0){
+      const k=line.slice(0,i).trim(),v=line.slice(i+1).trim();
+      html+='<tr><td style="padding:5px 6px;border-bottom:1px solid #e6eaf0;font-size:12px;color:#666;font-weight:600;width:34%;vertical-align:top">'+escDoc(k)+'</td><td style="padding:5px 6px;border-bottom:1px solid #e6eaf0;font-size:13.5px;white-space:pre-wrap">'+escDoc(v||'—')+'</td></tr>';
+    }
+  });
+  html+='</table>';
+  document.getElementById('docBody').innerHTML=html;
+  const canvas=await html2canvas(box,{scale:2,backgroundColor:'#ffffff',useCORS:true});
+  return canvas.toDataURL('image/png');
+}
+async function uploadImage(dataUrl){
+  const fd=new FormData();fd.append('image',dataUrl.split(',')[1]);
+  const r=await fetch('https://api.imgbb.com/1/upload?key='+IMGBB_KEY,{method:'POST',body:fd});
+  const j=await r.json();
+  return (j&&j.data&&j.data.url)?j.data.url:null;
+}
+
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const err=document.getElementById('formErr');
+  if(!V('f_nombre')||!V('f_telefono')||!tipoSel.value||!V('f_descripcion')||!document.getElementById('f_privacidad').checked){
+    err.classList.remove('hidden');err.scrollIntoView({behavior:'smooth',block:'center'});return;
+  }
+  err.classList.add('hidden');
+  componer();
+  const btn=document.getElementById('sendBtn');btn.disabled=true;
+  const btnTxt=btn.textContent;
+  btn.textContent=lang==='es'?'Preparando documento…':'Preparant document…';
+  let docUrl=null;
+  try{
+    const png=await renderDocImage(V('f_ficha'),'Proyecto de hostelería · Ficha del caso');
+    docUrl=await uploadImage(png);
+  }catch(err2){/* si falla, la ficha en texto va igualmente en el correo */}
+  btn.textContent=lang==='es'?'Enviando…':'Enviant…';
+  const payload={
+    access_key:'fa012fe6-b65d-4ef1-ad19-def51c1e530f',
+    subject:'Nuevo proyecto de hostelería · '+V('f_nombre'),
+    from_name:'Formulario web EPCA · Hostelería',
+    replyto:V('f_email')||'',
+    botcheck:document.querySelector('[name="bot-field"]').value,
+    'Nombre':V('f_nombre'),
+    'Teléfono':V('f_telefono'),
+    'Email':V('f_email')||'-',
+    'Documento (ver / descargar)':docUrl||'No se pudo generar automáticamente — ver la ficha completa más abajo',
+    'Ficha completa':V('f_ficha')
+  };
+  const done=()=>{
+    form.classList.add('hidden');
+    document.querySelector('.intro').classList.add('hidden');
+    const ok=document.getElementById('okCard');
+    ok.classList.remove('hidden');
+    ok.scrollIntoView({behavior:'smooth'});
+  };
+  const fail=()=>{btn.disabled=false;btn.textContent=btnTxt;const se=document.getElementById('sendErr');se.classList.remove('hidden');se.scrollIntoView({behavior:'smooth',block:'center'});};
+  document.getElementById('sendErr').classList.add('hidden');
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(payload)}).then(r=>r.json()).then(d=>{(d&&d.success)?done():fail();}).catch(fail);
+});
+</script>
+</body>
+</html>

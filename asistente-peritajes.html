@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cuéntenos su caso de peritaje judicial en 5 minutos. Le indicamos qué documentación necesitamos y preparamos su expediente antes de la primera llamada. EPCA · Ingeniería.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://epca.es/asistente-peritajes.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Cuéntenos su caso de peritaje judicial · EPCA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1B2A4A; --navy2:#26385c; --gold:#C9962A; --gold-light:#E8B84B;
+  --white:#FFFFFF; --gray-50:#F8F9FB; --gray-100:#F0F2F6;
+  --gray-300:#D7DCE5; --gray-400:#9BA3B2; --gray-600:#4B5563; --gray-900:#111827;
+  --green:#1f7a4d; --green-bg:#e7f3ec; --amber:#9a6b00; --amber-bg:#fdf3da;
+  --blue:#1d4e89; --blue-bg:#e8f0fb;
+  --radius:10px; --shadow:0 4px 24px rgba(27,42,74,.10);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--gray-900);background:var(--gray-50);line-height:1.6}
+.wrap{max-width:840px;margin:0 auto;padding:0 20px}
+header.top{background:var(--navy);color:#fff;padding:26px 0}
+header.top .bar{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+header.top h1{font-size:1.45rem;font-weight:700;line-height:1.3}
+header.top p{color:#c7d0e0;font-size:.92rem;margin-top:6px;max-width:600px}
+header.top a.home{color:#c7d0e0;font-size:.85rem;text-decoration:none}
+header.top a.home:hover{color:#fff}
+.lang-toggle{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;font-family:inherit;font-weight:600;font-size:.8rem;padding:5px 12px;border-radius:6px;cursor:pointer;flex:0 0 auto}
+.lang-toggle:hover{border-color:#fff}
+.badge{display:inline-block;background:var(--gold);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:6px;margin-bottom:10px}
+.intro{background:var(--blue-bg);border:1px solid #abc8ec;color:#16335a;font-size:.88rem;padding:14px 16px;border-radius:var(--radius);margin:18px 0}
+.card{background:#fff;border:1px solid var(--gray-100);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 26px;margin:18px 0}
+.card h2{font-size:1.1rem;color:var(--navy);margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.step-n{background:var(--navy);color:#fff;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;flex:0 0 auto}
+.card .hint{color:var(--gray-600);font-size:.85rem;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+label{font-size:.83rem;font-weight:600}
+label .opt{font-weight:400;color:var(--gray-400)}
+label .req{color:var(--gold);font-weight:700}
+input[type=text],input[type=tel],input[type=email],select,textarea{font-family:inherit;font-size:.95rem;padding:10px 12px;border:1px solid var(--gray-300);border-radius:8px;background:#fff;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,150,42,.15)}
+textarea{min-height:90px;resize:vertical}
+.radios{display:flex;flex-direction:column;gap:9px}
+.radio,.check{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;font-weight:400;cursor:pointer;padding:11px 13px;border:1px solid var(--gray-100);border-radius:8px;background:var(--gray-50)}
+.radio:hover,.check:hover{border-color:var(--gray-300)}
+.radio input,.check input{margin-top:4px;flex:0 0 auto;accent-color:var(--gold)}
+.radio span small,.check span small{display:block;color:var(--gray-600);font-size:.8rem}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.btn{font-family:inherit;font-weight:600;font-size:.98rem;padding:13px 28px;border-radius:var(--radius);border:2px solid transparent;cursor:pointer;transition:.18s;text-decoration:none;display:inline-block;text-align:center}
+.btn--primary{background:var(--gold);color:#fff;border-color:var(--gold)}
+.btn--primary:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.btn:disabled{opacity:.55;cursor:wait}
+.hidden{display:none!important}
+.err{color:#9b2226;background:#fbe7e7;border:1px solid #e9b3b3;border-radius:8px;padding:10px 13px;font-size:.87rem;margin-top:10px}
+.note{font-size:.8rem;color:var(--gray-600)}
+.success{background:var(--green-bg);border:1px solid #9fd3b4;border-radius:var(--radius);padding:26px;text-align:center}
+.success .tick{font-size:2.4rem}
+.success h2{color:var(--green);font-size:1.25rem;margin:6px 0 10px;justify-content:center;display:flex}
+.success ol{text-align:left;max-width:520px;margin:14px auto;padding-left:22px;font-size:.92rem;display:flex;flex-direction:column;gap:8px}
+footer{color:var(--gray-400);font-size:.78rem;text-align:center;padding:24px 0 40px}
+footer a{color:var(--gray-600)}
+.privacy{font-size:.76rem;color:var(--gray-400);margin-top:14px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="bar">
+      <div>
+        <div class="badge">EPCA · Enginyeria i Projectes Cardener</div>
+        <h1 data-es="Cuéntenos su caso de peritaje judicial" data-ca="Expliqueu-nos el vostre cas de peritatge judicial">Cuéntenos su caso de peritaje judicial</h1>
+        <p data-es="5 minutos. Al terminar sabrá exactamente qué documentación necesitamos y nosotros podremos estudiar su caso antes de llamarle." data-ca="5 minuts. En acabar sabreu exactament quina documentació necessitem i nosaltres podrem estudiar el vostre cas abans de trucar-vos.">5 minutos. Al terminar sabrá exactamente qué documentación necesitamos y nosotros podremos estudiar su caso antes de llamarle.</p>
+        <p style="margin-top:8px"><a class="home" href="peritajes.html" data-es="← Volver a Peritajes judiciales" data-ca="← Tornar a Peritatges judicials">← Volver a Peritajes judiciales</a></p>
+      </div>
+      <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">CA</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro" data-es="💬 No necesita conocimientos técnicos ni tener toda la información a mano: responda lo que sepa y deje en blanco lo demás. Un ingeniero revisará personalmente su caso." data-ca="💬 No calen coneixements tècnics ni tenir tota la informació a mà: responeu el que sapigueu i deixeu en blanc la resta. Un enginyer revisarà personalment el vostre cas.">💬 No necesita conocimientos técnicos ni tener toda la información a mano: responda lo que sepa y deje en blanco lo demás. Un ingeniero revisará personalmente su caso.</div>
+
+  <form id="periForm" name="peritaje-judicial" method="POST">
+    <input type="hidden" name="subject" id="f_subject" value="Peritaje judicial · nueva ficha">
+    <input type="hidden" name="idioma" id="f_idioma" value="es">
+    <p class="hidden"><label>No rellenar: <input name="bot-field"></label></p>
+
+    <!-- 1 · CONTACTO -->
+    <div class="card">
+      <h2><span class="step-n">1</span> <span data-es="Sus datos de contacto" data-ca="Les vostres dades de contacte">Sus datos de contacto</span></h2>
+      <div class="grid">
+        <div class="field full"><label data-es="Nombre y apellidos <span class='req'>*</span>" data-ca="Nom i cognoms <span class='req'>*</span>">Nombre y apellidos <span class="req">*</span></label><input type="text" name="nombre" id="f_nombre" required></div>
+        <div class="field"><label data-es="Teléfono <span class='req'>*</span>" data-ca="Telèfon <span class='req'>*</span>">Teléfono <span class="req">*</span></label><input type="tel" name="telefono" id="f_telefono" required></div>
+        <div class="field"><label data-es="Correo electrónico" data-ca="Correu electrònic">Correo electrónico</label><input type="email" name="email" id="f_email"></div>
+        <div class="field"><label data-es="DNI / NIF <span class='opt'>(para la nota de encargo)</span>" data-ca="DNI / NIF <span class='opt'>(per a la nota d'encàrrec)</span>">DNI / NIF <span class="opt">(para la nota de encargo)</span></label><input type="text" name="dni" id="f_dni"></div>
+        <div class="field"><label data-es="Población" data-ca="Població">Población</label><input type="text" name="poblacion" id="f_poblacion"></div>
+      </div>
+    </div>
+
+    <!-- 2 · PROCEDIMIENTO -->
+    <div class="card">
+      <h2><span class="step-n">2</span> <span data-es="¿Su caso está en un juzgado?" data-ca="El vostre cas és en un jutjat?">¿Su caso está en un juzgado?</span></h2>
+      <p class="hint" data-es="Los plazos judiciales mandan sobre todo lo demás: si hay una fecha límite, necesitamos saberla desde el primer día." data-ca="Els terminis judicials manen sobre tota la resta: si hi ha una data límit, l'hem de saber des del primer dia.">Los plazos judiciales mandan sobre todo lo demás: si hay una fecha límite, necesitamos saberla desde el primer día.</p>
+      <div class="radios">
+        <label class="radio"><input type="radio" name="procedimiento" value="sin_procedimiento" checked><span data-es="<b>No, todavía no</b><small>Quiero un informe técnico, de momento sin juicio de por medio.</small>" data-ca="<b>No, encara no</b><small>Vull un informe tècnic, de moment sense judici pel mig.</small>"><b>No, todavía no</b><small>Quiero un informe técnico, de momento sin juicio de por medio.</small></span></label>
+        <label class="radio"><input type="radio" name="procedimiento" value="en_preparacion"><span data-es="<b>Se está preparando una demanda</b><small>Mi abogado necesita el informe para presentarla.</small>" data-ca="<b>S'està preparant una demanda</b><small>El meu advocat necessita l'informe per presentar-la.</small>"><b>Se está preparando una demanda</b><small>Mi abogado necesita el informe para presentarla.</small></span></label>
+        <label class="radio"><input type="radio" name="procedimiento" value="en_curso"><span data-es="<b>Sí, hay un procedimiento en curso</b><small>Ya hay demanda presentada o juicio señalado.</small>" data-ca="<b>Sí, hi ha un procediment en curs</b><small>Ja hi ha demanda presentada o judici assenyalat.</small>"><b>Sí, hay un procedimiento en curso</b><small>Ya hay demanda presentada o juicio señalado.</small></span></label>
+        <label class="radio"><input type="radio" name="procedimiento" value="soy_abogado"><span data-es="<b>Soy abogado/a o procurador/a</b><small>Busco perito para un asunto de mi despacho.</small>" data-ca="<b>Sóc advocat/da o procurador/a</b><small>Busco perit per a un assumpte del meu despatx.</small>"><b>Soy abogado/a o procurador/a</b><small>Busco perito para un asunto de mi despacho.</small></span></label>
+      </div>
+      <div class="grid hidden" id="judBox" style="margin-top:16px">
+        <div class="field"><label data-es="Juzgado <span class='opt'>(si lo conoce)</span>" data-ca="Jutjat <span class='opt'>(si el coneixeu)</span>">Juzgado <span class="opt">(si lo conoce)</span></label><input type="text" name="juzgado" id="f_juzgado" data-ph-es="Ej. Juzgado de 1ª Instancia nº 2 de Manresa" data-ph-ca="Ex. Jutjat de 1a Instància núm. 2 de Manresa" placeholder="Ej. Juzgado de 1ª Instancia nº 2 de Manresa"></div>
+        <div class="field"><label data-es="Nº de procedimiento / autos" data-ca="Núm. de procediment / actuacions">Nº de procedimiento / autos</label><input type="text" name="autos" id="f_autos"></div>
+        <div class="field"><label data-es="Fecha límite o plazo <span class='opt'>(muy importante)</span>" data-ca="Data límit o termini <span class='opt'>(molt important)</span>">Fecha límite o plazo <span class="opt">(muy importante)</span></label><input type="text" name="plazo" id="f_plazo" data-ph-es="Ej. 15 días para aportar el informe" data-ph-ca="Ex. 15 dies per aportar l'informe" placeholder="Ej. 15 días para aportar el informe"></div>
+        <div class="field"><label data-es="Abogado/a <span class='opt'>(nombre y teléfono)</span>" data-ca="Advocat/da <span class='opt'>(nom i telèfon)</span>">Abogado/a <span class="opt">(nombre y teléfono)</span></label><input type="text" name="abogado" id="f_abogado"></div>
+        <div class="field full"><label data-es="Procurador/a <span class='opt'>(si lo hay)</span>" data-ca="Procurador/a <span class='opt'>(si n'hi ha)</span>">Procurador/a <span class="opt">(si lo hay)</span></label><input type="text" name="procurador" id="f_procurador"></div>
+      </div>
+    </div>
+
+    <!-- 3 · TIPO DE CASO -->
+    <div class="card">
+      <h2><span class="step-n">3</span> <span data-es="¿Cuál de estas situaciones describe mejor su caso?" data-ca="Quina d'aquestes situacions descriu millor el vostre cas?">¿Cuál de estas situaciones describe mejor su caso?</span></h2>
+      <div class="field">
+        <select name="tipo_caso" id="f_tipo" required>
+          <option value="" data-es="— Seleccione —" data-ca="— Seleccioneu —">— Seleccione —</option>
+        </select>
+      </div>
+      <p class="hint" id="tipoHint" style="margin-top:10px;margin-bottom:0"></p>
+    </div>
+
+    <!-- 4 · DETALLES (dinámico) -->
+    <div class="card hidden" id="detCard">
+      <h2><span class="step-n">4</span> <span data-es="Detalles del caso" data-ca="Detalls del cas">Detalles del caso</span></h2>
+      <p class="hint" data-es="Responda lo que sepa; ninguna pregunta es obligatoria." data-ca="Responeu el que sapigueu; cap pregunta no és obligatòria.">Responda lo que sepa; ninguna pregunta es obligatoria.</p>
+      <div class="grid" id="caseQuestions"></div>
+      <div class="field full" style="margin-top:14px">
+        <label data-es="¿Qué necesita que el informe demuestre o valore? <span class='req'>*</span>" data-ca="Què necessiteu que l'informe demostri o valori? <span class='req'>*</span>">¿Qué necesita que el informe demuestre o valore? <span class="req">*</span></label>
+        <textarea name="objeto" id="f_objeto" data-ph-es="Con sus palabras: qué ha pasado y qué quiere conseguir. Ej.: «Demostrar que las humedades de mi comedor vienen de la terraza del vecino y cuantificar la reparación»." data-ph-ca="Amb les vostres paraules: què ha passat i què voleu aconseguir. Ex.: «Demostrar que les humitats del meu menjador vénen de la terrassa del veí i quantificar la reparació»." placeholder="Con sus palabras: qué ha pasado y qué quiere conseguir. Ej.: «Demostrar que las humedades de mi comedor vienen de la terraza del vecino y cuantificar la reparación»."></textarea>
+      </div>
+    </div>
+
+    <!-- 5 · UBICACIÓN / OBJETO (se adapta a la casuística) -->
+    <div class="card hidden" id="inmCard">
+      <h2><span class="step-n">5</span> <span id="inmTitle" data-es="El inmueble u objeto del caso" data-ca="L'immoble o objecte del cas">El inmueble u objeto del caso</span></h2>
+      <div class="grid">
+        <div class="field full" id="dirField"><label id="dirLabel" data-es="Dirección completa" data-ca="Adreça completa">Dirección completa</label><input type="text" name="direccion" id="f_direccion" data-ph-es="Calle, número, piso, población" data-ph-ca="Carrer, número, pis, població" placeholder="Calle, número, piso, población"></div>
+        <div class="field" id="refcatField"><label data-es="Referencia catastral <span class='opt'>(figura en el recibo del IBI)</span>" data-ca="Referència cadastral <span class='opt'>(consta al rebut de l'IBI)</span>">Referencia catastral <span class="opt">(figura en el recibo del IBI)</span></label><input type="text" name="ref_catastral" id="f_refcat" placeholder="Ej. 7103401DG4170S0001OT" data-ph-es="Ej. 7103401DG4170S0001OT" data-ph-ca="Ex. 7103401DG4170S0001OT"></div>
+        <div class="field"><label data-es="¿Existe ya un informe de la otra parte?" data-ca="Ja existeix un informe de l'altra part?">¿Existe ya un informe de la otra parte?</label>
+          <select name="informe_contrario" id="f_contrario">
+            <option value="no" data-es="No" data-ca="No">No</option>
+            <option value="si" data-es="Sí" data-ca="Sí">Sí</option>
+            <option value="no_se" data-es="No lo sé" data-ca="No ho sé">No lo sé</option>
+          </select>
+        </div>
+      </div>
+      <p class="hint hidden" id="contraHint" style="margin-top:10px;margin-bottom:0" data-es="📄 Si existe un informe de la otra parte, es una de las piezas más importantes: inclúyalo en la documentación que nos envíe." data-ca="📄 Si existeix un informe de l'altra part, és una de les peces més importants: incloeu-lo a la documentació que ens envieu.">📄 Si existe un informe de la otra parte, es una de las piezas más importantes: inclúyalo en la documentación que nos envíe.</p>
+    </div>
+
+    <!-- 6 · DOCUMENTACIÓN -->
+    <div class="card hidden" id="docCard">
+      <h2><span class="step-n">6</span> <span data-es="Documentación para su caso" data-ca="Documentació per al vostre cas">Documentación para su caso</span></h2>
+      <p class="hint" data-es="Esta es la documentación que suele necesitarse en casos como el suyo. Marque lo que tiene: no hace falta adjuntarla ahora, ya se la pediremos al contactarle." data-ca="Aquesta és la documentació que sol necessitar-se en casos com el vostre. Marqueu el que teniu: no cal adjuntar-la ara, ja us la demanarem quan us contactem.">Esta es la documentación que suele necesitarse en casos como el suyo. Marque lo que tiene: no hace falta adjuntarla ahora, ya se la pediremos al contactarle.</p>
+      <div class="radios" id="docList"></div>
+    </div>
+
+    <!-- Campos compuestos para el email -->
+    <input type="hidden" name="detalles_caso" id="f_detalles">
+    <input type="hidden" name="documentos_disponibles" id="f_docs_si">
+    <input type="hidden" name="documentos_pendientes" id="f_docs_no">
+    <textarea name="ficha_epca" id="f_ficha" class="hidden" aria-hidden="true"></textarea>
+
+    <label class="check" style="margin:0 0 12px"><input type="checkbox" id="f_privacidad" name="privacidad">
+      <span data-es="He leído y acepto la <a href='politica-privacidad.html' target='_blank'>política de privacidad</a> <span class='req'>*</span>" data-ca="He llegit i accepto la <a href='politica-privacidad.html' target='_blank'>política de privacitat</a> <span class='req'>*</span>">He leído y acepto la <a href="politica-privacidad.html" target="_blank">política de privacidad</a> <span class="req">*</span></span>
+    </label>
+    <div class="btnrow" style="margin:6px 0 10px">
+      <button type="submit" class="btn btn--primary" id="sendBtn" data-es="Enviar mi caso a EPCA →" data-ca="Enviar el meu cas a EPCA →">Enviar mi caso a EPCA →</button>
+      <span class="note" data-es="Le responderemos en 24-48 h laborables." data-ca="Us respondrem en 24-48 h laborables.">Le responderemos en 24-48 h laborables.</span>
+    </div>
+    <div class="err hidden" id="formErr" data-es="⚠️ Revise los campos marcados: nombre, teléfono, tipo de caso y qué necesita demostrar son necesarios, y debe aceptar la política de privacidad." data-ca="⚠️ Reviseu els camps marcats: nom, telèfon, tipus de cas i què cal demostrar són necessaris, i cal acceptar la política de privacitat.">⚠️ Revise los campos marcados: nombre, teléfono, tipo de caso y qué necesita demostrar son necesarios, y debe aceptar la política de privacidad.</div>
+    <div class="err hidden" id="sendErr" data-es="⚠️ No se ha podido enviar el formulario. Inténtelo de nuevo en unos minutos o escríbanos a info@epca.es." data-ca="⚠️ No s'ha pogut enviar el formulari. Torneu-ho a provar d'aquí a uns minuts o escriviu-nos a info@epca.es.">⚠️ No se ha podido enviar el formulario. Inténtelo de nuevo en unos minutos o escríbanos a info@epca.es.</div>
+    <p class="privacy" data-es="🔒 Sus datos se utilizan únicamente para atender su consulta y elaborar, en su caso, la propuesta de encargo (RGPD). No se ceden a terceros." data-ca="🔒 Les vostres dades s'utilitzen únicament per atendre la consulta i elaborar, si escau, la proposta d'encàrrec (RGPD). No se cedeixen a tercers.">🔒 Sus datos se utilizan únicamente para atender su consulta y elaborar, en su caso, la propuesta de encargo (RGPD). No se ceden a terceros.</p>
+  </form>
+
+  <!-- ÉXITO -->
+  <div class="success hidden" id="okCard">
+    <div class="tick">✅</div>
+    <h2 data-es="Hemos recibido su caso" data-ca="Hem rebut el vostre cas">Hemos recibido su caso</h2>
+    <p data-es="Gracias. Un ingeniero lo revisará personalmente y le llamaremos en 24-48 h laborables para concretar visita, plazos y honorarios. Si necesitamos alguna documentación, se la pediremos entonces." data-ca="Gràcies. Un enginyer el revisarà personalment i us trucarem en 24-48 h laborables per concretar visita, terminis i honoraris. Si necessitem alguna documentació, us la demanarem llavors.">Gracias. Un ingeniero lo revisará personalmente y le llamaremos en 24-48 h laborables para concretar visita, plazos y honorarios. Si necesitamos alguna documentación, se la pediremos entonces.</p>
+  </div>
+
+  <footer>
+    EPCA · Enginyeria i Projectes Cardener, SL · <a href="mailto:info@epca.es">info@epca.es</a> · <a href="index.html" data-es="epca.es" data-ca="epca.es">epca.es</a>
+  </footer>
+</div>
+
+<!-- Documento fuera de pantalla: se convierte en imagen para adjuntar al correo -->
+<div id="docbox" style="position:absolute;left:-99999px;top:0;width:760px;background:#fff;color:#10243f;font-family:'Segoe UI',Arial,sans-serif;padding:34px 40px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;gap:16px;border-bottom:2px solid #1B2A4A;padding-bottom:12px;margin-bottom:14px">
+    <img src="logo.png" style="width:140px;height:auto" crossorigin="anonymous">
+    <div>
+      <h1 style="color:#1B2A4A;font-size:22px;margin:0">EPCA · Enginyeria i Projectes Cardener, SL</h1>
+      <div style="font-size:12px;color:#555;margin-top:4px" id="docSub"></div>
+    </div>
+  </div>
+  <div id="docBody"></div>
+  <div style="font-size:12px;color:#888;margin-top:18px">Documento generado automáticamente desde epca.es · No sustituye la nota de encargo</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+/* ══════════ Casuísticas: etiqueta, pista, preguntas y documentación ══════════ */
+const CASOS={
+valoracion:{es:'Valoración de un inmueble o terreno',ca:"Valoració d'un immoble o terreny",
+ hes:'Tasación pericial para herencias, divorcios, discrepancias de precio o expropiaciones.',hca:'Taxació pericial per a herències, divorcis, discrepàncies de preu o expropiacions.',
+ q:[
+  {t:'select',es:'Tipo de inmueble',ca:"Tipus d'immoble",ops:[['Vivienda','Habitatge'],['Local o nave','Local o nau'],['Terreno o parcela','Terreny o parcel·la'],['Edificio completo','Edifici complet'],['Otro','Altre']]},
+  {t:'select',es:'Motivo de la valoración',ca:'Motiu de la valoració',ops:[['Herencia o reparto','Herència o repartiment'],['Divorcio o separación','Divorci o separació'],['Discrepancia en compraventa','Discrepància en compravenda'],['Expropiación','Expropiació'],['Otro','Altre']]},
+  {t:'text',es:'Superficie aproximada (m²)',ca:'Superfície aproximada (m²)'},
+  {t:'select',es:'¿Es posible visitar el interior?',ca:'És possible visitar l’interior?',ops:[['Sí','Sí'],['No','No'],['Habría que coordinarlo','Caldria coordinar-ho']]}],
+ d:[['Escritura o nota simple','Escriptura o nota simple'],['Último recibo del IBI','Últim rebut de l’IBI'],['Planos, si dispone de ellos','Plànols, si en teniu'],['Fotos actuales del inmueble','Fotos actuals de l’immoble']]},
+desperfectos:{es:'Daños en un inmueble (vecino, obras colindantes, siniestro)',ca:'Danys en un immoble (veí, obres confrontants, sinistre)',
+ hes:'Determinamos la causa de los daños, quién responde y cuánto cuesta repararlos.',hca:'Determinem la causa dels danys, qui en respon i quant costa reparar-los.',
+ q:[
+  {t:'select',es:'¿Cuál cree que es el origen de los daños?',ca:'Quin creieu que és l’origen dels danys?',ops:[['Obras de un vecino o colindante','Obres d’un veí o confrontant'],['Filtración desde otra vivienda','Filtració des d’un altre habitatge'],['Un siniestro (incendio, inundación...)','Un sinistre (incendi, inundació...)'],['No lo sé','No ho sé']]},
+  {t:'text',es:'¿Cuándo aparecieron los daños? (mes/año)',ca:'Quan van aparèixer els danys? (mes/any)'},
+  {t:'select',es:'¿Ha dado parte al seguro?',ca:'Heu donat part a l’assegurança?',ops:[['Sí','Sí'],['No','No'],['El seguro ya ha hecho su informe','L’assegurança ja ha fet el seu informe']]},
+  {t:'text',es:'¿Qué zonas están afectadas?',ca:'Quines zones estan afectades?'}],
+ d:[['Fotos de los daños (generales y de detalle)','Fotos dels danys (generals i de detall)'],['Parte o informe del seguro, si existe','Part o informe de l’assegurança, si existeix'],['Comunicaciones con el vecino, la comunidad o el seguro','Comunicacions amb el veí, la comunitat o l’assegurança'],['Presupuestos de reparación, si tiene','Pressupostos de reparació, si en teniu']]},
+vicios:{es:'Defectos de obra nueva o reforma (vicios constructivos)',ca:'Defectes d’obra nova o reforma (vicis constructius)',
+ hes:'Obra mal ejecutada o inacabada: documentamos los defectos y valoramos su reparación.',hca:'Obra mal executada o inacabada: documentem els defectes i en valorem la reparació.',
+ q:[
+  {t:'text',es:'¿En qué año terminó la obra o reforma?',ca:'En quin any va acabar l’obra o reforma?'},
+  {t:'textarea',es:'¿Qué defectos ha observado?',ca:'Quins defectes heu observat?'},
+  {t:'select',es:'¿Ha reclamado por escrito al constructor o promotor?',ca:'Heu reclamat per escrit al constructor o promotor?',ops:[['Sí','Sí'],['No','No']]}],
+ d:[['Contrato de obra y presupuesto','Contracte d’obra i pressupost'],['Facturas y justificantes de pago','Factures i justificants de pagament'],['Fotos de los defectos','Fotos dels defectes'],['Comunicaciones con el constructor o promotor','Comunicacions amb el constructor o promotor'],['Libro del edificio o certificado final de obra, si dispone','Llibre de l’edifici o certificat final d’obra, si en teniu']]},
+humedades:{es:'Humedades o filtraciones',ca:'Humitats o filtracions',
+ hes:'Identificamos el origen (cubierta, vecino, fachada...) y cuantificamos la reparación.',hca:'Identifiquem l’origen (coberta, veí, façana...) i quantifiquem la reparació.',
+ q:[
+  {t:'text',es:'¿Desde cuándo hay humedades?',ca:'Des de quan hi ha humitats?'},
+  {t:'select',es:'¿Dónde aparecen?',ca:'On apareixen?',ops:[['Techo (vivienda superior o cubierta)','Sostre (habitatge superior o coberta)'],['Paredes exteriores o fachada','Parets exteriors o façana'],['Sótano o planta baja','Soterrani o planta baixa'],['Varios puntos','Diversos punts'],['Otro','Altre']]},
+  {t:'select',es:'¿Se ha intentado alguna reparación?',ca:'S’ha intentat alguna reparació?',ops:[['Sí, pero han vuelto','Sí, però han tornat'],['No','No'],['Hay una reparación en curso','Hi ha una reparació en curs']]},
+  {t:'select',es:'¿La vivienda está habitada?',ca:'L’habitatge està habitat?',ops:[['Sí','Sí'],['No','No']]}],
+ d:[['Fotos de las manchas y daños','Fotos de les taques i danys'],['Comunicaciones con la comunidad o el vecino','Comunicacions amb la comunitat o el veí'],['Actas de la comunidad, si se ha tratado el tema','Actes de la comunitat, si s’ha tractat el tema'],['Informes o presupuestos anteriores','Informes o pressupostos anteriors']]},
+lindes:{es:'Lindes, medianeras o invasión de finca',ca:'Llindes, mitgeres o invasió de finca',
+ hes:'Replanteamos los límites reales de la finca y documentamos la invasión o discrepancia.',hca:'Replantegem els límits reals de la finca i documentem la invasió o discrepància.',
+ q:[
+  {t:'select',es:'¿Qué tipo de conflicto es?',ca:'Quin tipus de conflicte és?',ops:[['Valla o muro desplazado','Tanca o mur desplaçat'],['Construcción que invade la finca','Construcció que envaeix la finca'],['Camino o paso en disputa','Camí o pas en disputa'],['Discrepancia de superficie','Discrepància de superfície'],['Otro','Altre']]},
+  {t:'text',es:'¿Desde cuándo existe el conflicto?',ca:'Des de quan existeix el conflicte?'},
+  {t:'select',es:'¿Existe alguna medición o topográfico previo?',ca:'Existeix alguna mesura o topogràfic previ?',ops:[['Sí','Sí'],['No','No'],['No lo sé','No ho sé']]}],
+ d:[['Escrituras de las fincas afectadas','Escriptures de les finques afectades'],['Referencias catastrales de las fincas','Referències cadastrals de les finques'],['Planos o mediciones anteriores, si existen','Plànols o mesuraments anteriors, si existeixen'],['Fotos del límite en disputa','Fotos del límit en disputa']]},
+catastro:{es:'Discrepancias con el Catastro (superficies, construcciones)',ca:'Discrepàncies amb el Cadastre (superfícies, construccions)',
+ hes:'Superficies que no coinciden, construcciones no declaradas o parcelario gráfico erróneo.',hca:'Superfícies que no coincideixen, construccions no declarades o parcel·lari gràfic erroni.',
+ q:[
+  {t:'select',es:'¿Qué tipo de discrepancia es?',ca:'Quin tipus de discrepància és?',ops:[['La superficie no coincide','La superfície no coincideix'],['Construcción no declarada','Construcció no declarada'],['El dibujo de la parcela es incorrecto','El dibuix de la parcel·la és incorrecte'],['Titularidad','Titularitat'],['Otro','Altre']]},
+  {t:'select',es:'¿Ha recibido notificación del Catastro?',ca:'Heu rebut notificació del Cadastre?',ops:[['Sí, con plazo para alegar','Sí, amb termini per al·legar'],['Sí, sin plazo','Sí, sense termini'],['No','No']]},
+  {t:'text',es:'Si hay plazo, ¿cuándo termina?',ca:'Si hi ha termini, quan acaba?'}],
+ d:[['Notificación del Catastro, si existe','Notificació del Cadastre, si existeix'],['Escritura o nota simple','Escriptura o nota simple'],['Certificación catastral descriptiva y gráfica','Certificació cadastral descriptiva i gràfica'],['Último recibo del IBI','Últim rebut de l’IBI']]},
+electrico:{es:'Reclamación de la compañía eléctrica (fraude, refacturación)',ca:'Reclamació de la companyia elèctrica (frau, refacturació)',
+ hes:'Expedientes de anomalía o fraude: analizamos consumos reales y rebatimos la refacturación.',hca:'Expedients d’anomalia o frau: analitzem consums reals i rebatem la refacturació.',
+ q:[
+  {t:'text',es:'¿Qué compañía le reclama?',ca:'Quina companyia us reclama?'},
+  {t:'text',es:'¿Qué importe le reclaman aproximadamente?',ca:'Quin import us reclamen aproximadament?'},
+  {t:'select',es:'¿En qué situación está el expediente?',ca:'En quina situació està l’expedient?',ops:[['He recibido carta o factura de refacturación','He rebut carta o factura de refacturació'],['Me han cortado el suministro','M’han tallat el subministrament'],['Estoy en plazo de alegaciones','Estic en termini d’al·legacions'],['Ya hay procedimiento judicial','Ja hi ha procediment judicial']]}],
+ d:[['Carta o expediente de la compañía','Carta o expedient de la companyia'],['Facturas de electricidad de los últimos 2-3 años','Factures d’electricitat dels últims 2-3 anys'],['Fotos del contador y del cuadro eléctrico','Fotos del comptador i del quadre elèctric'],['Boletín de la instalación (CIE), si dispone','Butlletí de la instal·lació (CIE), si en teniu']]},
+laboral:{es:'Accidente laboral (pericial técnica)',ca:'Accident laboral (pericial tècnica)',
+ hes:'Analizamos las causas técnicas del accidente y las medidas de seguridad existentes.',hca:'Analitzem les causes tècniques de l’accident i les mesures de seguretat existents.',
+ q:[
+  {t:'text',es:'¿Cuándo ocurrió el accidente?',ca:'Quan va passar l’accident?'},
+  {t:'textarea',es:'Describa brevemente qué ocurrió',ca:'Descriviu breument què va passar'},
+  {t:'select',es:'¿Quién encargaría el informe?',ca:'Qui encarregaria l’informe?',ops:[['El trabajador o su abogado','El treballador o el seu advocat'],['La empresa','L’empresa'],['La mutua o aseguradora','La mútua o asseguradora']]},
+  {t:'select',es:'¿Hay acta de la Inspección de Trabajo?',ca:'Hi ha acta de la Inspecció de Treball?',ops:[['Sí','Sí'],['No','No'],['No lo sé','No ho sé']]}],
+ d:[['Parte de accidente de trabajo','Part d’accident de treball'],['Acta de la Inspección de Trabajo, si existe','Acta de la Inspecció de Treball, si existeix'],['Fotos del lugar, máquina o equipo','Fotos del lloc, màquina o equip'],['Evaluación de riesgos del puesto, si dispone','Avaluació de riscos del lloc, si en teniu'],['Informes médicos relacionados','Informes mèdics relacionats']]},
+vehiculo:{es:'Vehículo o maquinaria (daños, averías, valor)',ca:'Vehicle o maquinària (danys, avaries, valor)',
+ hes:'Valoración de daños, causa de una avería o valor de mercado del vehículo o la máquina.',hca:'Valoració de danys, causa d’una avaria o valor de mercat del vehicle o la màquina.',
+ q:[
+  {t:'text',es:'Marca, modelo y año',ca:'Marca, model i any'},
+  {t:'select',es:'¿Qué necesita?',ca:'Què necessiteu?',ops:[['Valorar unos daños','Valorar uns danys'],['Determinar la causa de una avería','Determinar la causa d’una avaria'],['Calcular el valor del vehículo','Calcular el valor del vehicle'],['Otro','Altre']]},
+  {t:'text',es:'¿Dónde se encuentra ahora?',ca:'On es troba ara?'}],
+ d:[['Ficha técnica y permiso de circulación','Fitxa tècnica i permís de circulació'],['Facturas o presupuestos de reparación','Factures o pressupostos de reparació'],['Fotos de los daños o de la avería','Fotos dels danys o de l’avaria'],['Peritación del seguro, si existe','Peritatge de l’assegurança, si existeix']]},
+industrial:{es:'Instalaciones o industrial (averías, incumplimientos, siniestros)',ca:'Instal·lacions o industrial (avaries, incompliments, sinistres)',
+ hes:'Instalaciones eléctricas, climatización, CPD, maquinaria industrial: causas y responsabilidades.',hca:'Instal·lacions elèctriques, climatització, CPD, maquinària industrial: causes i responsabilitats.',
+ q:[
+  {t:'text',es:'¿Qué tipo de instalación o equipo es?',ca:'Quin tipus d’instal·lació o equip és?'},
+  {t:'textarea',es:'¿Qué ha ocurrido?',ca:'Què ha passat?'},
+  {t:'select',es:'¿La instalación sigue como quedó tras el incidente?',ca:'La instal·lació segueix com va quedar després de l’incident?',ops:[['Sí, sin tocar','Sí, sense tocar'],['Se ha reparado parcialmente','S’ha reparat parcialment'],['Se ha reparado del todo','S’ha reparat del tot']]},
+  {t:'select',es:'¿Hay contrato, pedido o pliego de por medio?',ca:'Hi ha contracte, comanda o plec pel mig?',ops:[['Sí','Sí'],['No','No']]}],
+ d:[['Contrato, pedido o pliego y especificaciones','Contracte, comanda o plec i especificacions'],['Documentación técnica (esquemas, legalizaciones, boletines)','Documentació tècnica (esquemes, legalitzacions, butlletins)'],['Fotos o vídeos del problema','Fotos o vídeos del problema'],['Comunicaciones entre las partes','Comunicacions entre les parts'],['Informes previos, si existen','Informes previs, si existeixen']]},
+antiguedad:{es:'Certificado de antigüedad de una construcción',ca:'Certificat d’antiguitat d’una construcció',
+ hes:'Para inscribir en el Registro, escriturar o acreditar la antigüedad ante el ayuntamiento.',hca:'Per inscriure al Registre, escripturar o acreditar l’antiguitat davant l’ajuntament.',
+ q:[
+  {t:'text',es:'¿Año aproximado de construcción?',ca:'Any aproximat de construcció?'},
+  {t:'select',es:'¿Para qué lo necesita?',ca:'Per a què el necessiteu?',ops:[['Inscripción en el Registro de la Propiedad','Inscripció al Registre de la Propietat'],['Escritura ante notario','Escriptura davant notari'],['Expediente urbanístico','Expedient urbanístic'],['Otro','Altre']]},
+  {t:'select',es:'¿La construcción figura en el Catastro?',ca:'La construcció consta al Cadastre?',ops:[['Sí','Sí'],['No','No'],['No lo sé','No ho sé']]}],
+ d:[['Escritura o nota simple','Escriptura o nota simple'],['Certificación catastral','Certificació cadastral'],['Fotos actuales de la construcción','Fotos actuals de la construcció'],['Documentos antiguos que la mencionen (fotos, licencias, recibos)','Documents antics que l’esmentin (fotos, llicències, rebuts)']]},
+contrainforme:{es:'Rebatir un informe pericial existente (contrainforme)',ca:'Rebatre un informe pericial existent (contrainforme)',
+ hes:'Analizamos el informe de la otra parte y elaboramos el dictamen técnico que lo rebate.',hca:'Analitzem l’informe de l’altra part i elaborem el dictamen tècnic que el rebat.',
+ q:[
+  {t:'select',es:'¿Quién firma el informe que quiere rebatir?',ca:'Qui signa l’informe que voleu rebatre?',ops:[['El perito de la otra parte','El perit de l’altra part'],['Un perito designado por el juzgado','Un perit designat pel jutjat'],['Un técnico de la administración','Un tècnic de l’administració'],['Otro','Altre']]},
+  {t:'text',es:'¿Sobre qué trata ese informe?',ca:'Sobre què tracta aquest informe?'},
+  {t:'text',es:'¿Qué plazo tenemos?',ca:'Quin termini tenim?'}],
+ d:[['El informe pericial completo, con sus anexos','L’informe pericial complet, amb els annexos'],['La demanda o contestación, si dispone','La demanda o contestació, si en teniu'],['La documentación técnica que cite ese informe','La documentació tècnica que citi aquest informe'],['Fotos propias del objeto del conflicto','Fotos pròpies de l’objecte del conflicte']]},
+otro:{es:'Otro caso (cuéntenoslo)',ca:'Un altre cas (expliqueu-nos-el)',
+ hes:'Peritamos casi cualquier cuestión técnica de ingeniería. Descríbanos la situación.',hca:'Peritem gairebé qualsevol qüestió tècnica d’enginyeria. Descriviu-nos la situació.',
+ q:[
+  {t:'textarea',es:'Describa su situación con el máximo detalle posible',ca:'Descriviu la vostra situació amb el màxim detall possible'}],
+ d:[['Cualquier documento relacionado con el caso','Qualsevol document relacionat amb el cas'],['Fotos, si el caso lo permite','Fotos, si el cas ho permet']]}
+};
+
+/* ══════════ Paso 5 según casuística: título, dirección y ref. catastral ══════════
+   dir:false oculta la dirección · rc:false oculta la ref. catastral */
+const LOC={
+valoracion:{tes:'El inmueble a valorar',tca:'L’immoble a valorar'},
+desperfectos:{tes:'El inmueble afectado',tca:'L’immoble afectat'},
+vicios:{tes:'El inmueble afectado',tca:'L’immoble afectat'},
+humedades:{tes:'El inmueble afectado',tca:'L’immoble afectat'},
+lindes:{tes:'La finca en conflicto',tca:'La finca en conflicte',des:'Dirección o paraje de la finca',dca:'Adreça o paratge de la finca'},
+catastro:{tes:'El inmueble o parcela',tca:'L’immoble o parcel·la'},
+electrico:{tes:'El punto de suministro',tca:'El punt de subministrament',des:'Dirección del suministro',dca:'Adreça del subministrament',rc:false},
+laboral:{tes:'El lugar del accidente',tca:'El lloc de l’accident',des:'Dirección del centro de trabajo o lugar del accidente',dca:'Adreça del centre de treball o lloc de l’accident',rc:false},
+vehiculo:{tes:'Otros datos del caso',tca:'Altres dades del cas',dir:false,rc:false},
+industrial:{tes:'La instalación',tca:'La instal·lació',des:'Dirección de la instalación',dca:'Adreça de la instal·lació',rc:false},
+antiguedad:{tes:'La construcción',tca:'La construcció'},
+contrainforme:{tes:'El objeto del informe',tca:'L’objecte de l’informe',des:'Dirección, si el caso afecta a un inmueble',dca:'Adreça, si el cas afecta un immoble'},
+otro:{tes:'El objeto del caso',tca:'L’objecte del cas',des:'Dirección, si el caso afecta a un inmueble o lugar',dca:'Adreça, si el cas afecta un immoble o lloc'}
+};
+
+/* ══════════ Idioma (mismo patrón data-es/data-ca del resto de la web) ══════════ */
+let lang='es';
+function applyLang(l){
+  lang=l;
+  document.querySelectorAll('[data-es]').forEach(el=>{
+    const v=el.dataset[l];
+    if(v!==undefined) el.innerHTML=v;
+  });
+  document.querySelectorAll('[data-ph-es]').forEach(el=>{
+    el.placeholder=el.dataset[l==='es'?'phEs':'phCa']||'';
+  });
+  document.getElementById('langToggle').textContent=l==='es'?'CA':'ES';
+  document.documentElement.lang=l;
+  document.getElementById('f_idioma').value=l;
+  const tipo=document.getElementById('f_tipo').value;
+  document.getElementById('tipoHint').textContent=tipo?('▸ '+CASOS[tipo][l==='es'?'hes':'hca']):'';
+}
+document.getElementById('langToggle').addEventListener('click',()=>applyLang(lang==='es'?'ca':'es'));
+
+/* ══════════ Poblar selector de casos ══════════ */
+const tipoSel=document.getElementById('f_tipo');
+Object.entries(CASOS).forEach(([k,c])=>{
+  const o=document.createElement('option');
+  o.value=k;o.dataset.es=c.es;o.dataset.ca=c.ca;o.textContent=c.es;
+  tipoSel.appendChild(o);
+});
+
+/* ══════════ Procedimiento judicial: mostrar datos del juzgado ══════════ */
+document.querySelectorAll('input[name=procedimiento]').forEach(r=>r.addEventListener('change',()=>{
+  document.getElementById('judBox').classList.toggle('hidden',r.form.procedimiento.value==='sin_procedimiento');
+}));
+
+/* ══════════ Render dinámico de preguntas y checklist ══════════ */
+function renderCaso(k){
+  const c=CASOS[k];
+  const qBox=document.getElementById('caseQuestions');
+  const dBox=document.getElementById('docList');
+  qBox.innerHTML='';dBox.innerHTML='';
+  if(!c){['detCard','inmCard','docCard'].forEach(id=>document.getElementById(id).classList.add('hidden'));return;}
+  c.q.forEach((q,i)=>{
+    const full=q.t!=='select'?' full':'';
+    let inner='';
+    if(q.t==='select'){
+      inner='<select class="cq" data-qes="'+q.es+'" data-qca="'+q.ca+'"><option value="" data-es="—" data-ca="—">—</option>'+
+        q.ops.map(op=>'<option value="'+op[0]+'" data-es="'+op[0]+'" data-ca="'+op[1]+'">'+op[0]+'</option>').join('')+'</select>';
+    }else if(q.t==='textarea'){
+      inner='<textarea class="cq" data-qes="'+q.es+'" data-qca="'+q.ca+'"></textarea>';
+    }else{
+      inner='<input type="text" class="cq" data-qes="'+q.es+'" data-qca="'+q.ca+'">';
+    }
+    qBox.insertAdjacentHTML('beforeend','<div class="field'+full+'"><label data-es="'+q.es+'" data-ca="'+q.ca+'">'+q.es+'</label>'+inner+'</div>');
+  });
+  c.d.forEach(doc=>{
+    dBox.insertAdjacentHTML('beforeend','<label class="check"><input type="checkbox" class="cd" data-des="'+doc[0]+'" data-dca="'+doc[1]+'"><span data-es="'+doc[0]+'" data-ca="'+doc[1]+'">'+doc[0]+'</span></label>');
+  });
+  // Adaptar el paso 5 a la casuística
+  const L=LOC[k]||{};
+  const ti=document.getElementById('inmTitle');
+  ti.dataset.es=L.tes||'El inmueble u objeto del caso';
+  ti.dataset.ca=L.tca||"L'immoble o objecte del cas";
+  const dl=document.getElementById('dirLabel');
+  dl.dataset.es=L.des||'Dirección completa';
+  dl.dataset.ca=L.dca||'Adreça completa';
+  const dirHide=L.dir===false, rcHide=L.rc===false;
+  document.getElementById('dirField').classList.toggle('hidden',dirHide);
+  document.getElementById('refcatField').classList.toggle('hidden',rcHide);
+  if(dirHide) document.getElementById('f_direccion').value='';
+  if(rcHide) document.getElementById('f_refcat').value='';
+  ['detCard','inmCard','docCard'].forEach(id=>document.getElementById(id).classList.remove('hidden'));
+  applyLang(lang);
+}
+tipoSel.addEventListener('change',()=>renderCaso(tipoSel.value));
+
+document.getElementById('f_contrario').addEventListener('change',e=>{
+  document.getElementById('contraHint').classList.toggle('hidden',e.target.value!=='si');
+});
+
+/* ══════════ Composición y envío (Netlify Forms, AJAX) ══════════ */
+const form=document.getElementById('periForm');
+const V=id=>document.getElementById(id).value.trim();
+
+function componer(){
+  // Preguntas específicas → detalles_caso
+  const det=[];
+  document.querySelectorAll('.cq').forEach(el=>{
+    const v=el.value.trim();
+    if(v) det.push(el.dataset.qes+': '+v);
+  });
+  document.getElementById('f_detalles').value=det.join('\n')||'—';
+  // Checklist → disponibles / pendientes
+  const si=[],no=[];
+  document.querySelectorAll('.cd').forEach(el=>{(el.checked?si:no).push(el.dataset.des);});
+  document.getElementById('f_docs_si').value=si.join(' · ')||'—';
+  document.getElementById('f_docs_no').value=no.join(' · ')||'—';
+  // Asunto del email
+  const tipoTxt=CASOS[tipoSel.value]?CASOS[tipoSel.value].es:'caso';
+  document.getElementById('f_subject').value='🔎 Peritaje · '+tipoTxt+' · '+V('f_nombre');
+  // Bloque estructurado (para automatizar el alta del expediente)
+  const F=[];
+  F.push('== FICHA EPCA · PERITAJE v1 ==');
+  F.push('FECHA_ENVIO: '+new Date().toISOString().slice(0,16).replace('T',' '));
+  F.push('IDIOMA: '+lang);
+  F.push('NOMBRE: '+V('f_nombre'));
+  F.push('DNI: '+V('f_dni'));
+  F.push('TELEFONO: '+V('f_telefono'));
+  F.push('EMAIL: '+V('f_email'));
+  F.push('POBLACION: '+V('f_poblacion'));
+  F.push('PROCEDIMIENTO: '+form.procedimiento.value);
+  F.push('JUZGADO: '+V('f_juzgado'));
+  F.push('AUTOS: '+V('f_autos'));
+  F.push('PLAZO: '+V('f_plazo'));
+  F.push('ABOGADO: '+V('f_abogado'));
+  F.push('PROCURADOR: '+V('f_procurador'));
+  F.push('TIPO_CASO: '+tipoSel.value);
+  F.push('OBJETO: '+V('f_objeto').replace(/\n/g,' / '));
+  F.push('DIRECCION: '+V('f_direccion'));
+  F.push('REF_CATASTRAL: '+V('f_refcat'));
+  F.push('INFORME_CONTRARIO: '+V('f_contrario'));
+  F.push('DETALLES:');
+  det.forEach(d=>F.push('  - '+d.replace(/\n/g,' / ')));
+  F.push('DOCS_DISPONIBLES: '+(si.join(' | ')||'-'));
+  F.push('DOCS_PENDIENTES: '+(no.join(' | ')||'-'));
+  F.push('== FIN FICHA ==');
+  document.getElementById('f_ficha').value=F.join('\n');
+}
+
+/* ══════════ Documento con membrete (imagen) para adjuntar al correo ══════════ */
+const IMGBB_KEY='c7ff8c08de957592ca169191d6bbe4cd';
+function escDoc(s){ return (''+s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+async function renderDocImage(fichaText,titulo){
+  const box=document.getElementById('docbox');
+  document.getElementById('docSub').textContent=titulo+' — '+new Date().toLocaleString('es-ES');
+  const lines=fichaText.split('\n').filter(l=>l&&!l.startsWith('=='));
+  let html='<table style="width:100%;border-collapse:collapse">';
+  lines.forEach(line=>{
+    if(line.startsWith('  - ')){
+      html+='<tr><td colspan="2" style="padding:3px 6px 3px 16px;font-size:13px;color:#333">'+escDoc(line.trim())+'</td></tr>';
+      return;
+    }
+    const i=line.indexOf(':');
+    if(i>0){
+      const k=line.slice(0,i).trim(),v=line.slice(i+1).trim();
+      html+='<tr><td style="padding:5px 6px;border-bottom:1px solid #e6eaf0;font-size:12px;color:#666;font-weight:600;width:34%;vertical-align:top">'+escDoc(k)+'</td><td style="padding:5px 6px;border-bottom:1px solid #e6eaf0;font-size:13.5px;white-space:pre-wrap">'+escDoc(v||'—')+'</td></tr>';
+    }
+  });
+  html+='</table>';
+  document.getElementById('docBody').innerHTML=html;
+  const canvas=await html2canvas(box,{scale:2,backgroundColor:'#ffffff',useCORS:true});
+  return canvas.toDataURL('image/png');
+}
+async function uploadImage(dataUrl){
+  const fd=new FormData();fd.append('image',dataUrl.split(',')[1]);
+  const r=await fetch('https://api.imgbb.com/1/upload?key='+IMGBB_KEY,{method:'POST',body:fd});
+  const j=await r.json();
+  return (j&&j.data&&j.data.url)?j.data.url:null;
+}
+
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const err=document.getElementById('formErr');
+  if(!V('f_nombre')||!V('f_telefono')||!tipoSel.value||!V('f_objeto')||!document.getElementById('f_privacidad').checked){
+    err.classList.remove('hidden');err.scrollIntoView({behavior:'smooth',block:'center'});return;
+  }
+  err.classList.add('hidden');
+  componer();
+  const btn=document.getElementById('sendBtn');btn.disabled=true;
+  const btnTxt=btn.textContent;
+  btn.textContent=lang==='es'?'Preparando documento…':'Preparant document…';
+  let docUrl=null;
+  try{
+    const png=await renderDocImage(V('f_ficha'),'Peritaje judicial · Ficha del caso');
+    docUrl=await uploadImage(png);
+  }catch(err2){/* si falla, la ficha en texto va igualmente en el correo */}
+  btn.textContent=lang==='es'?'Enviando…':'Enviant…';
+  const payload={
+    access_key:'fa012fe6-b65d-4ef1-ad19-def51c1e530f',
+    subject:'Nuevo peritaje judicial · '+V('f_nombre'),
+    from_name:'Formulario web EPCA · Peritajes',
+    replyto:V('f_email')||'',
+    botcheck:document.querySelector('[name="bot-field"]').value,
+    'Nombre':V('f_nombre'),
+    'Teléfono':V('f_telefono'),
+    'Email':V('f_email')||'-',
+    'Documento (ver / descargar)':docUrl||'No se pudo generar automáticamente — ver la ficha completa más abajo',
+    'Ficha completa':V('f_ficha')
+  };
+  const done=()=>{
+    form.classList.add('hidden');
+    document.querySelector('.intro').classList.add('hidden');
+    const ok=document.getElementById('okCard');
+    ok.classList.remove('hidden');
+    ok.scrollIntoView({behavior:'smooth'});
+  };
+  const fail=()=>{btn.disabled=false;btn.textContent=btnTxt;const se=document.getElementById('sendErr');se.classList.remove('hidden');se.scrollIntoView({behavior:'smooth',block:'center'});};
+  document.getElementById('sendErr').classList.add('hidden');
+  fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(payload)}).then(r=>r.json()).then(d=>{(d&&d.success)?done():fail();}).catch(fail);
+});
+</script>
+</body>
+</html>
