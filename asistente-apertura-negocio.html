@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Hoja de Ruta de Apertura de Negocio · Cataluña · EPCA (uso interno)</title>
+<style>
+:root{
+  --navy:#1B2A4A; --navy2:#26385c; --gold:#C9962A; --gold-light:#E8B84B;
+  --white:#FFFFFF; --gray-50:#F8F9FB; --gray-100:#F0F2F6;
+  --gray-300:#D7DCE5; --gray-400:#9BA3B2; --gray-600:#4B5563; --gray-900:#111827;
+  --green:#1f7a4d; --green-bg:#e7f3ec; --amber:#9a6b00; --amber-bg:#fdf3da;
+  --red:#9b2226; --red-bg:#fbe7e7; --blue:#1d4e89; --blue-bg:#e8f0fb;
+  --radius:10px; --shadow:0 4px 24px rgba(27,42,74,.10);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--gray-900);background:var(--gray-50);line-height:1.6}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header.top{background:var(--navy);color:#fff;padding:26px 0}
+header.top h1{font-size:1.45rem;font-weight:700}
+header.top p{color:#c7d0e0;font-size:.92rem;margin-top:4px}
+.badge{display:inline-block;background:var(--gold);color:#fff;font-size:.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:6px;margin-bottom:10px}
+.disclaimer{background:var(--amber-bg);border:1px solid #e7cd8a;color:#5b4500;font-size:.83rem;padding:12px 16px;border-radius:var(--radius);margin:18px 0}
+.card{background:#fff;border:1px solid var(--gray-100);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px 26px;margin:18px 0}
+.card h2{font-size:1.1rem;color:var(--navy);margin-bottom:4px;display:flex;align-items:center;gap:10px}
+.step-n{background:var(--navy);color:#fff;width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;flex:0 0 auto}
+.card .hint{color:var(--gray-600);font-size:.86rem;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+label{font-size:.83rem;font-weight:600}
+label .opt{font-weight:400;color:var(--gray-400)}
+input[type=text],input[type=number],select{font-family:inherit;font-size:.92rem;padding:9px 11px;border:1px solid var(--gray-300);border-radius:8px;background:#fff;width:100%}
+input:focus,select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,150,42,.15)}
+.checks{display:flex;flex-direction:column;gap:9px}
+.check{display:flex;gap:9px;align-items:flex-start;font-size:.88rem;font-weight:400;cursor:pointer;padding:9px 11px;border:1px solid var(--gray-100);border-radius:8px;background:var(--gray-50)}
+.check input{margin-top:3px;flex:0 0 auto}
+.check span small{display:block;color:var(--gray-600);font-weight:400;font-size:.8rem}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:8px}
+.btn{font-family:inherit;font-weight:600;font-size:.95rem;padding:12px 26px;border-radius:var(--radius);border:2px solid transparent;cursor:pointer;transition:.18s}
+.btn--primary{background:var(--gold);color:#fff;border-color:var(--gold)}
+.btn--primary:hover{background:var(--gold-light);border-color:var(--gold-light)}
+.btn--ghost{background:#fff;color:var(--navy);border-color:var(--gray-300)}
+.btn--ghost:hover{border-color:var(--navy)}
+.hidden{display:none!important}
+.verdict{border-radius:var(--radius);padding:16px 18px;margin-bottom:16px;border:1px solid}
+.verdict .lvl{font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.verdict .name{font-size:1.15rem;font-weight:700;margin:2px 0 6px}
+.verdict.r-cert{background:var(--blue-bg);border-color:#abc8ec;color:#16335a}
+.verdict.r-proj{background:var(--amber-bg);border-color:#e7cd8a;color:#5b4500}
+.verdict.r-lic{background:var(--red-bg);border-color:#e9b3b3;color:#6e1417}
+.fase{margin:22px 0}
+.fase h3{font-size:1rem;color:#fff;background:var(--navy);padding:9px 14px;border-radius:8px 8px 0 0;display:flex;gap:10px;align-items:center}
+.fase h3 .fn{background:var(--gold);width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;flex:0 0 auto}
+.fase .fbody{border:1px solid var(--gray-100);border-top:none;border-radius:0 0 8px 8px;padding:14px 16px;background:#fff}
+.it{border-radius:8px;padding:10px 13px;font-size:.88rem;margin-bottom:9px;border:1px solid var(--gray-100);background:var(--gray-50)}
+.it b{display:block;margin-bottom:1px}
+.it.stop{background:var(--red-bg);border-color:#e9b3b3}
+.it.warn{background:var(--amber-bg);border-color:#e7cd8a}
+.it.info{background:var(--blue-bg);border-color:#abc8ec}
+.it.ok{background:var(--green-bg);border-color:#9fd3b4}
+.it .norm{display:inline-block;font-size:.74rem;color:var(--blue);background:#eef4fc;border:1px solid #d4e3f7;border-radius:6px;padding:0 7px;margin-top:5px;margin-right:5px}
+table.tnorm{width:100%;border-collapse:collapse;margin:8px 0;font-size:.84rem}
+table.tnorm th,table.tnorm td{border:1px solid var(--gray-300);padding:6px 9px;text-align:left;vertical-align:top}
+table.tnorm th{background:var(--gray-100)}
+ul.lst{list-style:none;display:flex;flex-direction:column;gap:7px;margin:6px 0}
+ul.lst li{font-size:.88rem;padding-left:24px;position:relative}
+ul.lst li::before{content:"☐";position:absolute;left:2px;top:0;color:var(--gold);font-weight:700}
+footer{color:var(--gray-400);font-size:.78rem;text-align:center;padding:24px 0 40px}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;background:var(--gray-100);color:var(--gray-600);padding:2px 8px;border-radius:20px;margin:0 4px 4px 0}
+.subq{margin-left:28px;margin-top:8px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="badge">EPCA · Ús intern</div>
+    <h1>Hoja de Ruta de Apertura de Negocio</h1>
+    <p>Cuestionario → clasificación completa + hoja de ruta cronológica + documento Word · Cataluña · Rev. 2026</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="disclaimer">
+    <strong>Uso interno EPCA.</strong> Motor basado en umbrales verificados (Llei 18/2020, Llei 3/2010, Llei 20/2009, Llei 11/2009 + Decret 112/2010, Decret 209/2023) y reglamentos estatales (REBT, RITE, RSCIEI, RD 487/2022, RD 919/2006, Reg. CE 852/2004). Los ítems marcados <em>“verificar en ordenanza”</em> dependen del municipio.
+    El criterio del técnico firmante prevalece. Confirma siempre CCAE exacto y ordenanzas locales.
+  </div>
+
+  <!-- 1 · DATOS -->
+  <div class="card">
+    <h2><span class="step-n">1</span> Datos del expediente</h2>
+    <div class="grid">
+      <div class="field full"><label>Actividad / rótulo comercial</label><input type="text" id="d_act" placeholder="Ej. Restaurante La Cassola"></div>
+      <div class="field"><label>Titular</label><input type="text" id="d_tit"></div>
+      <div class="field"><label>Municipio</label><input type="text" id="d_mun" placeholder="Ej. Súria"></div>
+      <div class="field full"><label>Emplazamiento</label><input type="text" id="d_dir"></div>
+      <div class="field"><label>CCAE — escribe código o actividad <span class="opt">(autocompleta y asigna el tipo; base CCAE-2009 — verificar equivalencia CCAE-2025)</span></label><input type="text" id="d_ccae" list="ccaedb" placeholder="Ej. 5610 o «restaurante»" autocomplete="off"><datalist id="ccaedb"></datalist></div>
+      <div class="field"><label>Técnico redactor</label><input type="text" id="d_tec"></div>
+    </div>
+  </div>
+
+  <!-- 2 · ACTIVIDAD -->
+  <div class="card">
+    <h2><span class="step-n">2</span> Tipo de actividad</h2>
+    <div class="field">
+      <select id="act">
+        <option value="">— Selecciona —</option>
+        <optgroup label="Comercio">
+          <option value="retail">Comercio al detalle (tienda, alimentación sin obrador, bazar…)</option>
+          <option value="engros">Comercio al por mayor / intermediarios</option>
+          <option value="vehiculos">Venta de vehículos / recambios</option>
+        </optgroup>
+        <optgroup label="Hostelería">
+          <option value="restaurant">Restaurante / cafetería (SIN música)</option>
+          <option value="bar">Bar / establecimiento de bebidas (SIN música)</option>
+          <option value="musical">Local musical (bar musical, restaurante musical, karaoke, discoteca, sala de baile)</option>
+          <option value="takeaway">Comida para llevar / catering (sin consumo en local)</option>
+        </optgroup>
+        <optgroup label="Oficinas y servicios">
+          <option value="oficina">Oficina / despacho profesional / coworking</option>
+          <option value="personal">Servicio personal (peluquería, estética, lavandería, reparaciones)</option>
+          <option value="tatuaje">Tatuaje / piercing / micropigmentación</option>
+        </optgroup>
+        <optgroup label="Educación / salud / deporte / cultura">
+          <option value="academia">Academia / centro de formación no reglada</option>
+          <option value="bressol">Escuela infantil / guardería (escola bressol)</option>
+          <option value="gimnasio">Gimnasio / centro deportivo / fitness</option>
+          <option value="clinica">Clínica / centro médico / dental (sin internamiento)</option>
+          <option value="museo">Museo / biblioteca / archivo</option>
+        </optgroup>
+        <optgroup label="Industria / logística">
+          <option value="industria">Industria / taller de manufactura</option>
+          <option value="almacen">Almacén / logística / depósito</option>
+        </optgroup>
+        <optgroup label="Alojamiento">
+          <option value="hotel">Hotel / alojamiento similar</option>
+          <option value="hut">Vivienda de uso turístico (HUT) / turismo rural</option>
+        </optgroup>
+      </select>
+    </div>
+    <p class="hint" id="ccae-hint" style="margin-top:10px"></p>
+    <div class="checks" id="extra"></div>
+  </div>
+
+  <!-- 3 · PARÁMETROS -->
+  <div class="card">
+    <h2><span class="step-n">3</span> Parámetros físicos</h2>
+    <div class="grid">
+      <div class="field"><label>Superficie construida (m²)</label><input type="number" id="p_sup" min="0" step="1"></div>
+      <div class="field"><label>Superficie útil (m²) <span class="opt">(si se conoce)</span></label><input type="number" id="p_suputil" min="0" step="1"></div>
+      <div class="field"><label>Aforo / ocupación (personas) <span class="opt">(si se conoce; si no, se estima)</span></label><input type="number" id="p_aforo" min="0" step="1"></div>
+      <div class="field"><label>Nº plazas <span class="opt">(alojamiento)</span></label><input type="number" id="p_places" min="0" step="1"></div>
+      <div class="field"><label>Situación del local</label>
+        <select id="p_planta"><option value="pb">Planta baja</option><option value="piso">Planta piso</option><option value="sotano">Sótano / bajo rasante</option><option value="aislado">Edificio aislado / nave</option></select>
+      </div>
+      <div class="field"><label>Altura de evacuación del edificio</label>
+        <select id="p_altura"><option value="baja">≤ 15 m</option><option value="alta">&gt; 15 m</option><option value="muyalta">≥ 28 m</option></select>
+      </div>
+    </div>
+    <div class="checks" style="margin-top:14px">
+      <label class="check"><input type="checkbox" id="p_viviendas" checked><span><b>El local está en un edificio con viviendas</b><small>Activa comprobación de estatutos de la comunidad y condiciona acústica y salida de humos.</small></span></label>
+      <label class="check"><input type="checkbox" id="p_usoprevio"><span><b>Cambio de uso urbanístico</b> (el local tenía otro uso: vivienda, garaje…) <small>Informe de compatibilidad urbanística + normalmente obras mayores.</small></span></label>
+      <label class="check"><input type="checkbox" id="p_barreras"><span><b>Local existente con barreras de accesibilidad difíciles de eliminar</b> (escalón de acceso, aseo pequeño…)<small>Activa el análisis de soluciones alternativas / ajustes razonables (Decret 209/2023).</small></span></label>
+    </div>
+  </div>
+
+  <!-- 4 · OBRAS -->
+  <div class="card">
+    <h2><span class="step-n">4</span> Obras previstas</h2>
+    <div class="grid">
+      <div class="field full"><label>Alcance de las obras de adecuación</label>
+        <select id="o_obras">
+          <option value="no">Sin obras (local ya adecuado)</option>
+          <option value="menor">Reforma interior SIN afectar estructura ni fachada</option>
+          <option value="mayor">Reforma que afecta estructura, fachada o volumen</option>
+        </select>
+      </div>
+    </div>
+    <div class="checks" style="margin-top:14px">
+      <label class="check"><input type="checkbox" id="o_rotulo"><span><b>Rótulo / banderola nueva en fachada</b><small>Comunicación o licencia según ordenanza de paisaje urbano.</small></span></label>
+      <label class="check"><input type="checkbox" id="o_terraza"><span><b>Terraza en la vía pública</b><small>Autorización de ocupación de dominio público (procedimiento aparte).</small></span></label>
+      <label class="check"><input type="checkbox" id="o_vado"><span><b>Vado / acceso de vehículos o carga y descarga</b><small>Licencia de vado o reserva de estacionamiento según ordenanza municipal.</small></span></label>
+    </div>
+  </div>
+
+  <!-- 5 · INSTALACIONES -->
+  <div class="card">
+    <h2><span class="step-n">5</span> Instalaciones y riesgos</h2>
+    <div class="grid">
+      <div class="field"><label>Potencia eléctrica prevista (kW) <span class="opt">(contratada/a contratar)</span></label><input type="number" id="i_elec" min="0" step="0.1"></div>
+      <div class="field"><label>Potencia térmica clima/calefacción (kW) <span class="opt">(suma de equipos)</span></label><input type="number" id="i_clima" min="0" step="0.1"></div>
+      <div class="field"><label>Caudal de ventilación/extracción (m³/h) <span class="opt">(si se conoce)</span></label><input type="number" id="i_caudal" min="0" step="1"></div>
+      <div class="field"><label>Cocina</label>
+        <select id="i_cocina">
+          <option value="no">Sin cocina / solo office frío</option>
+          <option value="peq">Cocina ≤ 20 kW (plancha, freidora pequeña…)</option>
+          <option value="med">Cocina &gt; 20 y ≤ 50 kW</option>
+          <option value="gran">Cocina &gt; 50 kW</option>
+        </select>
+      </div>
+      <div class="field"><label>Salida de humos a cubierta <span class="opt">(si hay cocina)</span></label>
+        <select id="i_humos"><option value="na">No aplica (sin cocina)</option><option value="si">Existe conducto propio hasta cubierta</option><option value="posible">No existe, pero es viable instalarlo</option><option value="no">No existe y NO es viable / comunidad se opone</option></select>
+      </div>
+      <div class="field"><label>Música</label>
+        <select id="i_musica"><option value="no">Sin música</option><option value="ambiental">Música ambiental / TV (hilo musical)</option><option value="actividad">Actividad musical (equipo, DJ, directo)</option></select>
+      </div>
+    </div>
+    <div class="checks" style="margin-top:14px">
+      <label class="check"><input type="checkbox" id="i_gas"><span><b>Instalación de gas</b> (cocina, caldera…)<small>RD 919/2006 — certificado de instalador + puesta en servicio.</small></span></label>
+      <label class="check"><input type="checkbox" id="i_alim"><span><b>Manipulación / venta de alimentos</b><small>Reg. CE 852/2004 + RD 1021/2022. Censo sanitario municipal, APPCC.</small></span></label>
+      <label class="check subq hidden" id="wrap_alimdist"><input type="checkbox" id="i_alimdist"><span><b>Además elabora y distribuye a otros establecimientos</b> (obrador con reparto, catering)<small>Alta en RSIPAC/RGSEAA (no basta el censo municipal).</small></span></label>
+      <label class="check"><input type="checkbox" id="i_legio"><span><b>Riesgo de legionela</b> (duchas colectivas, torre de refrigeración, ACS centralizada con acumulación)<small>RD 487/2022 — plan de prevención y control.</small></span></label>
+      <label class="check"><input type="checkbox" id="i_apq"><span><b>Productos químicos / mercancías peligrosas (APQ)</b><small>Reglamentación APQ + probable clasificación ambiental.</small></span></label>
+      <label class="check"><input type="checkbox" id="i_video"><span><b>Videovigilancia prevista</b><small>Cartel informativo y obligaciones LOPDGDD (art. 22 LO 3/2018).</small></span></label>
+    </div>
+  </div>
+
+  <!-- 6 · AMBIENTAL -->
+  <div class="card">
+    <h2><span class="step-n">6</span> Clasificación ambiental — Llei 20/2009 (LPCAA)</h2>
+    <p class="hint">Consulta las tablas consolidadas de la Generalitat si hay maquinaria/proceso relevante. Comercios, oficinas y restauración estándar normalmente NO están anexados.
+    <br><b>Regla del filtro mayor:</b> si la actividad principal no está anexada pero una secundaria sí (p. ej. tienda con obrador), clasifica por la de MAYOR intervención.</p>
+    <div class="field">
+      <select id="amb">
+        <option value="no">No clasificada ambientalmente / no aplica</option>
+        <option value="3">Anexo III — Comunicación ambiental</option>
+        <option value="2">Anexo II — Licencia ambiental (municipal)</option>
+        <option value="1">Anexo I — Autorización Ambiental Integrada (Generalitat)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="btnrow" style="margin:6px 0 22px">
+    <button class="btn btn--primary" onclick="generar()">Generar hoja de ruta →</button>
+    <button class="btn btn--ghost" onclick="guardarCaso()">Guardar caso (.json)</button>
+    <label class="btn btn--ghost" style="margin:0">Cargar caso<input type="file" accept=".json" style="display:none" onchange="cargarCaso(event)"></label>
+    <button class="btn btn--ghost" onclick="location.reload()">Reiniciar</button>
+  </div>
+
+  <div class="card hidden" id="result"></div>
+
+  <div class="btnrow hidden" id="dlrow" style="margin:0 0 26px">
+    <button class="btn btn--primary" onclick="descargarWord()">⬇ Descargar hoja de ruta en Word (.doc)</button>
+    <button class="btn btn--ghost" onclick="window.print()">Imprimir / PDF</button>
+  </div>
+
+  <footer>Herramienta interna EPCA · Rev. 2026 · No sustituye el criterio del técnico firmante ni la verificación de ordenanzas municipales.</footer>
+</div>
+
+<script>
+/* ============================================================
+   CATÁLOGO DE ACTIVIDADES (umbrales verificados — Llei 18/2020)
+   ============================================================ */
+const ACT = {
+  retail:{ccae:'47x', cat:'comercial', regla:'120', dens:2,   txt:'Comercio al detalle — CCAE 47x. Certificado ≤120 m² construida; proyecto >120 m².'},
+  engros:{ccae:'46x', cat:'comercial', regla:'120', dens:5,   txt:'Comercio al por mayor — CCAE 46x. Certificado ≤120 m²; proyecto >120 m².'},
+  vehiculos:{ccae:'451/453', cat:'comercial', regla:'120', dens:5, txt:'Venta de vehículos/recambios — CCAE 451/453. Certificado ≤120 m²; proyecto >120 m².'},
+  restaurant:{ccae:'561', cat:'concurrencia', regla:'rest', dens:1.5, txt:'Restaurante — CCAE 561. Certificado hasta 500 m² y 500 pax; proyecto si se supera.'},
+  bar:{ccae:'563', cat:'concurrencia', regla:'rest', dens:1.5, txt:'Bar / bebidas — CCAE 563. Certificado hasta 500 m² y 500 pax; proyecto si se supera.'},
+  musical:{ccae:'563/932/900', cat:'musical', regla:'musical', dens:1, txt:'Actividad recreativa musical — Llei 11/2009. ≤150 pax comunicación; >150 pax licencia.'},
+  takeaway:{ccae:'562', cat:'comercial', regla:'120', dens:3, txt:'Comida para llevar / catering — CCAE 562. Certificado ≤120 m²; proyecto >120 m².'},
+  oficina:{ccae:'69–82', cat:'oficina', regla:'500', dens:10, txt:'Oficina / servicios profesionales — CCAE 69–82. Certificado ≤500 m²; proyecto >500 m².'},
+  personal:{ccae:'9601/9602/952', cat:'personal', regla:'120', dens:3, txt:'Servicio personal — CCAE 96xx/95xx. Certificado ≤120 m²; proyecto >120 m².'},
+  tatuaje:{ccae:'9609', cat:'personal', regla:'120', dens:3, txt:'Tatuaje/piercing — CCAE 9609. Certificado ≤120 m²; proyecto >120 m² + autorización sanitaria específica.'},
+  academia:{ccae:'855', cat:'docent', regla:'120', dens:1.5, txt:'Academia — CCAE 855. Certificado ≤120 m²; proyecto >120 m².'},
+  bressol:{ccae:'851', cat:'docent', regla:'always', dens:2, txt:'Escola bressol — CCAE 851. SIEMPRE proyecto técnico.'},
+  gimnasio:{ccae:'9313', cat:'esportiu', regla:'120', dens:5, txt:'Gimnasio — CCAE 9313. Certificado ≤120 m²; proyecto >120 m².'},
+  clinica:{ccae:'862', cat:'sanitari', regla:'120', dens:5, txt:'Clínica / centro médico — CCAE 862. Certificado ≤120 m²; proyecto >120 m² + autorización sanitaria (Dep. Salut).'},
+  museo:{ccae:'910', cat:'concurrencia', regla:'120', dens:2, txt:'Museo / biblioteca — CCAE 910. Certificado ≤120 m²; proyecto >120 m².'},
+  industria:{ccae:'10–33', cat:'industrial', regla:'120', dens:20, txt:'Industria / taller — CCAE 10–33. Certificado ≤120 m²; proyecto >120 m². Verificar RSCIEI y Llei 20/2009.'},
+  almacen:{ccae:'521', cat:'almacen', regla:'almacen', dens:40, txt:'Almacén — CCAE 521. Certificado (todos), salvo RSCIEI Anexo 2 → proyecto.'},
+  hotel:{ccae:'551', cat:'residencial', regla:'hotel', dens:10, txt:'Hotel — CCAE 551. Certificado ≤20 plazas; proyecto >20 plazas.'},
+  hut:{ccae:'552', cat:'hut', regla:'hut', dens:10, txt:'HUT / turismo rural — CCAE 552. Trámite turístico específico (Canal Empresa).'}
+};
+const EXTRAS={
+  musical:[{id:'m_disco',t:'Es discoteca / sala de baile / sala de fiestas',s:'Normalmente supera 150 pax → licencia.'}],
+  industria:[{id:'i_rsciei',t:'Sometido a RSCIEI (Anexo 2 Llei 3/2010): carga de fuego relevante',s:'Activa control preventivo de incendios (informe previo + ECA).'}],
+  almacen:[{id:'a_rsciei',t:'Sometido a RSCIEI (Anexo 2 Llei 3/2010)',s:'Pasa a proyecto + informe previo de incendios.'}],
+  gimnasio:[{id:'g_piscina',t:'Dispone de piscina',s:'RD 742/2013: control sanitario del agua + riesgo de legionela.'}],
+  hotel:[{id:'h_piscina',t:'Dispone de piscina',s:'RD 742/2013: control sanitario del agua + riesgo de legionela.'}]
+};
+/* Registro de fuentes: t = etiqueta corta · full = cita oficial completa · loc = referencia exacta (artículo/anexo/ITC) · url = texto consolidado oficial */
+const NORM = {
+  l18:{t:'Llei 18/2020 + D.131/2022', full:'Llei 18/2020, del 28 de desembre, de facilitació de l\'activitat econòmica (DOGC 8307, 31/12/2020) + Decret 131/2022, de 5 de juliol, del seu Reglament (DOGC 8704, 07/07/2022)', loc:'Annex de la Llei (classificació per CCAE: certificat vs projecte); disposició derogatòria (deroga la Llei 16/2015); D.131/2022: catàleg de tràmits FUE i formularis', url:'https://portaljuridic.gencat.cat/eli/es-ct/l/2020/12/28/18'},
+  l20:{t:'Llei 20/2009 (LPCAA)', full:'Llei 20/2009, del 4 de desembre, de prevenció i control ambiental de les activitats (DOGC 5524, 11/12/2009)', loc:'Annexos I, II i III (text consolidat) + taules consolidades de classificació de la DG de Qualitat Ambiental; informe urbanístic: art. 60', url:'https://portaljuridic.gencat.cat/eli/es-ct/l/2009/12/04/20'},
+  l3:{t:'Llei 3/2010 (incendis)', full:'Llei 3/2010, del 18 de febrer, de prevenció i seguretat en matèria d\'incendis en establiments, activitats, infraestructures i edificis (DOGC 5584, 10/03/2010)', loc:'Annexos 1 i 2 (activitats sotmeses a control preventiu de la Generalitat); títol II (informe previ i acta de comprovació per ECA)', url:'https://portaljuridic.gencat.cat/ca/document-del-pjur/?documentId=547998'},
+  cte_si:{t:'CTE DB-SI', full:'Código Técnico de la Edificación — Documento Básico SI, Seguridad en caso de incendio (RD 314/2006)', loc:'DB-SI 1, tabla 2.1 (locales de riesgo especial: cocinas 20/30/50 kW); DB-SI 3, tabla 2.1 (densidades de ocupación / aforo); DB-SI 3 y 4 (evacuación y PCI)', url:'https://www.codigotecnico.org/pdf/Documentos/SI/DBSI.pdf'},
+  cte_sua:{t:'CTE DB-SUA', full:'Código Técnico de la Edificación — Documento Básico SUA, Seguridad de utilización y accesibilidad (RD 314/2006)', loc:'SUA 9 (condiciones de accesibilidad) y anejo A (definiciones: itinerario accesible)', url:'https://www.codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf'},
+  rsciei:{t:'RSCIEI', full:'RD 2267/2004, de 3 de diciembre, Reglamento de seguridad contra incendios en los establecimientos industriales (BOE 303, 17/12/2004)', loc:'Anexo I (configuraciones A-E y nivel de riesgo intrínseco por carga de fuego) y Anexo II (requisitos constructivos)', url:'https://www.boe.es/eli/es/rd/2004/12/03/2267/con'},
+  d209:{t:'D.209/2023 (accessibilitat)', full:'Decret 209/2023, de 28 de novembre, Codi d\'accessibilitat de Catalunya (DOGC 9043, 30/11/2023)', loc:'Art. 122 + annex 6a (fitxa de condicions d\'accessibilitat i obligats); annex 3e (règim transitori: desnivell d\'accés ≤12 cm); guia oficial de la fitxa (Drets Socials, març 2025)', url:'https://portaljuridic.gencat.cat/ca/document-del-pjur/?documentId=972919'},
+  lepar:{t:'Llei 11/2009 + Reglament espectacles', full:'Llei 11/2009, del 6 de juliol, d\'espectacles públics i activitats recreatives + Decret 112/2010, de 31 d\'agost (Reglament VIGENT; hi ha un projecte de nou reglament en tramitació — comprovar al Portal Jurídic/DOGC abans de citar)', loc:'Catàleg d\'activitats: annex I del Reglament; assegurança RC: arts. 75–83 D.112/2010 (capitals mínims: art. 80); control d\'aforament i memòria de seguretat en musicals >150 pax; horaris: Ordre d\'horaris vigent del Dep. d\'Interior', url:'https://portaljuridic.gencat.cat/ca/document-del-pjur/?documentId=540841'},
+  rebt:{t:'REBT', full:'RD 842/2002, de 2 de agosto, Reglamento electrotécnico para baja tensión (BOE 224, 18/09/2002)', loc:'ITC-BT-28 (locales de pública concurrencia: lista de usos + regla 1 persona/0,8 m² útil >100 pax); ITC-BT-04 (proyecto vs MTD); ITC-BT-05 (inspección OCA inicial y periódica 5 años); visado no obligatorio: RD 1000/2010, art. 2', url:'https://www.boe.es/eli/es/rd/2002/08/02/842/con'},
+  rite:{t:'RITE', full:'RD 1027/2007, de 20 de julio, Reglamento de Instalaciones Térmicas en los Edificios (RITE), modificado por RD 178/2021, de 23 de marzo', loc:'Art. 15 (proyecto >70 kW / memoria técnica 5–70 kW); IT 1.1.4.2.3 (calidad de aire interior: categorías IDA y caudales); IT 1.2.4.5.2 (recuperación de calor si expulsión >0,5 m³/s)', url:'https://www.boe.es/eli/es/rd/2007/07/20/1027/con'},
+  acust:{t:'Acústica (16/2002 + 176/2009)', full:'Llei 16/2002, de 28 de juny, de protecció contra la contaminació acústica + Decret 176/2009, de 10 de novembre (Reglament) + Ley 37/2003, del Ruido, y RD 1367/2007 (marco estatal)', loc:'Annexos del D.176/2009 (valors límit d\'immissió i mètodes de mesura); mapa de capacitat acústica del municipi; ordenança municipal de sorolls (pot ser més restrictiva)', url:'https://portaljuridic.gencat.cat/eli/es-ct/d/2009/11/10/176'},
+  sanit:{t:'Higiene alimentària', full:'Reglamento (CE) nº 852/2004, relativo a la higiene de los productos alimenticios + RD 1021/2022, de 13 de diciembre (comercio minorista alimentario)', loc:'Reg. 852/2004: art. 5 (APPCC) i annex II (requisits dels locals); registre: cens sanitari municipal (declaració responsable) o RSIPAC si distribueix a tercers', url:'https://eur-lex.europa.eu/eli/reg/2004/852/oj'},
+  gas:{t:'RD 919/2006 (gas)', full:'RD 919/2006, de 28 de julio, Reglamento técnico de distribución y utilización de combustibles gaseosos (BOE 211, 04/09/2006)', loc:'ITC-ICG 07 (instalaciones receptoras) — certificado de instalador habilitado + puesta en servicio de la distribuidora', url:'https://www.boe.es/eli/es/rd/2006/07/28/919/con'},
+  legio:{t:'RD 487/2022 (legionel·la)', full:'RD 487/2022, de 21 de junio, requisitos sanitarios para la prevención y el control de la legionelosis (BOE 148, 22/06/2022)', loc:'Art. 2 y anexos (instalaciones de riesgo); Plan de Prevención y Control (PPCL) y libro de mantenimiento', url:'https://www.boe.es/eli/es/rd/2022/06/21/487/con'},
+  pau:{t:'D.30/2015 (autoprotecció)', full:'Decret 30/2015, de 3 de març, catàleg d\'activitats i centres obligats a adoptar mesures d\'autoprotecció (DOGC 6824, 05/03/2015)', loc:'Annex I: catàleg A (interès per a la protecció civil de Catalunya) i C (interès local); registre electrònic Hermes; tècnic acreditat', url:'https://portaljuridic.gencat.cat/eli/es-ct/d/2015/03/03/30'},
+  vert:{t:'D.130/2003 (sanejament)', full:'Decret 130/2003, de 13 de maig, Reglament dels serveis públics de sanejament (DOGC 3894, 29/05/2003)', loc:'Permís d\'abocament al sistema públic + ordenança municipal de clavegueram (separador de greixos en cuines)', url:'https://portaljuridic.gencat.cat/eli/es-ct/d/2003/05/13/130'},
+  pci_mant:{t:'RIPCI (RD 513/2017)', full:'RD 513/2017, de 22 de mayo, Reglamento de instalaciones de protección contra incendios (BOE 139, 12/06/2017)', loc:'Anexo II (programas de mantenimiento mínimo trimestral/anual de extintores, BIEs, detección y alumbrado de emergencia)', url:'https://www.boe.es/eli/es/rd/2017/05/22/513/con'},
+  ss:{t:'RD 1627/1997 (SS obres)', full:'RD 1627/1997, de 24 de octubre, disposiciones mínimas de seguridad y de salud en las obras de construcción (BOE 256, 25/10/1997)', loc:'Art. 4 (estudio básico vs estudio de SS) y art. 3 (coordinador si intervienen varias empresas)', url:'https://www.boe.es/eli/es/rd/1997/10/24/1627/con'},
+  resid:{t:'TR Llei de residus', full:'Decret legislatiu 1/2009, de 21 de juliol, Text refós de la Llei reguladora dels residus de Catalunya + Ley 7/2022, de 8 de abril, de residuos y suelos contaminados (estatal)', loc:'DL 1/2009: art. 54 (residus comercials: el titular ha d\'acreditar-ne la gestió correcta); Ley 7/2022: obligacions de separació en origen', url:'https://portaljuridic.gencat.cat/eli/es-ct/dlg/2009/07/21/1'},
+  urb:{t:'POUM / planejament', full:'Planejament urbanístic municipal (POUM) i plans d\'usos; informe urbanístic municipal (art. 60 Llei 20/2009 per a activitats anexades)', loc:'Registre de planejament urbanístic de Catalunya (RPUC) + seu electrònica del municipi', url:'https://dtes.gencat.cat/rpucportal'},
+  canal:{t:'Canal Empresa / FUE', full:'Canal Empresa — Finestreta Única Empresarial (Generalitat de Catalunya)', loc:'Cercador de tràmits per activitat econòmica i formularis normalitzats FUE del municipi', url:'https://canalempresa.gencat.cat'},
+  consum:{t:'Codi de consum', full:'Llei 22/2010, del 20 de juliol, del Codi de consum de Catalunya + Decret 121/2013, de 26 de febrer (fulls oficials de queixa, reclamació i denúncia)', loc:'Fulls de reclamació a disposició del públic + cartell anunciador (D.121/2013); preus i horari comercial visibles', url:'https://portaljuridic.gencat.cat/eli/es-ct/l/2010/07/20/22'},
+  prl:{t:'PRL / centre de treball', full:'Ley 31/1995, de 8 de noviembre, de Prevención de Riesgos Laborales', loc:'Pla de prevenció, avaluació de riscos i vigilància de la salut si hi ha treballadors; comunicació d\'obertura de centre de treball al Dep. d\'Empresa i Treball (tràmit del Canal Empresa, dins dels 30 dies)', url:'https://www.boe.es/eli/es/l/1995/11/08/31/con'},
+  turisme:{t:'Reglament de turisme', full:'Decret 75/2020, de 4 d\'agost, de turisme de Catalunya (DOGC 8195, 06/08/2020)', loc:'Capítols d\'habitatges d\'ús turístic: alta al Registre de Turisme de Catalunya via Canal Empresa; verificar moratòries/limitacions municipals', url:'https://portaljuridic.gencat.cat/eli/es-ct/d/2020/08/04/75'},
+  piscina:{t:'RD 742/2013 (piscines)', full:'RD 742/2013, de 27 de septiembre, criterios técnico-sanitarios de las piscinas (BOE 244, 11/10/2013)', loc:'Tractament i control de l\'aigua, protocol d\'autocontrol, registre d\'incidències i personal', url:'https://www.boe.es/eli/es/rd/2013/09/27/742/con'},
+  amianto:{t:'RD 396/2006 (amiant)', full:'RD 396/2006, de 31 de marzo, disposiciones mínimas de seguridad y salud en trabajos con riesgo de exposición al amianto (BOE 86, 11/04/2006)', loc:'Retirada només per empresa inscrita al RERA amb pla de treball aprovat (edificis anteriors a 2002: sospitar-ne a cobertes, baixants i aïllaments)', url:'https://www.boe.es/eli/es/rd/2006/03/31/396/con'},
+  cee:{t:'RD 390/2021 (certificat energètic)', full:'RD 390/2021, de 1 de junio, procedimiento básico para la certificación de la eficiencia energética de los edificios (BOE 131, 02/06/2021)', loc:'CEE obligatori en compravenda/lloguer del local; exhibició de l\'etiqueta en establiments amb gran afluència', url:'https://www.boe.es/eli/es/rd/2021/06/01/390/con'},
+  dea:{t:'D.151/2012 (DEA)', full:'Decret 151/2012, de 20 de novembre, requisits per a la instal·lació i l\'ús de desfibril·ladors externs fora de l\'àmbit sanitari (verificar text vigent)', loc:'Annex: espais obligats (grans equipaments esportius, grans superfícies…) + comunicació al Dep. de Salut i personal format', url:'https://portaljuridic.gencat.cat/eli/es-ct/d/2012/11/20/151'},
+  lopd:{t:'LOPDGDD (videovigilància)', full:'Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales', loc:'Art. 22 (videovigilància): cartell informatiu, registre d\'activitats de tractament, conservació màx. 1 mes', url:'https://www.boe.es/eli/es/lo/2018/12/05/3/con'},
+  tabaco:{t:'Ley 28/2005 (tabac)', full:'Ley 28/2005, de 26 de diciembre, de medidas sanitarias frente al tabaquismo (BOE 309, 27/12/2005)', loc:'Art. 7: prohibició de fumar en espais tancats d\'ús públic; senyalització obligatòria als accessos', url:'https://www.boe.es/eli/es/l/2005/12/26/28/con'}
+};
+
+/* ============================================================
+   HELPERS
+   ============================================================ */
+const $=id=>document.getElementById(id);
+const val=id=>{const e=$(id);return e?e.value.trim():''};
+const num=id=>{const e=$(id);return e&&e.value!==''?parseFloat(e.value):null};
+const chk=id=>{const e=$(id);return e?e.checked:false};
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+/* ============================================================
+   BASE CCAE (epígrafes habituales CCAE-2009 → tipo de actividad)
+   Verificar siempre la equivalencia con la CCAE-2025.
+   ============================================================ */
+const CCAE_DB=[
+ // Comercio al detalle (47)
+ ['4711','Supermercado / ultramarinos (predominio alimentación)','retail'],
+ ['4719','Otro comercio no especializado (bazar, multiprecio)','retail'],
+ ['4721','Frutas y hortalizas','retail'],['4722','Carnicería y charcutería (sin obrador)','retail'],
+ ['4723','Pescadería','retail'],['4724','Venta de pan, pastelería y confitería (sin obrador)','retail'],
+ ['4725','Tienda de bebidas','retail'],['4729','Otros productos alimenticios (herbolario, congelados…)','retail'],
+ ['4741','Informática y software','retail'],['4743','Equipos de audio y vídeo','retail'],
+ ['4751','Textiles y mercería','retail'],['4752','Ferretería, pintura y vidrio','retail'],
+ ['4754','Electrodomésticos','retail'],['4759','Muebles e iluminación','retail'],
+ ['4761','Librería','retail'],['4762','Prensa y papelería','retail'],
+ ['4764','Artículos deportivos','retail'],['4765','Juguetería','retail'],
+ ['4771','Ropa / prendas de vestir','retail'],['4772','Calzado y marroquinería','retail'],
+ ['4773','Farmacia','retail'],['4774','Ortopedia y artículos médicos','retail'],
+ ['4775','Perfumería y cosmética','retail'],['4776','Floristería / plantas / animales de compañía','retail'],
+ ['4777','Joyería y relojería','retail'],['4778','Otros artículos nuevos (regalo, óptica…)','retail'],
+ ['4779','Artículos de segunda mano','retail'],['4791','Comercio por internet (con local/almacén)','retail'],
+ // Mayoristas y vehículos (45-46)
+ ['4690','Comercio al por mayor no especializado','engros'],
+ ['4511','Venta de automóviles','vehiculos'],['4532','Venta de recambios de vehículos','vehiculos'],
+ ['4540','Venta y reparación de motocicletas','vehiculos'],
+ ['4520','Taller mecánico de vehículos (reparación)','industria'],
+ // Hostelería (55-56)
+ ['5610','Restaurante / cafetería / puestos de comidas','restaurant'],
+ ['5621','Catering para eventos','takeaway'],['5629','Otros servicios de comidas (colectividades)','takeaway'],
+ ['5630','Bar / establecimiento de bebidas (SIN música)','bar'],
+ ['5630','Bar musical / pub / karaoke (CON música)','musical'],
+ ['9329','Discoteca / sala de baile / otras recreativas','musical'],
+ ['9004','Gestión de salas de espectáculos','musical'],
+ ['5510','Hotel y alojamientos similares','hotel'],
+ ['5520','Alojamiento turístico de corta estancia (HUT, turismo rural)','hut'],
+ // Oficinas y profesionales (62-82)
+ ['6201','Programación / desarrollo informático','oficina'],
+ ['6419','Sucursal bancaria / intermediación monetaria','oficina'],
+ ['6622','Agencia / corredor de seguros','oficina'],
+ ['6810','Inmobiliaria (compraventa)','oficina'],['6831','Agente de la propiedad inmobiliaria','oficina'],
+ ['6910','Despacho jurídico / abogados / notaría','oficina'],['6920','Asesoría contable y fiscal / gestoría','oficina'],
+ ['7111','Estudio de arquitectura','oficina'],['7112','Ingeniería y consultoría técnica','oficina'],
+ ['7311','Agencia de publicidad','oficina'],['7410','Estudio de diseño','oficina'],
+ ['7420','Estudio de fotografía','personal'],['7911','Agencia de viajes','oficina'],
+ ['8211','Servicios administrativos / oficina de servicios','oficina'],
+ // Servicios personales y reparaciones (95-96)
+ ['9601','Lavandería / tintorería','personal'],['9602','Peluquería y estética','personal'],
+ ['9609','Tatuaje / piercing / micropigmentación','tatuaje'],
+ ['9609','Otros servicios personales','personal'],
+ ['9511','Reparación de ordenadores','personal'],['9521','Reparación de electrónica de consumo','personal'],
+ ['9522','Reparación de electrodomésticos','personal'],['9523','Reparación de calzado','personal'],
+ ['9529','Reparación de otros efectos personales','personal'],
+ ['7500','Clínica veterinaria','clinica'],
+ // Educación (85)
+ ['8510','Educación preprimaria / escola bressol','bressol'],
+ ['8551','Educación deportiva y recreativa','academia'],
+ ['8552','Educación cultural (música, danza, artes)','academia'],
+ ['8553','Autoescuela','academia'],['8559','Academia / idiomas / formación no reglada','academia'],
+ ['8560','Actividades auxiliares a la educación','academia'],
+ // Sanidad (86)
+ ['8621','Consulta de medicina general','clinica'],['8622','Consulta de especialistas','clinica'],
+ ['8623','Clínica dental / odontología','clinica'],['8690','Fisioterapia, podología y otras sanitarias','clinica'],
+ // Deporte, cultura y ocio (91-93)
+ ['9313','Gimnasio / fitness','gimnasio'],['9311','Gestión de instalaciones deportivas','gimnasio'],
+ ['9604','Mantenimiento físico (sauna, baños, masaje)','gimnasio'],
+ ['9102','Museo','museo'],['9101','Biblioteca / archivo','museo'],
+ ['9200','Salón de juego / apuestas (normativa de juego específica)','museo'],
+ // Industria y obradores (10-33)
+ ['1071','Obrador de pan y pastelería','industria'],['1013','Elaboración de productos cárnicos (obrador)','industria'],
+ ['1052','Elaboración de helados (obrador)','industria'],['1812','Imprenta / artes gráficas','industria'],
+ ['1610','Carpintería de madera','industria'],['2512','Carpintería metálica / cerrajería','industria'],
+ ['2562','Taller de mecanizado','industria'],['3109','Fabricación de muebles','industria'],
+ ['3312','Reparación de maquinaria','industria'],
+ // Almacén y logística (49-52)
+ ['5210','Depósito y almacenamiento','almacen'],['5224','Manipulación de mercancías','almacen'],
+ ['4941','Transporte de mercancías por carretera (base/cochera)','almacen']
+];
+const dl=$('ccaedb');
+CCAE_DB.forEach(e=>{const o=document.createElement('option');o.value=e[0]+' — '+e[1];dl.appendChild(o);});
+function ccaeMatch(){const v=val('d_ccae');return CCAE_DB.find(e=>(e[0]+' — '+e[1])===v)||null;}
+$('d_ccae').addEventListener('change',()=>{
+  const hit=ccaeMatch();
+  if(hit){
+    actSel.value=hit[2];
+    actSel.dispatchEvent(new Event('change'));
+    $('ccae-hint').textContent='▸ CCAE '+hit[0]+' reconocido → tipo asignado: «'+actSel.options[actSel.selectedIndex].text+'». '+(ACT[hit[2]]?ACT[hit[2]].txt:'');
+  }
+});
+
+const actSel=$('act');
+actSel.addEventListener('change',()=>{
+  const a=ACT[actSel.value];
+  $('ccae-hint').textContent=a?('▸ '+a.txt):'';
+  const ex=$('extra');ex.innerHTML='';
+  (EXTRAS[actSel.value]||[]).forEach(o=>ex.insertAdjacentHTML('beforeend',
+    `<label class="check"><input type="checkbox" id="${o.id}"><span><b>${o.t}</b><small>${o.s}</small></span></label>`));
+  // Coherencia CCAE ↔ tipo: si el CCAE escrito pertenece a otra familia, se limpia y se avisa
+  const cur=ccaeMatch();
+  if(cur && cur[2]!==actSel.value){
+    $('d_ccae').value='';
+    $('ccae-hint').textContent='⚠ El CCAE «'+cur[0]+' — '+cur[1]+'» no corresponde a este tipo de actividad y se ha borrado. Vuelve a escribir el código correcto (o deja el campo vacío).';
+  }
+});
+$('i_alim').addEventListener('change',()=>$('wrap_alimdist').classList.toggle('hidden',!chk('i_alim')));
+
+/* ============================================================
+   MOTOR DE REGLAS
+   ============================================================ */
+function clasificar(a,sup,aforo,places){
+  switch(a.regla){
+    case '120': return sup===null?['proj','Sin superficie declarada; por prudencia, proyecto.']:(sup<=120?['cert','≤120 m² construida → comunicación con certificado técnico.']:['proj','>120 m² → comunicación con proyecto técnico + certificado.']);
+    case '500': return sup===null?['cert','Oficinas hasta 500 m² → certificado.']:(sup<=500?['cert','≤500 m² → comunicación con certificado técnico.']:['proj','>500 m² → comunicación con proyecto + certificado.']);
+    case 'rest':{
+      const big=(sup!==null&&sup>500)||(aforo!==null&&aforo>500);
+      return big?['proj','>500 m² o >500 pax → comunicación con proyecto + certificado.']:['cert','Hasta 500 m² y 500 pax → comunicación con certificado técnico (CCAE 561/563).'];
+    }
+    case 'musical':{
+      if(aforo!==null&&aforo>150) return ['lic','Recreativa musical >150 pax → LICENCIA municipal (Llei 11/2009).'];
+      if(chk('m_disco')) return ['lic','Discoteca/sala de baile → licencia municipal (suele superar 150 pax).'];
+      return ['proj','Recreativa musical ≤150 pax → comunicación + proyecto + estudio acústico.'];
+    }
+    case 'hotel': return (places!==null&&places>20)?['proj','>20 plazas → proyecto + certificado.']:['cert','≤20 plazas → certificado técnico.'];
+    case 'hut': return ['cert','Trámite turístico específico; cédula de habitabilidad hace de certificado.'];
+    case 'always': return ['proj','Educación: SIEMPRE proyecto técnico.'];
+    case 'almacen': return chk('a_rsciei')?['proj','RSCIEI Anexo 2 → proyecto + certificado.']:['cert','Almacén general → certificado, salvo RSCIEI.'];
+  }
+  return ['proj','—'];
+}
+function escalar(base,amb){
+  const o={cert:0,proj:1,lic:2};let r=base;
+  if(amb==='3'&&o[r]<1)r='proj';
+  if((amb==='2'||amb==='1')&&o[r]<2)r='lic';
+  return r;
+}
+function incendis(a,k,sup,aforo,places){
+  const cat=a.cat, alt=val('p_altura');
+  if(cat==='docent'){
+    if(a.regla==='always'){ if(sup!==null&&sup>300) return 'Escola bressol >300 m² → informe previo de Bombers.'; return null;}
+    if(sup!==null&&sup>2000) return 'Docente >2.000 m² → informe previo de Bombers.';
+    return null;
+  }
+  if(cat==='residencial' && places!==null && places>20) return 'Residencial público >20 plazas → informe previo de Bombers.';
+  if(cat==='comercial' && sup!==null && (sup>2000 || (sup>750 && val('p_planta')!=='aislado'))) {
+    if(sup>2000) return 'Comercial >2.000 m² → informe previo de Bombers.';
+    return 'Comercial >750 m² situado bajo edificio → informe previo de Bombers (verificar Annex 1).';
+  }
+  if((cat==='concurrencia'||cat==='esportiu'||cat==='musical') && ((sup!==null&&sup>500)||(aforo!==null&&aforo>500)))
+    return 'Pública concurrencia / recreativa >500 m² o >500 pax → informe previo de Bombers.';
+  if(cat==='musical' && chk('m_disco')) return 'Espectáculo público musical → informe previo de Bombers (verificar Annex 1.16/1.17).';
+  if(cat==='sanitari' && sup!==null && sup>750 && alt!=='baja') return 'Sanitario ambulatorio >750 m²/planta y >15 m de evacuación → informe previo de Bombers.';
+  if((cat==='industrial'||cat==='almacen') && (chk('i_rsciei')||chk('a_rsciei')||chk('i_apq'))) return 'Industrial/almacén RSCIEI (Anexo 2) → informe previo de Bombers según nivel de riesgo.';
+  if(alt==='muyalta') return 'Edificio con altura de evacuación ≥28 m → informe previo de Bombers (cualquier uso).';
+  return null;
+}
+function fichaAcc(a,k,sup,aforo){
+  if(a.cat==='residencial' && k==='hotel') return ['Hoteles: SIEMPRE ficha de condiciones de accesibilidad.',true];
+  if(k==='museo') return ['Museos/teatros/cines: SIEMPRE ficha de accesibilidad.',true];
+  if((k==='restaurant'||k==='bar'||k==='musical') && aforo!==null && aforo>100) return ['Bar/restaurante/discoteca >100 pax → ficha de accesibilidad obligatoria (art. 122 + Annex 6a).',true];
+  if(a.cat==='comercial' && sup!==null && sup>250) return ['Comercio >250 m² útil → ficha de accesibilidad obligatoria.',true];
+  if(a.cat==='esportiu' && sup!==null && sup>250) return ['Centro deportivo >250 m² útil → ficha de accesibilidad obligatoria.',true];
+  return ['Por umbral no se aprecia obligación de Ficha; la accesibilidad general del local sí es exigible (DB-SUA + D. 209/2023).',false];
+}
+function esLPC(a,k,aforoCalc){
+  // ITC-BT-28: pública concurrencia por uso (siempre) o por ocupación >100 (regla 1 pax/0,8 m² útil)
+  if(['concurrencia','musical','docent','sanitari','esportiu','residencial'].includes(a.cat)) return [true,'Local de pública concurrencia por USO (ITC-BT-28: bares, restaurantes, docencia, sanitario, deportivo, espectáculos, hospedaje).'];
+  if(k==='museo') return [true,'Museos y bibliotecas: pública concurrencia por uso.'];
+  if(aforoCalc!==null && aforoCalc>100) return [true,`Ocupación prevista ${aforoCalc} > 100 personas → pública concurrencia (ITC-BT-28, regla 1 persona/0,8 m² útil).`];
+  return [false,''];
+}
+function seguroRC(aforo){
+  if(aforo===null) return 'capital mínimo según aforo (verificar art. 80 Decret 112/2010 / nuevo reglamento)';
+  if(aforo<=100) return '300.000 €';
+  if(aforo<=150) return '400.000 €';
+  if(aforo<=300) return '600.000 €';
+  if(aforo<=500) return '750.000 €';
+  if(aforo<=1000) return '900.000 €';
+  if(aforo<=1500) return '1.200.000 €';
+  return '≥1.600.000 € (verificar escala)';
+}
+
+/* ============================================================
+   GENERACIÓN DEL MODELO
+   ============================================================ */
+let MODEL=null;
+
+function generar(){
+  const k=actSel.value; if(!k){alert('Selecciona el tipo de actividad.');return;}
+  const mm=ccaeMatch();
+  if(mm && mm[2]!==k){
+    const tipoCcae=[...actSel.options].find(o=>o.value===mm[2]);
+    alert('INCOHERENCIA: el CCAE «'+mm[0]+' — '+mm[1]+'» corresponde al tipo «'+(tipoCcae?tipoCcae.text:mm[2])+'», pero tienes seleccionado «'+actSel.options[actSel.selectedIndex].text+'».\n\nCorrige uno de los dos antes de generar la hoja de ruta.');
+    return;
+  }
+  const a={...ACT[k],id:k};
+  const sup=num('p_sup'), suputil=num('p_suputil'), places=num('p_places'), amb=val('amb');
+  const cocina=val('i_cocina'), humos=val('i_humos'), musica=val('i_musica');
+  const clima=num('i_clima'), caudal=num('i_caudal'), pelec=num('i_elec');
+  const obras=val('o_obras'), planta=val('p_planta');
+  const mun=val('d_mun');
+
+  // Aforo: declarado o estimado (orientativo) con densidad de la actividad sobre superficie útil (o 80% de construida)
+  let aforo=num('p_aforo'), aforoEst=false;
+  if(aforo===null){
+    const s=suputil!==null?suputil:(sup!==null?sup*0.8:null);
+    if(s!==null){aforo=Math.ceil((s*0.75)/a.dens);aforoEst=true;}
+  }
+
+  // Régimen base + escalado
+  let [base,nota]=clasificar(a,sup,aforo,places);
+  const inc=incendis(a,k,sup,aforo,places);
+  if(inc && base==='cert'){base='proj';nota+=' (Elevado a proyecto por control preventivo de incendios.)';}
+  const reg=escalar(base,amb);
+  const NAMES={cert:['r-cert','Comunicación previa','Comunicación previa con CERTIFICADO técnico — apertura el mismo día del registro'],
+    proj:['r-proj','Comunicación previa','Comunicación previa con PROYECTO técnico + certificado — apertura el mismo día del registro (si no hay frenos)'],
+    lic:['r-lic','Control ex ante','LICENCIA / autorización previa — NO se puede abrir hasta resolución expresa']};
+  const R=NAMES[reg];
+
+  const [fTxt,fOblig]=fichaAcc(a,k,sup,aforo);
+  const [lpc,lpcTxt]=esLPC(a,k,aforo);
+  const esHosteleria=['restaurant','bar','musical'].includes(k);
+  const esLepar=esHosteleria; // actividades recreativas (restauración y musicales)
+  const hayCocina=cocina!=='no';
+  const normSet=new Map();
+  const addNorm=(key,motivo)=>{if(!normSet.has(key))normSet.set(key,motivo)};
+
+  // ---------- FASES ----------
+  const F=[[],[],[],[],[],[],[]]; // 0..6
+  const add=(f,tipo,tit,txt,norm)=>{F[f].push({tipo,tit,txt,norm:norm||null});if(norm)norm.forEach(n=>{if(!normSet.has(n))normSet.set(n,tit)})};
+
+  /* ===== FASE 0 · VIABILIDAD ===== */
+  add(0,chk('p_usoprevio')?'stop':'warn','Compatibilidad urbanística (POUM / plan de usos)',
+    'Solicitar el informe urbanístico municipal POR ESCRITO antes de firmar alquiler u honorarios. Plazo municipal orientativo: 1 mes (20 días en régimen de comunicación); si no responde, se puede continuar adjuntando copia sellada de la solicitud. Vigencia: la que fije el informe (mín. 6 meses) o 2 años.'+
+    (chk('p_usoprevio')?' ATENCIÓN: hay cambio de uso → si el POUM no admite el nuevo uso, el proyecto es INVIABLE.':'')+
+    (esHosteleria?' Comprobar además si existe PLAN DE USOS que limite nuevos bares/restaurantes en la zona.':''),['urb']);
+  if(hayCocina){
+    if(humos==='no') add(0,'stop','Salida de humos: NO viable',
+      'La cocina exige conducto de extracción propio hasta cubierta (UNE 100165 + ordenanza). Sin conducto y sin permiso de la comunidad, el proyecto de restauración es inviable en la mayoría de municipios. Verificar si la ordenanza local admite excepcionalmente sistemas de filtración sin salida a cubierta antes de continuar.',['acust']);
+    else if(humos==='posible') add(0,'warn','Salida de humos: pendiente de ejecutar',
+      'Conseguir ANTES de nada la autorización de la comunidad de propietarios (acta) para el paso del conducto hasta cubierta, y valorar su coste en el presupuesto de obra.',null);
+    else add(0,'ok','Salida de humos existente','Verificar sección, estanqueidad y registro de limpieza del conducto existente.',null);
+  }
+  if(chk('p_viviendas')&&(esHosteleria||a.cat==='industrial'))
+    add(0,'warn','Estatutos de la comunidad de propietarios','En edificios de viviendas, los estatutos pueden prohibir actividades molestas (bares, talleres, música). Pedir nota simple / estatutos antes de comprometerse.',null);
+  add(0,'info','Suministro eléctrico contratable',
+    'Verificar con la distribuidora la potencia disponible en la acometida'+(pelec!==null?` (prevista: ${pelec} kW)`:'')+'. Una ampliación de acometida puede tardar meses.',null);
+  add(0,'info','Certificado de eficiencia energética del local',
+    'Si el local se alquila o compra, el propietario debe entregar el CEE en vigor; los establecimientos con gran afluencia de público deben exhibir la etiqueta energética.',['cee']);
+  add(0,'info','Aforo de cálculo (CTE DB-SI 3)',
+    aforo!==null?(aforoEst?`Aforo ESTIMADO orientativo: ~${aforo} personas (densidad ${a.dens} m²/persona). Recalcular con superficies útiles reales por zonas antes de firmar nada.`:`Aforo declarado: ${aforo} personas. Verificar con densidades DB-SI 3 por zonas.`):'Calcular el aforo con las densidades del CTE DB-SI 3: condiciona pública concurrencia, incendios, accesibilidad y seguro.',['cte_si']);
+  if(mun.toLowerCase().includes('barcelona'))
+    add(0,'warn','Barcelona: ordenanzas propias','Barcelona ciudad tiene planes de usos por distrito, ORCPI municipal de incendios y ordenanza de medio ambiente propia. Revisar SIEMPRE antes de clasificar.',null);
+
+  /* ===== FASE 1 · CLASIFICACIÓN ===== */
+  add(1,reg==='lic'?'stop':'info','Régimen de tramitación — '+R[2],nota,['l18']);
+  if(amb!=='no'){
+    const t={'1':'Anexo I — Autorización Ambiental Integrada (OGAU/Generalitat). Resolución ~8 meses, silencio negativo. Declaración de impacto ambiental.',
+             '2':'Anexo II — Licencia ambiental municipal. Proyecto básico + estudio ambiental, información pública 30 días + vecinal 10 días. Resolución ~6 meses, silencio negativo.',
+             '3':'Anexo III — Comunicación ambiental: efectiva al presentarla con el certificado técnico (y acta ECA de incendios si la actividad está en anexos de la Llei 3/2010).'}[amb];
+    add(1,amb==='3'?'info':'stop','Clasificación ambiental (Llei 20/2009)',t+' Verificar epígrafe exacto en las tablas consolidadas vigentes de la Generalitat.',['l20']);
+  }
+  if(inc) add(1,'stop','Incendios — control preventivo (Llei 3/2010) — BLOQUEA la apertura',
+    inc+' Secuencia obligada: proyecto de incendios → informe previo favorable de Bombers (plazo ~2 meses) → ejecutar obras → acta de comprobación favorable de ECA/EIC → solo entonces comunicar/abrir.',['l3','cte_si']);
+  else add(1,'ok','Incendios — sin control preventivo de la Generalitat',
+    'La actividad no alcanza los umbrales de los anexos de la Llei 3/2010: la justificación del CTE DB-SI'+((a.cat==='industrial'||a.cat==='almacen')?' / RSCIEI':'')+' se integra en el proyecto/certificado de actividad, bajo responsabilidad del técnico.',['cte_si'].concat((a.cat==='industrial'||a.cat==='almacen')?['rsciei']:[]));
+  if(esLepar){
+    add(1,'info','Actividad recreativa (Llei 11/2009 + Reglament d\'espectacles)',
+      'Epígrafe del catálogo de espectáculos y actividades recreativas (annex I del Decret 112/2010, VIGENTE). Obligaciones: seguro de RC con capital mínimo según aforo ('+seguroRC(aforo)+'), cartel de aforo visible, derecho de admisión, horarios según Ordre d\'horaris de Interior.'+
+      (k==='musical'?' Actividad musical >150 pax: sistema de control de aforo. NOTA: hay un proyecto de nuevo reglamento de espectáculos en tramitación — comprobar en el Portal Jurídic el texto vigente en la fecha de la firma.':''),['lepar']);
+    if(k==='musical'&&aforo!==null&&aforo>150) add(1,'warn','Memoria de seguridad (>150 pax)','Actividad musical >150 personas: memoria de seguridad, personal de control de acceso y control de aforo.',['lepar']);
+  }
+  if(k==='hut') add(1,'info','Trámite turístico','Alta HUT/turismo rural en Canal Empresa + número de registro turístico. Verificar moratorias municipales de HUT.',['turisme']);
+  if(k==='clinica') add(1,'info','Autorización sanitaria de centro','Los centros sanitarios requieren autorización del Departament de Salut además de la comunicación municipal.',null);
+  if(k==='tatuaje') add(1,'info','Autorización sanitaria específica','Tatuaje/piercing: autorización sanitaria del establecimiento y formación higiénico-sanitaria del personal.',null);
+  if(k==='bressol') add(1,'info','Autorización del Departament d\'Educació','Las escoles bressol requieren autorización educativa además de la licencia municipal.',null);
+
+  /* ===== FASE 2 · PROYECTOS Y DOCUMENTACIÓN ===== */
+  if(reg==='cert') add(2,'task','Certificado técnico de actividad + expediente interno',
+    'Certificado firmado (formulario FUE) + archivo interno as-built: levantamiento, cálculo de ocupación y evacuación, justificación CTE DB-SI/DB-SUA, accesibilidad e instalaciones. Aunque el ayuntamiento no lo pida, es el respaldo de la firma.',['l18','cte_si','cte_sua']);
+  else add(2,'task','Proyecto técnico de actividad'+(reg==='lic'?' (para licencia)':''),
+    'Memoria (descriptiva, urbanística, ambiental, incendios, accesibilidad, acústica, sanitaria si procede), anexos de cálculo y planos: emplazamiento, distribución acotada, evacuación y PCI, instalaciones, ventilación y saneamiento.'+(reg==='lic'?' Incluir estudios sectoriales exigidos por el régimen de licencia.':''),['l18','cte_si','cte_sua']);
+  if(inc) add(2,'task','Proyecto específico de incendios (para informe previo de Bombers)','Documentación técnica según guías de Bombers (SP): sectorización, resistencia estructural, evacuación, instalaciones PCI, accesibilidad de bomberos.',['l3']);
+  if(lpc) add(2,'task','Proyecto eléctrico de Baja Tensión (LPC)',
+    lpcTxt+' La ITC-BT-04 exige PROYECTO sin límite de potencia (no basta MTD). Prescripciones ITC-BT-28: cables libres de halógenos, alumbrado de emergencia en recorridos, aseos y cuadros, previsión de suministros complementarios según aforo. El visado no es obligatorio (RD 1000/2010).',['rebt']);
+  else add(2,'task','Instalación eléctrica — memoria técnica de diseño (MTD)',
+    'Local sin condición de pública concurrencia: basta MTD del instalador autorizado'+((a.cat==='industrial')?' salvo que la potencia supere los umbrales de la ITC-BT-04 (industrias >20 kW → proyecto)':'')+'.',['rebt']);
+  if(clima!==null&&clima>70) add(2,'task','Proyecto RITE (potencia térmica >70 kW)','Instalación térmica > 70 kW → proyecto RITE firmado por técnico. Justificar ventilación (caudales IDA) y eficiencia.',['rite']);
+  else if(clima!==null&&clima>=5) add(2,'task','Instalación térmica — memoria técnica RITE (5–70 kW)','La documenta el instalador habilitado; el proyecto de actividad debe justificar los caudales de aire exterior (IDA 2 oficinas, IDA 3 comercio/restauración/gimnasios).',['rite']);
+  else add(2,'info','Ventilación (RITE)','Justificar la renovación mecánica de aire exterior según uso (IDA 2 oficinas, IDA 3 comercio/restauración). Los locales públicos no pueden ventilar solo por puertas.',['rite']);
+  if(caudal!==null&&caudal>1800) add(2,'warn','Recuperador de calor obligatorio','Caudal de expulsión '+caudal+' m³/h > 1.800 m³/h (0,5 m³/s): la IT 1.2.4.5.2 del RITE exige recuperación de calor del aire expulsado (si funcionamiento >1.000 h/año).',['rite']);
+  if(musica==='actividad') add(2,'task','Estudio de impacto acústico + limitador',
+    'Estudio acústico (aislamiento de paredes, techo, fachada; vibraciones) según Decret 176/2009 y mapa de capacidad acústica municipal. Limitador-registrador homologado, precintado y (según ordenanza) conectado telemáticamente al ayuntamiento.',['acust']);
+  else if(musica==='ambiental'||esHosteleria||a.cat==='esportiu'||a.cat==='industrial') add(2,'task','Justificación acústica',
+    'Justificar aislamiento y niveles de inmisión en viviendas colindantes (Decret 176/2009 + ordenanza). '+(musica==='ambiental'?'La música ambiental puede exigir limitador según ordenanza (no convierte la actividad en "musical" si es hilo de fondo ≤ límites).':''),['acust']);
+  if(hayCocina){
+    const riesgo=cocina==='peq'?null:(cocina==='med'?'riesgo especial BAJO (20<P≤30 kW) o MEDIO (30<P≤50 kW)':'riesgo especial ALTO (>50 kW)');
+    add(2,'task','Cocina: extracción y sectorización',
+      'Conducto de extracción propio hasta cubierta (UNE 100165), registro de limpieza y filtros. '+(riesgo?('La cocina es local de '+riesgo+' según DB-SI 1 → sectorizar y justificar. Valorar extinción automática en campana.'):'Cocina ≤20 kW: no es local de riesgo especial, pero la extracción sigue siendo exigible.'),['cte_si']);
+    add(2,'task','Saneamiento: separador de grasas','Prever arqueta separadora de grasas antes de la conexión al alcantarillado y tramitar el permiso de conexión/vertido si el municipio lo exige.',['vert']);
+  }
+  if(chk('i_gas')) add(2,'task','Instalación de gas','Diseño según RD 919/2006 (instalación receptora); la documenta el instalador habilitado de gas; prever ventilaciones del local de la caldera/cocina.',['gas']);
+  add(2,fOblig?'warn':'info','Accesibilidad (Decret 209/2023 + DB-SUA)',
+    fTxt+' Parámetros clave: itinerario ≥1,20 m (practicable ≥0,90), puertas ≥0,78 m, rampa practicable máx. 12% (accesible 10-8-6%), mecanismos a 0,80–1,20 m, aseo adaptado con giro Ø1,50 m según uso/aforo.'+
+    (chk('p_barreras')?' Local existente con barreras: redactar análisis de SOLUCIONES ALTERNATIVAS / ajustes razonables justificando la mayor accesibilidad posible (transitorio: desnivel de acceso ≤12 cm → practicable sin obra estructural).':''),['d209','cte_sua']);
+  if(chk('i_alim')) add(2,'task','Diseño higiénico-sanitario','Circuito "marcha hacia adelante" (recepción → almacenaje → preparación → servicio, sin cruces con residuos/vajilla sucia), paramentos lisos, impermeables y lavables, lavamanos no manual en zonas de manipulación.',['sanit']);
+  if(aforo!==null&&aforo>=2000) add(2,'stop','Plan de autoprotección (PAU)','Aforo ≥2.000 personas → PAU según Decret 30/2015, redactado por técnico acreditado y registrado en Hermes.',['pau']);
+  else if(k==='musical'&&aforo!==null&&aforo>500) add(2,'warn','Plan de autoprotección (interés local)','Actividad musical >500 pax: PAU de interés local (Decret 30/2015, anexo I.C). Verificar catálogo municipal.',['pau']);
+  if(chk('g_piscina')||chk('h_piscina')) add(2,'task','Piscina: tratamiento y control sanitario del agua','Diseño de depuración y renovación, protocolo de autocontrol y registro de incidencias (RD 742/2013). Incluye el riesgo de legionela en duchas y vasos climatizados.',['piscina','legio']);
+  if(a.cat==='esportiu') add(2,'info','Desfibril·lador extern (DEA)','Verificar si el equipamiento deportivo está obligado a disponer de DEA (Decret 151/2012): instalación señalizada, comunicación a Salut y personal formado.',['dea']);
+
+  /* ===== FASE 3 · OBRAS ===== */
+  if(obras==='mayor'||chk('p_usoprevio')) add(3,'stop','Licencia de obras mayores',
+    'Obras con afectación estructural/fachada'+(chk('p_usoprevio')?' y/o cambio de uso':'')+' → proyecto de obras + licencia urbanística + ICIO + gestión de residuos de construcción. El Certificado Final de Obra debe estar CERRADO antes de comunicar la actividad.',['urb']);
+  else if(obras==='menor') add(3,'task','Comunicación de obras menores','Reforma interior sin afectar estructura → comunicación/asabentat de obras + ICIO reducido + gestión de residuos de construcción. En muchos municipios puede tramitarse junto con la actividad.',null);
+  else add(3,'ok','Sin obras','No se prevén obras: verificar igualmente que el estado actual coincide con los planos que se firmarán.',null);
+  if(obras!=='no'){
+    add(3,'task','Seguridad y salud en obra','Estudio básico de seguridad y salud + coordinador de SS si intervienen varias empresas (RD 1627/1997). Apertura de centro de trabajo del contratista.',['ss']);
+    add(3,'task','Dirección de obra / dirección técnica','Visitas periódicas documentadas: comprobar aislamiento acústico realmente instalado, protección pasiva (espesores de ignifugado para R-30/R-60…), alicatados sanitarios, pendientes y anchos de accesibilidad. Reportaje fotográfico para el expediente.',null);
+  }
+  if(obras!=='no') add(3,'warn','Amianto (edificios anteriores a 2002)','Antes de demoler falsos techos, cubiertas o bajantes: si el edificio es anterior a 2002, sospechar presencia de amianto. La retirada solo puede hacerla una empresa inscrita en el RERA con plan de trabajo aprobado.',['amianto']);
+  if(chk('o_rotulo')) add(3,'task','Rótulo en fachada','Comunicación o licencia según ordenanza de paisaje urbano (medidas, iluminación, catalogación del edificio).',null);
+  if(chk('o_terraza')) add(3,'task','Terraza en dominio público','Autorización de ocupación de vía pública: procedimiento y tasa independientes; suele exigir plano de ocupación y seguro.',null);
+  if(chk('o_vado')) add(3,'task','Vado / carga y descarga','Licencia de vado o reserva de estacionamiento según la ordenanza municipal de circulación y ocupación de la vía pública.',null);
+
+  /* ===== FASE 4 · LEGALIZACIÓN DE INSTALACIONES ===== */
+  add(4,'task','Electricidad: CIE '+(lpc?'+ inspección OCA inicial':''),
+    'El instalador emite el CIE (Certificado de Instalación Eléctrica) y lo registra vía Canal Empresa/OGE. '+(lpc?'Al ser pública concurrencia: inspección INICIAL favorable de un Organismo de Control (OCA) antes del suministro definitivo, e inspecciones periódicas cada 5 años.':'Sin OCA inicial salvo umbrales especiales; conservar el CIE en el expediente.'),['rebt']);
+  if(clima!==null&&clima>=5) add(4,'task','Térmicas: certificado RITE','Certificado de la instalación térmica registrado (instalador/empresa habilitada) + programa de mantenimiento. Inspecciones periódicas de eficiencia según potencia.',['rite']);
+  if(chk('i_gas')) add(4,'task','Gas: certificado y puesta en servicio','Certificado del instalador de gas (IRG) + pruebas + puesta en servicio por la distribuidora.',['gas']);
+  if(inc) add(4,'stop','Acta de comprobación de incendios (ECA/EIC)','Contratar entidad colaboradora para el acto de comprobación en materia de incendios una vez ejecutadas las medidas. Sin acta favorable NO se puede presentar la comunicación.',['l3']);
+  if(musica==='actividad') add(4,'task','Sonometría final','Medición acústica en condiciones reales de funcionamiento por técnico/entidad acreditada, verificando inmisión en viviendas colindantes y ajuste del limitador.',['acust']);
+  if(chk('i_legio')) add(4,'task','Legionela','Alta de las instalaciones de riesgo, plan de prevención y control (PPCL), analíticas y libro de mantenimiento (RD 487/2022).',['legio']);
+  if(chk('i_alim')) add(4,'task','Sanidad alimentaria','Declaración responsable de establecimiento alimentario ante el ayuntamiento (censo municipal) e implantación del APPCC/prerequisitos.'+(chk('i_alimdist')?' Al distribuir a terceros: inscripción en RSIPAC/RGSEAA (trámite autonómico propio con inspección).':''),['sanit']);
+  add(4,'task','Protección contra incendios: contrato de mantenimiento','Extintores, BIEs, detección y alumbrado de emergencia con contrato de mantenimiento (RD 513/2017) y actas trimestrales/anuales desde la puesta en marcha.',['pci_mant']);
+
+  /* ===== FASE 5 · CIERRE DOCUMENTAL ===== */
+  const cierre=[];
+  cierre.push(reg==='cert'?'Certificado técnico de actividad firmado (formulario FUE).':'Proyecto técnico + Certificado final de obra y dirección técnica (coincidencia realidad-proyecto).');
+  cierre.push('CIE eléctrico registrado'+(lpc?' + acta OCA inicial favorable':'')+'.');
+  if(clima!==null&&clima>=5) cierre.push('Certificado RITE registrado.');
+  if(chk('i_gas')) cierre.push('Certificado de gas + puesta en servicio.');
+  if(inc) cierre.push('Acta favorable de ECA/EIC en materia de incendios (y copia del informe previo de Bombers).');
+  if(musica==='actividad') cierre.push('Estudio acústico + certificado de sonometría final + ficha del limitador.');
+  if(fOblig) cierre.push('Ficha de condiciones de accesibilidad (Annex 6a) cumplimentada y registrada.');
+  if(esLepar) cierre.push('Póliza de RC con capital mínimo ('+seguroRC(aforo)+') y recibo pagado.');
+  if(chk('i_alim')) cierre.push('Declaración responsable sanitaria presentada + plan APPCC documentado.'+(chk('i_alimdist')?' Alta RSIPAC.':''));
+  if(chk('i_legio')) cierre.push('Plan de prevención de legionela + contrato de mantenimiento.');
+  if(obras!=='no') cierre.push('Licencia/comunicación de obras cerrada: CFO, ICIO liquidado, certificado de gestión de residuos de construcción.');
+  cierre.push('Contrato de gestión de residuos comerciales (papel/orgánica/envases según actividad).');
+  cierre.push('Levantamiento as-built + reportaje fotográfico archivados (respaldo de la firma).');
+  F[5]=cierre;
+
+  /* ===== FASE 6 · FUE Y POST-APERTURA ===== */
+  add(6,'task','Presentación telemática (Canal Empresa / FUE municipal)',
+    'Formulario normalizado + PDFs firmados digitalmente (proyecto/certificado, CFO, boletines, actas) + pago telemático de tasas. '+(reg==='lic'?'RÉGIMEN DE LICENCIA: el justificante NO habilita; esperar resolución expresa antes de abrir.':'El justificante de registro habilita la apertura INMEDIATA… solo si la documentación está completa y es veraz; una comunicación incompleta es ineficaz y el ayuntamiento puede ordenar el cese.'),['l18','canal']);
+  add(6,'info','Control posterior','El ayuntamiento inscribirá la actividad en su registro (GIA) y puede inspeccionar en cualquier momento (plan de verificación municipal). Todo lo firmado debe ser comprobable in situ.',null);
+  add(6,'task','Consumo: hojas de reclamación y precios','Fulls oficials de queixa/reclamació a disposición del público con cartel anunciador; precios y horario comercial visibles.',['consum']);
+  add(6,'task','Laboral y fiscal (coordinar con gestoría)','Si hay trabajadores: comunicación de apertura de centro de trabajo (30 días) y plan de prevención de riesgos laborales. Altas del titular: censal AEAT (036/037), IAE si procede, RETA/Seguridad Social.',['prl']);
+  const post=[], postNorm=['resid','pci_mant'];
+  if(esLepar){post.push('Cartel de aforo visible y derecho de admisión.');post.push('Cumplir horarios de la Ordre d\'horaris vigente.');}
+  if(esHosteleria){post.push('Señalización de prohibido fumar en accesos (Ley 28/2005, art. 7).');postNorm.push('tabaco');}
+  if(chk('i_video')){post.push('Videovigilancia: cartel informativo, registro de tratamiento y conservación máx. 1 mes (LOPDGDD art. 22).');postNorm.push('lopd');}
+  if(lpc) post.push('OCA eléctrica periódica cada 5 años.');
+  post.push('Mantenimientos periódicos: PCI (RD 513/2017)'+(clima!==null&&clima>=5?', RITE':'')+(chk('i_legio')?', legionela':'')+(chk('g_piscina')||chk('h_piscina')?', autocontrol de piscina':'')+'.');
+  if(chk('i_alim')) post.push('APPCC operativo y registros de autocontrol al día (inspecciones de salud pública).');
+  post.push('Cualquier modificación de la actividad (ampliación, música, terraza…) requiere nueva comunicación o modificación de la existente.');
+  add(6,'info','Obligaciones permanentes',post.join(' · '),postNorm);
+
+  MODEL={a,k,reg,R,nota,sup,suputil,aforo,aforoEst,places,amb,inc,lpc,esLepar,fases:F,cierre,normSet,
+    datos:{act:val('d_act'),tit:val('d_tit'),mun:mun,dir:val('d_dir'),ccae:val('d_ccae')||a.ccae,tec:val('d_tec')},
+    fecha:new Date().toLocaleDateString('es-ES')};
+  render(MODEL);
+}
+
+/* ============================================================
+   RENDER EN PANTALLA
+   ============================================================ */
+const FNAMES=['FASE 0 · Viabilidad previa (antes de alquilar / aceptar el encargo)','FASE 1 · Clasificación y régimen de tramitación','FASE 2 · Proyectos y documentación técnica a redactar','FASE 3 · Obras y dirección','FASE 4 · Legalización de instalaciones y controles externos','FASE 5 · Checklist de cierre documental','FASE 6 · Tramitación FUE, apertura y obligaciones posteriores'];
+
+function itHTML(it){
+  const tipo=it.tipo==='task'?'':it.tipo;
+  const norms=(it.norm||[]).map(k=>{const r=NORM[k];return r?`<span class="norm" title="${esc(r.full)}">§ ${esc(r.t)} · ${esc(r.loc)}</span>`:''}).join('');
+  return `<div class="it ${tipo}"><b>${esc(it.tit)}</b>${esc(it.txt)}<br>${norms}</div>`;
+}
+function render(M){
+  let h=`<h2>Hoja de ruta — ${esc(M.datos.act||'actividad')}</h2>`;
+  h+=`<p class="hint">${esc(M.datos.mun||'[municipio]')} · CCAE ${esc(M.datos.ccae)} · ${M.fecha}${M.aforo!==null?` · aforo ${M.aforoEst?'estimado ~':''}${M.aforo} pax`:''}</p>`;
+  h+=`<div class="verdict ${M.R[0]}"><div class="lvl">${M.R[1]}</div><div class="name">${esc(M.R[2])}</div><div>${esc(M.nota)}</div><span class="tag">CCAE ${esc(M.a.ccae)}</span>${M.lpc?'<span class="tag">Pública concurrencia (REBT)</span>':''}${M.inc?'<span class="tag">⚠ Control previo incendios</span>':''}</div>`;
+  M.fases.forEach((f,i)=>{
+    h+=`<div class="fase"><h3><span class="fn">${i}</span>${esc(FNAMES[i])}</h3><div class="fbody">`;
+    if(i===5) h+=`<ul class="lst">${M.cierre.map(c=>`<li>${esc(c)}</li>`).join('')}</ul>`;
+    else h+=f.map(itHTML).join('')||'<p class="hint">Sin acciones específicas.</p>';
+    h+=`</div></div>`;
+  });
+  h+=`<div class="fase"><h3><span class="fn">§</span>Normativa aplicable — fuentes oficiales exactas</h3><div class="fbody"><table class="tnorm"><tr><th>Norma (enlace al texto oficial)</th><th>Referencia exacta</th><th>Por qué aplica</th></tr>`;
+  M.normSet.forEach((motivo,key)=>{const r=NORM[key];if(!r)return;h+=`<tr><td><a href="${r.url}" target="_blank">${esc(r.full)}</a></td><td>${esc(r.loc)}</td><td>${esc(motivo)}</td></tr>`;});
+  h+=`</table></div></div>`;
+  const res=$('result');res.innerHTML=h;res.classList.remove('hidden');
+  $('dlrow').classList.remove('hidden');
+  res.scrollIntoView({behavior:'smooth'});
+}
+
+/* ============================================================
+   EXPORTACIÓN A WORD (.doc HTML)
+   ============================================================ */
+function descargarWord(){
+  if(!MODEL) return;
+  const M=MODEL;
+  const st=`body{font-family:Calibri,Arial,sans-serif;font-size:11pt;color:#111}
+    h1{font-size:17pt;color:#1B2A4A;margin:0 0 2pt} h2{font-size:13pt;color:#1B2A4A;background:#F0F2F6;padding:4pt 8pt;margin:16pt 0 6pt}
+    h3{font-size:11.5pt;color:#C9962A;margin:10pt 0 3pt} p{margin:4pt 0}
+    .meta{color:#4B5563;font-size:10pt} .verd{border:1pt solid #C9962A;background:#FDF6E8;padding:8pt;margin:8pt 0}
+    .stop{color:#9b2226;font-weight:bold} .warn{color:#9a6b00;font-weight:bold}
+    table{border-collapse:collapse;width:100%;font-size:10pt;margin:6pt 0} td,th{border:1pt solid #9BA3B2;padding:4pt 6pt;text-align:left;vertical-align:top} th{background:#F0F2F6}
+    li{margin:3pt 0} .norm{color:#1d4e89;font-size:9pt}`;
+  const tipoTxt={'stop':'⛔ FRENO — ','warn':'⚠ ATENCIÓN — ','info':'ℹ ','ok':'✔ ','task':'▸ '};
+  let b='';
+  b+=`<h1>Hoja de ruta de apertura — ${esc(M.datos.act||'[actividad]')}</h1>`;
+  b+=`<p class="meta">Titular: ${esc(M.datos.tit||'[titular]')} · Emplazamiento: ${esc(M.datos.dir||'[dirección]')} (${esc(M.datos.mun||'[municipio]')})<br>CCAE: ${esc(M.datos.ccae)} · Técnico: ${esc(M.datos.tec||'[técnico]')} · Fecha: ${M.fecha} · EPCA Enginyeria i Projectes Cardener, SL</p>`;
+  b+=`<div class="verd"><b>RÉGIMEN DE TRAMITACIÓN: ${esc(M.R[2])}</b><br>${esc(M.nota)}${M.aforo!==null?`<br>Aforo ${M.aforoEst?'estimado (orientativo) ~':''}${M.aforo} personas`:''}${M.lpc?'<br>Local de pública concurrencia a efectos del REBT (ITC-BT-28)':''}</div>`;
+  M.fases.forEach((f,i)=>{
+    b+=`<h2>${esc(FNAMES[i])}</h2>`;
+    if(i===5){b+=`<ul>${M.cierre.map(c=>`<li>☐ ${esc(c)}</li>`).join('')}</ul>`;return;}
+    f.forEach(it=>{
+      b+=`<h3>${tipoTxt[it.tipo]||''}${esc(it.tit)}</h3><p>${esc(it.txt)}`;
+      if(it.norm&&it.norm.length) b+=`<br><span class="norm">Fuente: ${it.norm.map(k=>{const r=NORM[k];return r?esc(r.full)+' — '+esc(r.loc):esc(k)}).join('  |  ')}</span>`;
+      b+=`</p>`;
+    });
+  });
+  b+=`<h2>Repertorio de fuentes oficiales del expediente</h2><p>Toda afirmación de este documento se apoya en las fuentes siguientes. Los enlaces apuntan al texto consolidado oficial (Portal Jurídic de Catalunya, BOE o EUR-Lex).</p><table><tr><th>Norma</th><th>Referencia exacta (dónde está el requisito)</th><th>Por qué aplica a este expediente</th><th>Enlace oficial</th></tr>`;
+  M.normSet.forEach((motivo,key)=>{const r=NORM[key];if(!r)return;b+=`<tr><td>${esc(r.full)}</td><td>${esc(r.loc)}</td><td>${esc(motivo)}</td><td><a href="${r.url}">${esc(r.url)}</a></td></tr>`;});
+  b+=`</table>`;
+  b+=`<h2>Advertencias y regla de verificación</h2><p>Documento de trabajo interno generado automáticamente (rev. 2026). No sustituye el criterio del técnico firmante. Antes de citar una fuente ante la administración: (1) abrir el enlace y comprobar el TEXTO CONSOLIDADO vigente a la fecha de la firma; (2) verificar el epígrafe CCAE exacto (CCAE-2025 sustituye a CCAE-2009) y las tablas consolidadas vigentes de la Llei 20/2009; (3) espectáculos: el Decret 112/2010 sigue VIGENTE, pero hay un proyecto de nuevo reglamento en tramitación — comprobar el Portal Jurídic; (4) contrastar la ordenanza municipal (ruido, terrazas, rótulos, plan de usos), que puede ser más restrictiva y prevalece en su ámbito.</p><p><b>Radar normativo (a fecha de la revisión 2026):</b> hay modificaciones en tramitación estatal del RITE (RD previsto para 2026, entrada en vigor ~12 meses después) y del REBT (revisión prevista 2026). Mientras no se publiquen en el BOE, los textos citados en este documento son los vigentes.</p>`;
+  const html=`<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word"><head><meta charset="utf-8"><title>Hoja de ruta</title><style>${st}</style></head><body>${b}</body></html>`;
+  const blob=new Blob(['﻿',html],{type:'application/msword'});
+  const x=document.createElement('a');x.href=URL.createObjectURL(blob);
+  x.download='Hoja-de-ruta-'+((M.datos.act||'actividad').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''))+'.doc';
+  x.click();URL.revokeObjectURL(x.href);
+}
+
+/* ============================================================
+   GUARDAR / CARGAR CASO (.json)
+   ============================================================ */
+function guardarCaso(){
+  const o={};
+  document.querySelectorAll('input,select').forEach(e=>{if(!e.id)return;o[e.id]=e.type==='checkbox'?e.checked:e.value});
+  const b=new Blob([JSON.stringify(o,null,1)],{type:'application/json'});
+  const x=document.createElement('a');x.href=URL.createObjectURL(b);
+  x.download='caso-'+((val('d_act')||'actividad').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''))+'.json';
+  x.click();URL.revokeObjectURL(x.href);
+}
+function cargarCaso(ev){
+  const f=ev.target.files[0];if(!f)return;
+  f.text().then(t=>{
+    const o=JSON.parse(t);
+    const aplicar=()=>Object.entries(o).forEach(([id,v])=>{const e=$(id);if(!e)return;if(e.type==='checkbox')e.checked=!!v;else e.value=v});
+    aplicar();
+    actSel.dispatchEvent(new Event('change')); // regenera checkboxes extra de la actividad
+    aplicar();                                  // segunda pasada para rellenar los extras recién creados
+    $('i_alim').dispatchEvent(new Event('change'));
+    ev.target.value='';
+  }).catch(()=>alert('El archivo no es un caso válido.'));
+}
+</script>
+</body>
+</html>

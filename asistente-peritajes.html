@@ -128,8 +128,9 @@ footer a{color:var(--gray-600)}
     <!-- 3 · TIPO DE CASO -->
     <div class="card">
       <h2><span class="step-n">3</span> <span data-es="¿Cuál de estas situaciones describe mejor su caso?" data-ca="Quina d'aquestes situacions descriu millor el vostre cas?">¿Cuál de estas situaciones describe mejor su caso?</span></h2>
+      <p class="hint" data-es="Cuéntenos lo que pueda: a partir de aquí no hay ningún campo obligatorio para poder enviar. Con lo que sepa, nos basta para empezar a estudiar su caso." data-ca="Expliqueu-nos el que pugueu: a partir d'aquí no hi ha cap camp obligatori per poder enviar. Amb el que sapigueu, ja en tenim prou per començar a estudiar el vostre cas.">Cuéntenos lo que pueda: a partir de aquí no hay ningún campo obligatorio para poder enviar. Con lo que sepa, nos basta para empezar a estudiar su caso.</p>
       <div class="field">
-        <select name="tipo_caso" id="f_tipo" required>
+        <select name="tipo_caso" id="f_tipo">
           <option value="" data-es="— Seleccione —" data-ca="— Seleccioneu —">— Seleccione —</option>
         </select>
       </div>
@@ -142,7 +143,7 @@ footer a{color:var(--gray-600)}
       <p class="hint" data-es="Responda lo que sepa; ninguna pregunta es obligatoria." data-ca="Responeu el que sapigueu; cap pregunta no és obligatòria.">Responda lo que sepa; ninguna pregunta es obligatoria.</p>
       <div class="grid" id="caseQuestions"></div>
       <div class="field full" style="margin-top:14px">
-        <label data-es="¿Qué necesita que el informe demuestre o valore? <span class='req'>*</span>" data-ca="Què necessiteu que l'informe demostri o valori? <span class='req'>*</span>">¿Qué necesita que el informe demuestre o valore? <span class="req">*</span></label>
+        <label data-es="¿Qué necesita que el informe demuestre o valore? <span class='opt'>(opcional, pero nos ayuda mucho)</span>" data-ca="Què necessiteu que l'informe demostri o valori? <span class='opt'>(opcional, però ens ajuda molt)</span>">¿Qué necesita que el informe demuestre o valore? <span class="opt">(opcional, pero nos ayuda mucho)</span></label>
         <textarea name="objeto" id="f_objeto" data-ph-es="Con sus palabras: qué ha pasado y qué quiere conseguir. Ej.: «Demostrar que las humedades de mi comedor vienen de la terraza del vecino y cuantificar la reparación»." data-ph-ca="Amb les vostres paraules: què ha passat i què voleu aconseguir. Ex.: «Demostrar que les humitats del meu menjador vénen de la terrassa del veí i quantificar la reparació»." placeholder="Con sus palabras: qué ha pasado y qué quiere conseguir. Ej.: «Demostrar que las humedades de mi comedor vienen de la terraza del vecino y cuantificar la reparación»."></textarea>
       </div>
     </div>
@@ -184,7 +185,7 @@ footer a{color:var(--gray-600)}
       <button type="submit" class="btn btn--primary" id="sendBtn" data-es="Enviar mi caso a EPCA →" data-ca="Enviar el meu cas a EPCA →">Enviar mi caso a EPCA →</button>
       <span class="note" data-es="Le responderemos en 24-48 h laborables." data-ca="Us respondrem en 24-48 h laborables.">Le responderemos en 24-48 h laborables.</span>
     </div>
-    <div class="err hidden" id="formErr" data-es="⚠️ Revise los campos marcados: nombre, teléfono, tipo de caso y qué necesita demostrar son necesarios, y debe aceptar la política de privacidad." data-ca="⚠️ Reviseu els camps marcats: nom, telèfon, tipus de cas i què cal demostrar són necessaris, i cal acceptar la política de privacitat.">⚠️ Revise los campos marcados: nombre, teléfono, tipo de caso y qué necesita demostrar son necesarios, y debe aceptar la política de privacidad.</div>
+    <div class="err hidden" id="formErr" data-es="⚠️ Para enviar solo necesitamos su nombre, su teléfono y que acepte la política de privacidad. El resto es opcional." data-ca="⚠️ Per enviar només necessitem el vostre nom, el telèfon i que accepteu la política de privacitat. La resta és opcional.">⚠️ Para enviar solo necesitamos su nombre, su teléfono y que acepte la política de privacidad. El resto es opcional.</div>
     <div class="err hidden" id="sendErr" data-es="⚠️ No se ha podido enviar el formulario. Inténtelo de nuevo en unos minutos o escríbanos a info@epca.es." data-ca="⚠️ No s'ha pogut enviar el formulari. Torneu-ho a provar d'aquí a uns minuts o escriviu-nos a info@epca.es.">⚠️ No se ha podido enviar el formulario. Inténtelo de nuevo en unos minutos o escríbanos a info@epca.es.</div>
     <p class="privacy" data-es="🔒 Sus datos se utilizan únicamente para atender su consulta y elaborar, en su caso, la propuesta de encargo (RGPD). No se ceden a terceros." data-ca="🔒 Les vostres dades s'utilitzen únicament per atendre la consulta i elaborar, si escau, la proposta d'encàrrec (RGPD). No se cedeixen a tercers.">🔒 Sus datos se utilizan únicamente para atender su consulta y elaborar, en su caso, la propuesta de encargo (RGPD). No se ceden a terceros.</p>
   </form>
@@ -309,8 +310,7 @@ contrainforme:{es:'Rebatir un informe pericial existente (contrainforme)',ca:'Re
  d:[['El informe pericial completo, con sus anexos','L’informe pericial complet, amb els annexos'],['La demanda o contestación, si dispone','La demanda o contestació, si en teniu'],['La documentación técnica que cite ese informe','La documentació tècnica que citi aquest informe'],['Fotos propias del objeto del conflicto','Fotos pròpies de l’objecte del conflicte']]},
 otro:{es:'Otro caso (cuéntenoslo)',ca:'Un altre cas (expliqueu-nos-el)',
  hes:'Peritamos casi cualquier cuestión técnica de ingeniería. Descríbanos la situación.',hca:'Peritem gairebé qualsevol qüestió tècnica d’enginyeria. Descriviu-nos la situació.',
- q:[
-  {t:'textarea',es:'Describa su situación con el máximo detalle posible',ca:'Descriviu la vostra situació amb el màxim detall possible'}],
+ q:[],
  d:[['Cualquier documento relacionado con el caso','Qualsevol document relacionat amb el cas'],['Fotos, si el caso lo permite','Fotos, si el cas ho permet']]}
 };
 
@@ -492,7 +492,7 @@ async function uploadImage(dataUrl){
 form.addEventListener('submit',async e=>{
   e.preventDefault();
   const err=document.getElementById('formErr');
-  if(!V('f_nombre')||!V('f_telefono')||!tipoSel.value||!V('f_objeto')||!document.getElementById('f_privacidad').checked){
+  if(!V('f_nombre')||!V('f_telefono')||!document.getElementById('f_privacidad').checked){
     err.classList.remove('hidden');err.scrollIntoView({behavior:'smooth',block:'center'});return;
   }
   err.classList.add('hidden');

@@ -145,8 +145,9 @@ footer a{color:var(--gray-600)}
     <!-- 3 · TIPO DE ACTIVIDAD -->
     <div class="card">
       <h2><span class="step-n">3</span> <span data-es="¿Qué tipo de actividad es?" data-ca="Quin tipus d'activitat és?">¿Qué tipo de actividad es?</span></h2>
+      <p class="hint" data-es="Cuéntenos lo que pueda: a partir de aquí no hay ningún campo obligatorio para poder enviar. Con lo que sepa, nos basta para empezar a estudiar su caso." data-ca="Expliqueu-nos el que pugueu: a partir d'aquí no hi ha cap camp obligatori per poder enviar. Amb el que sapigueu, ja en tenim prou per començar a estudiar el vostre cas.">Cuéntenos lo que pueda: a partir de aquí no hay ningún campo obligatorio para poder enviar. Con lo que sepa, nos basta para empezar a estudiar su caso.</p>
       <div class="field">
-        <select name="tipo_actividad" id="f_tipo" required>
+        <select name="tipo_actividad" id="f_tipo">
           <option value="" data-es="— Seleccione —" data-ca="— Seleccioneu —">— Seleccione —</option>
         </select>
       </div>
@@ -161,7 +162,7 @@ footer a{color:var(--gray-600)}
       <div class="grid" id="caseQuestions"></div>
       <div class="grid" style="margin-top:14px">
         <div class="field full">
-          <label data-es="Describa su negocio con sus palabras <span class='req'>*</span>" data-ca="Descriviu el vostre negoci amb les vostres paraules <span class='req'>*</span>">Describa su negocio con sus palabras <span class="req">*</span></label>
+          <label data-es="Describa su negocio con sus palabras <span class='opt'>(opcional, pero nos ayuda mucho)</span>" data-ca="Descriviu el vostre negoci amb les vostres paraules <span class='opt'>(opcional, però ens ajuda molt)</span>">Describa su negocio con sus palabras <span class="opt">(opcional, pero nos ayuda mucho)</span></label>
           <textarea name="descripcion" id="f_descripcion" data-ph-es="Ej.: «Tienda de ropa infantil de unos 60 m² en el centro de Manresa, sin obras previstas»." data-ph-ca="Ex.: «Botiga de roba infantil d'uns 60 m² al centre de Manresa, sense obres previstes»." placeholder="Ej.: «Tienda de ropa infantil de unos 60 m² en el centro de Manresa, sin obras previstas»."></textarea>
         </div>
         <div class="field full"><label data-es="Nombre comercial / rótulo <span class='opt'>(si ya lo tiene)</span>" data-ca="Nom comercial / rètol <span class='opt'>(si ja el teniu)</span>">Nombre comercial / rótulo <span class="opt">(si ya lo tiene)</span></label><input type="text" name="nombre_comercial" id="f_rotulo"></div>
@@ -224,7 +225,7 @@ footer a{color:var(--gray-600)}
       <button type="submit" class="btn btn--primary" id="sendBtn" data-es="Enviar mi consulta a EPCA →" data-ca="Enviar la meva consulta a EPCA →">Enviar mi consulta a EPCA →</button>
       <span class="note" data-es="Le responderemos en 24-48 h laborables." data-ca="Us respondrem en 24-48 h laborables.">Le responderemos en 24-48 h laborables.</span>
     </div>
-    <div class="err hidden" id="formErr" data-es="⚠️ Revise los campos marcados: nombre, teléfono, tipo de actividad y la descripción del negocio son necesarios, y debe aceptar la política de privacidad." data-ca="⚠️ Reviseu els camps marcats: nom, telèfon, tipus d'activitat i la descripció del negoci són necessaris, i cal acceptar la política de privacitat.">⚠️ Revise los campos marcados: nombre, teléfono, tipo de actividad y la descripción del negocio son necesarios, y debe aceptar la política de privacidad.</div>
+    <div class="err hidden" id="formErr" data-es="⚠️ Para enviar solo necesitamos su nombre, su teléfono y que acepte la política de privacidad. El resto es opcional." data-ca="⚠️ Per enviar només necessitem el vostre nom, el telèfon i que accepteu la política de privacitat. La resta és opcional.">⚠️ Para enviar solo necesitamos su nombre, su teléfono y que acepte la política de privacidad. El resto es opcional.</div>
     <div class="err hidden" id="sendErr" data-es="⚠️ No se ha podido enviar el formulario. Inténtelo de nuevo en unos minutos o escríbanos a info@epca.es." data-ca="⚠️ No s'ha pogut enviar el formulari. Torneu-ho a provar d'aquí a uns minuts o escriviu-nos a info@epca.es.">⚠️ No se ha podido enviar el formulario. Inténtelo de nuevo en unos minutos o escríbanos a info@epca.es.</div>
     <p class="privacy" data-es="🔒 Sus datos se utilizan únicamente para atender su consulta y elaborar, en su caso, la propuesta de encargo (RGPD). No se ceden a terceros." data-ca="🔒 Les vostres dades s'utilitzen únicament per atendre la consulta i elaborar, si escau, la proposta d'encàrrec (RGPD). No se cedeixen a tercers.">🔒 Sus datos se utilizan únicamente para atender su consulta y elaborar, en su caso, la propuesta de encargo (RGPD). No se ceden a terceros.</p>
   </form>
@@ -328,8 +329,7 @@ gimnasio:{es:'Gimnasio, centro deportivo o de yoga',ca:'Gimnàs, centre esportiu
  d:[['Fotos del local (fachada, salas, vestuarios)','Fotos del local (façana, sales, vestidors)'],['Planos del local, si dispone de ellos','Plànols del local, si en teniu'],['Contrato de alquiler o escritura del local','Contracte de lloguer o escriptura del local'],['Último recibo del IBI del local','Últim rebut de l’IBI del local'],['¿Hay viviendas encima o al lado? Indíquelo en observaciones','Hi ha habitatges a sobre o al costat? Indiqueu-ho a observacions']]},
 otro:{es:'Otra actividad (cuéntenosla)',ca:'Una altra activitat (expliqueu-nos-la)',
  hes:'Tramitamos licencias para casi cualquier actividad. Descríbanos la suya y le orientamos.',hca:'Tramitem llicències per a gairebé qualsevol activitat. Descriviu-nos la vostra i us orientem.',
- q:[
-  {t:'textarea',es:'Describa la actividad con el máximo detalle posible',ca:'Descriviu l’activitat amb el màxim detall possible'}],
+ q:[],
  d:[['Fotos del local','Fotos del local'],['Planos, si dispone de ellos','Plànols, si en teniu'],['Contrato de alquiler o escritura del local','Contracte de lloguer o escriptura del local'],['Último recibo del IBI del local','Últim rebut de l’IBI del local']]}
 };
 
@@ -522,7 +522,7 @@ form.addEventListener('submit',async e=>{
   if(CASOS[tipoSel.value]&&CASOS[tipoSel.value].redirect){
     document.getElementById('hostWarn').scrollIntoView({behavior:'smooth',block:'center'});return;
   }
-  if(!V('f_nombre')||!V('f_telefono')||!tipoSel.value||!V('f_descripcion')||!document.getElementById('f_privacidad').checked){
+  if(!V('f_nombre')||!V('f_telefono')||!document.getElementById('f_privacidad').checked){
     err.classList.remove('hidden');err.scrollIntoView({behavior:'smooth',block:'center'});return;
   }
   err.classList.add('hidden');
