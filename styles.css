@@ -265,6 +265,14 @@ img { max-width: 100%; display: block; }
 }
 .lp-feature h3 { font-size: 1rem; color: var(--navy); margin-bottom: 8px; }
 .lp-feature p { color: var(--gray-600); font-size: 0.9rem; }
+.lp-feature__price { display: block; margin-top: 12px; font-weight: 700; color: var(--navy); font-size: 1.05rem; }
+.lp-feature__price small { font-weight: 400; color: var(--gray-600); font-size: 0.78rem; }
+.lp-feature--star { border-left-color: var(--navy); background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%); }
+.lp-feature__tag {
+  display: inline-block; margin-bottom: 10px; padding: 3px 10px; border-radius: 999px;
+  background: var(--navy); color: var(--gold); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.4px;
+}
+.lp-note { margin-top: 22px; font-size: 0.82rem; color: var(--gray-600); max-width: 760px; }
 
 .lp-steps { counter-reset: step; display: flex; flex-direction: column; gap: 20px; margin-top: 36px; max-width: 760px; }
 .lp-step { display: flex; gap: 18px; align-items: flex-start; }
